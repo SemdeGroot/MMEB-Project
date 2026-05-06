@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
-# Downloads moth images from multimedia.txt and saves them to images/<species>/<id>.jpg
+# Downloads all moth images from multimedia.txt and saves them to images/<species>/<id>.jpg
 # Skips files that already exist so it is safe to re-run.
+# Species filtering (minimum samples) happens in dataset.py, not here.
 
 import csv
 import re
@@ -14,10 +15,9 @@ OCCURRENCE = DATA_DIR / "occurrence.txt"
 MULTIMEDIA = DATA_DIR / "multimedia.txt"
 IMAGES_DIR = DATA_DIR / "images"
 
-MIN_SAMPLES = 50   # skip species with fewer records than this
-DELAY_S     = 0.05
-TIMEOUT_S   = 15
-MAX_ERRORS  = 20   # stop after this many consecutive failures
+DELAY_S    = 0.05
+TIMEOUT_S  = 15
+MAX_ERRORS = 20   # stop after this many consecutive failures
 
 
 def make_dirname(name):
@@ -29,25 +29,18 @@ def make_dirname(name):
 
 
 def load_species_map():
-    counts = {}
-    gbif_to_species = {}
+    # maps each occurrence ID to a folder-safe species name
+    species_map = {}
 
     with open(OCCURRENCE, newline="", encoding="utf-8") as f:
         for row in csv.DictReader(f, delimiter="\t"):
             sp  = row.get("scientificName", "").strip()
             gid = row.get("gbifID", "").strip()
             if sp and gid:
-                counts[sp] = counts.get(sp, 0) + 1
-                gbif_to_species[gid] = sp
+                species_map[gid] = make_dirname(sp)
 
-    allowed = {sp for sp, n in counts.items() if n >= MIN_SAMPLES}
-    print(f"Species with >={MIN_SAMPLES} records: {len(allowed)}")
-
-    return {
-        gid: make_dirname(sp)
-        for gid, sp in gbif_to_species.items()
-        if sp in allowed
-    }
+    print(f"Loaded {len(species_map)} occurrence records")
+    return species_map
 
 
 def download_images(species_map):
