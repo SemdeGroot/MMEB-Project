@@ -56,16 +56,27 @@ def compute_class_weights(train_ds, num_classes, device):
     return (weights / weights.sum() * num_classes).to(device)
 
 
+def _progress(tag, i, n, extra=""):
+    filled = int(40 * (i + 1) / n)
+    bar = "#" * filled + "-" * (40 - filled)
+    print(f"  {tag} [{bar}] {i+1}/{n}{extra}", flush=True)
+
+
 def train_one_epoch(model, loader, criterion, optimizer, device):
     model.train()
     total_loss = 0.0
-    for img, loc, label in loader:
+    n = len(loader)
+    interval = max(1, n // 100)
+    for i, (img, loc, label) in enumerate(loader):
         img, loc, label = img.to(device), loc.to(device), label.to(device)
         optimizer.zero_grad()
         loss = criterion(model(img, loc), label)
         loss.backward()
         optimizer.step()
         total_loss += loss.item() * len(label)
+        if (i + 1) % interval == 0 or i + 1 == n:
+            avg = total_loss / ((i + 1) * loader.batch_size)
+            _progress("train", i, n, f"  loss={avg:.4f}")
     return total_loss / len(loader.dataset)
 
 
@@ -73,13 +84,17 @@ def train_one_epoch(model, loader, criterion, optimizer, device):
 def evaluate(model, loader, criterion, device):
     model.eval()
     total_loss, correct = 0.0, 0
-    for img, loc, label in loader:
+    n = len(loader)
+    interval = max(1, n // 100)
+    for i, (img, loc, label) in enumerate(loader):
         img, loc, label = img.to(device), loc.to(device), label.to(device)
         logits = model(img, loc)
         total_loss += criterion(logits, label).item() * len(label)
         correct += (logits.argmax(1) == label).sum().item()
-    n = len(loader.dataset)
-    return total_loss / n, correct / n
+        if (i + 1) % interval == 0 or i + 1 == n:
+            _progress("val  ", i, n)
+    n_samples = len(loader.dataset)
+    return total_loss / n_samples, correct / n_samples
 
 
 def save_checkpoint(path, model, optimizer, scheduler, epoch, best_val_loss):

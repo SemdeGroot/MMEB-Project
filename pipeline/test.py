@@ -62,15 +62,25 @@ def bucket_for_count(count):
     return None
 
 
+def _progress(tag, i, n):
+    filled = int(40 * (i + 1) / n)
+    bar = "#" * filled + "-" * (40 - filled)
+    print(f"  {tag} [{bar}] {i+1}/{n}", flush=True)
+
+
 @torch.no_grad()
 def run_inference(model, loader, device):
     """Return (predictions, labels) as numpy arrays over the full loader."""
     model.eval()
     all_preds, all_labels = [], []
-    for img, loc, label in loader:
+    n = len(loader)
+    interval = max(1, n // 100)
+    for i, (img, loc, label) in enumerate(loader):
         img, loc = img.to(device), loc.to(device)
         all_preds.extend(model(img, loc).argmax(1).cpu().tolist())
         all_labels.extend(label.tolist())
+        if (i + 1) % interval == 0 or i + 1 == n:
+            _progress("inference", i, n)
     return np.array(all_preds), np.array(all_labels)
 
 
