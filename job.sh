@@ -16,13 +16,13 @@
 # When called with no arguments, submit all 7 jobs and exit.
 if [ $# -eq 0 ]; then
     mkdir -p logs
-    sbatch --time=01:00:00 -p gpu-short "$0" location_only
-    sbatch --time=02:00:00 -p gpu-short "$0" baseline     resnet50
-    sbatch --time=02:00:00 -p gpu-short "$0" early_fusion resnet50
-    sbatch --time=02:00:00 -p gpu-short "$0" late_fusion  resnet50
-    sbatch --time=04:00:00 -p gpu-short "$0" baseline     bioclip
-    sbatch --time=08:00:00 -p gpu-2080ti-11g "$0" early_fusion bioclip
-    sbatch --time=08:00:00 -p gpu-2080ti-11g "$0" late_fusion  bioclip
+    sbatch --time=04:00:00 -p gpu-short      "$0" location_only
+    sbatch --time=04:00:00 -p gpu-short      "$0" baseline     resnet50
+    sbatch --time=04:00:00 -p gpu-short      "$0" early_fusion resnet50
+    sbatch --time=04:00:00 -p gpu-short      "$0" late_fusion  resnet50
+    sbatch --time=06:00:00 -p gpu-2080ti-11g "$0" baseline     bioclip
+    sbatch --time=10:00:00 -p gpu-2080ti-11g "$0" early_fusion bioclip
+    sbatch --time=10:00:00 -p gpu-2080ti-11g "$0" late_fusion  bioclip
     echo "All 7 jobs submitted. Check status with: squeue --me"
     exit 0
 fi
