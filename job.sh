@@ -6,7 +6,7 @@
 #SBATCH --mem=32G
 #SBATCH --cpus-per-task=8
 #SBATCH --mail-type=END,FAIL
-#SBATCH --mail-user=semdegroot2003@gmail.com
+#SBATCH --mail-user=s3569829@umail.leidenuniv.nl
 #SBATCH --output=logs/%j.out
 
 # Usage:
