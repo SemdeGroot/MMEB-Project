@@ -33,6 +33,7 @@ BACKBONE=${2:-resnet50}
 WORKDIR=/zfsstore/courses/2025-2026/4343MMEBX/Group6
 cd "$WORKDIR"
 conda activate ./env
+export HF_HOME=/zfsstore/courses/2025-2026/4343MMEBX/Group6/.cache
 
 mkdir -p logs
 
