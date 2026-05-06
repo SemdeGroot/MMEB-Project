@@ -10,15 +10,24 @@
 #SBATCH --output=logs/%j.out
 
 # Usage:
-#   sbatch --time=02:00:00 job.sh baseline resnet50
-#   sbatch --time=02:00:00 job.sh early_fusion resnet50
-#   sbatch --time=02:00:00 job.sh late_fusion resnet50
-#   sbatch --time=01:00:00 job.sh location_only
-#   sbatch --time=04:00:00 -p gpu-short job.sh baseline bioclip
-#   sbatch --time=08:00:00 -p gpu-long  job.sh early_fusion bioclip
-#   sbatch --time=08:00:00 -p gpu-long  job.sh late_fusion bioclip
+#   bash job.sh                           submit all 7 experiments at once
+#   sbatch --time=02:00:00 job.sh baseline resnet50   run one experiment
 
-MODEL=${1:?usage: sbatch job.sh <model> [backbone]}
+# When called with no arguments, submit all 7 jobs and exit.
+if [ $# -eq 0 ]; then
+    mkdir -p logs
+    sbatch --time=01:00:00 -p gpu-short "$0" location_only
+    sbatch --time=02:00:00 -p gpu-short "$0" baseline     resnet50
+    sbatch --time=02:00:00 -p gpu-short "$0" early_fusion resnet50
+    sbatch --time=02:00:00 -p gpu-short "$0" late_fusion  resnet50
+    sbatch --time=04:00:00 -p gpu-short "$0" baseline     bioclip
+    sbatch --time=08:00:00 -p gpu-long  "$0" early_fusion bioclip
+    sbatch --time=08:00:00 -p gpu-long  "$0" late_fusion  bioclip
+    echo "All 7 jobs submitted. Check status with: squeue --me"
+    exit 0
+fi
+
+MODEL=${1:?usage: bash job.sh  OR  sbatch job.sh <model> [backbone]}
 BACKBONE=${2:-resnet50}
 
 WORKDIR=/zfsstore/courses/2025-2026/4343MMEBX/Group6
