@@ -1,10 +1,6 @@
 #!/usr/bin/env python3
-"""
-Download moth images from GBIF multimedia.txt, organised as:
-  data/images/<species_name>/<gbifID>_<photo_id>.jpg
-
-Skips already-downloaded files so the script is safe to re-run.
-"""
+# Downloads moth images from multimedia.txt and saves them to images/<species>/<id>.jpg
+# Skips files that already exist so it is safe to re-run.
 
 import csv
 import re
@@ -13,35 +9,31 @@ import time
 import urllib.request
 from pathlib import Path
 
-# ── paths ────────────────────────────────────────────────────────────────────
 DATA_DIR   = Path(__file__).parent
 OCCURRENCE = DATA_DIR / "occurrence.txt"
 MULTIMEDIA = DATA_DIR / "multimedia.txt"
 IMAGES_DIR = DATA_DIR / "images"
 
-# ── settings ─────────────────────────────────────────────────────────────────
-MIN_SAMPLES = 50    # skip species with fewer occurrence records than this
-DELAY_S     = 0.05  # seconds between requests
-TIMEOUT_S   = 15    # per-request timeout
-MAX_ERRORS  = 20    # abort after this many consecutive failures
+MIN_SAMPLES = 50   # skip species with fewer records than this
+DELAY_S     = 0.05
+TIMEOUT_S   = 15
+MAX_ERRORS  = 20   # stop after this many consecutive failures
 
 
-def sanitise(name: str) -> str:
-    """Turn a scientific name into a safe directory name."""
+def make_dirname(name):
+    # strip author parentheses so the folder name stays short
     name = name.split("(")[0].strip()
     name = re.sub(r"[^\w\s-]", "", name)
     name = re.sub(r"\s+", "_", name.strip())
     return name[:80]
 
 
-def load_species_map() -> dict[str, str]:
-    """Return {gbifID: sanitised_species_name} for species above MIN_SAMPLES."""
-    counts: dict[str, int] = {}
-    gbif_to_species: dict[str, str] = {}
+def load_species_map():
+    counts = {}
+    gbif_to_species = {}
 
     with open(OCCURRENCE, newline="", encoding="utf-8") as f:
-        reader = csv.DictReader(f, delimiter="\t")
-        for row in reader:
+        for row in csv.DictReader(f, delimiter="\t"):
             sp  = row.get("scientificName", "").strip()
             gid = row.get("gbifID", "").strip()
             if sp and gid:
@@ -52,13 +44,13 @@ def load_species_map() -> dict[str, str]:
     print(f"Species with >={MIN_SAMPLES} records: {len(allowed)}")
 
     return {
-        gid: sanitise(sp)
+        gid: make_dirname(sp)
         for gid, sp in gbif_to_species.items()
         if sp in allowed
     }
 
 
-def download_images(species_map: dict[str, str]) -> None:
+def download_images(species_map):
     IMAGES_DIR.mkdir(parents=True, exist_ok=True)
 
     total = skipped = downloaded = errors = 0
@@ -67,7 +59,7 @@ def download_images(species_map: dict[str, str]) -> None:
     with open(MULTIMEDIA, newline="", encoding="utf-8") as f:
         rows = list(csv.DictReader(f, delimiter="\t"))
 
-    print(f"Multimedia rows: {len(rows)}")
+    print(f"Total multimedia rows: {len(rows)}")
 
     for row in rows:
         gid = row.get("gbifID", "").strip()
@@ -85,6 +77,7 @@ def download_images(species_map: dict[str, str]) -> None:
         species_dir = IMAGES_DIR / species_map[gid]
         species_dir.mkdir(exist_ok=True)
 
+        # iNaturalist URLs look like .../photos/<photo_id>/original.jpg
         photo_id = url.rstrip("/").split("/")[-2] if "/photos/" in url else url.split("/")[-1].split(".")[0]
         dest = species_dir / f"{gid}_{photo_id}.jpg"
 
@@ -99,17 +92,17 @@ def download_images(species_map: dict[str, str]) -> None:
             downloaded += 1
             consecutive_errors = 0
             if downloaded % 100 == 0:
-                print(f"  downloaded {downloaded}  skipped {skipped}  errors {errors}", flush=True)
+                print(f"  downloaded {downloaded}, skipped {skipped}, errors {errors}", flush=True)
             time.sleep(DELAY_S)
         except Exception as e:
             errors += 1
             consecutive_errors += 1
-            print(f"  WARN {dest.name}: {e}", file=sys.stderr)
+            print(f"  failed {dest.name}: {e}", file=sys.stderr)
             if consecutive_errors >= MAX_ERRORS:
-                print(f"ERROR: {MAX_ERRORS} consecutive failures, aborting.", file=sys.stderr)
+                print(f"Stopping after {MAX_ERRORS} consecutive failures.", file=sys.stderr)
                 break
 
-    print(f"\nDone. total={total}  downloaded={downloaded}  skipped={skipped}  errors={errors}")
+    print(f"\nDone. total={total}, downloaded={downloaded}, skipped={skipped}, errors={errors}")
 
 
 if __name__ == "__main__":
