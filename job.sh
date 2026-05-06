@@ -39,6 +39,9 @@ fi
 if [ "$MODEL" = "location_only" ]; then
     python -m pipeline.train --model location_only --resume
     python -m pipeline.test  --model location_only
+elif [ "$MODEL" = "baseline" ]; then
+    python -m pipeline.train --model "$MODEL" --backbone "$BACKBONE" --resume
+    python -m pipeline.test  --model "$MODEL" --backbone "$BACKBONE" --gradcam
 else
     python -m pipeline.train --model "$MODEL" --backbone "$BACKBONE" --resume
     python -m pipeline.test  --model "$MODEL" --backbone "$BACKBONE"
