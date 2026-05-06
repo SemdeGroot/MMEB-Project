@@ -108,7 +108,7 @@ def save_checkpoint(path, model, optimizer, scheduler, epoch, best_val_loss):
 
 
 def load_checkpoint(path, model, optimizer, scheduler):
-    ckpt = torch.load(path, map_location="cpu")
+    ckpt = torch.load(path, map_location="cpu", weights_only=False)
     model.load_state_dict(ckpt["model"])
     optimizer.load_state_dict(ckpt["optimizer"])
     scheduler.load_state_dict(ckpt["scheduler"])
