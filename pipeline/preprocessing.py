@@ -10,7 +10,7 @@ from torch.utils.data import Dataset
 import torchvision.transforms as T
 
 
-DATA_DIR   = Path(__file__).parent / "data"
+DATA_DIR   = Path(__file__).parent.parent / "data"
 IMAGES_DIR = DATA_DIR / "images"
 OCCURRENCE = DATA_DIR / "occurrence.txt"
 
