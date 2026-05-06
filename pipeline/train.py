@@ -135,6 +135,8 @@ def main():
     start_epoch    = 0
     best_val_loss  = float("inf")
     patience_count = 0
+    history_path   = result_dir / "history.json"
+    history: list  = []
 
     if args.resume:
         last_pt = result_dir / "last.pt"
@@ -142,6 +144,9 @@ def main():
             start_epoch, best_val_loss = load_checkpoint(last_pt, model, optimizer, scheduler)
             start_epoch += 1
             print(f"Resumed from epoch {start_epoch} (best_val_loss={best_val_loss:.4f})")
+            if history_path.exists():
+                with open(history_path) as f:
+                    history = json.load(f)
         else:
             print("--resume set but no last.pt found; starting from scratch")
 
@@ -163,6 +168,11 @@ def main():
 
         print(f"Epoch {epoch:3d} | train_loss={train_loss:.4f} | "
               f"val_loss={val_loss:.4f} | val_acc={val_acc:.4f}")
+
+        history.append({"epoch": epoch, "train_loss": train_loss,
+                         "val_loss": val_loss, "val_acc": val_acc})
+        with open(history_path, "w") as f:
+            json.dump(history, f)
 
         save_checkpoint(result_dir / "last.pt", model, optimizer, scheduler, epoch, best_val_loss)
 
