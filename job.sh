@@ -37,14 +37,8 @@ export HF_HOME=/zfsstore/courses/2025-2026/4343MMEBX/Group6/.cache
 
 mkdir -p logs
 
-# Download images only if fewer than 1000 files exist (idempotent check)
-N_IMAGES=$(find data/images -name "*.jpg" 2>/dev/null | wc -l)
-if [ "$N_IMAGES" -lt 1000 ]; then
-    echo "Only $N_IMAGES images found - downloading..."
-    python data/download_images.py
-else
-    echo "Images already present ($N_IMAGES files), skipping download."
-fi
+# download_images.py is idempotent: skips files that already exist
+python data/download_images.py
 
 if [ "$MODEL" = "location_only" ]; then
     python -m pipeline.train --model location_only --resume
