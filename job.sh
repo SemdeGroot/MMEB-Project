@@ -32,6 +32,8 @@ BACKBONE=${2:-resnet50}
 
 WORKDIR=/zfsstore/courses/2025-2026/4343MMEBX/Group6
 cd "$WORKDIR"
+module load Miniconda3
+source "$(conda info --base)/etc/profile.d/conda.sh"
 conda activate ./env
 export HF_HOME=/zfsstore/courses/2025-2026/4343MMEBX/Group6/.cache
 
