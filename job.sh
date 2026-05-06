@@ -21,7 +21,7 @@
 MODEL=${1:?usage: sbatch job.sh <model> [backbone]}
 BACKBONE=${2:-resnet50}
 
-WORKDIR=/zfsstore/courses/2025-2026/4343MMEBX/GroupXX
+WORKDIR=/zfsstore/courses/2025-2026/4343MMEBX/Group6
 cd "$WORKDIR"
 conda activate ./env
 
