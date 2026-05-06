@@ -11,7 +11,7 @@ dependencies:
   - pillow=12.2.0
   - matplotlib=3.10.9
   - numpy=2.4.3
-  - pip
+  - pip==26.1.1
   - pip:
     - timm==1.0.26
     - open-clip-torch==3.3.0

@@ -11,7 +11,6 @@ filelock==3.29.0
 fonttools==4.62.1
 fsspec==2026.4.0
 ftfy==6.3.1
-gmpy2==2.3.0
 grad-cam==1.5.5
 h11==0.16.0
 h2==4.3.0
