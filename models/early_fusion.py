@@ -15,7 +15,7 @@ class EarlyFusionModel(nn.Module):
             self.backbone = net
             img_dim = 2048
         elif backbone == "bioclip":
-            clip_model, _ = open_clip.create_model_and_transforms("hf-hub:imageomics/bioclip")
+            clip_model, _, _ = open_clip.create_model_and_transforms("hf-hub:imageomics/bioclip")
             self.backbone = clip_model.visual
             img_dim = 512
         else:

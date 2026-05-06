@@ -14,7 +14,7 @@ class BaselineModel(nn.Module):
             self.backbone = net
             feat_dim = 2048
         elif backbone == "bioclip":
-            clip_model, _ = open_clip.create_model_and_transforms("hf-hub:imageomics/bioclip")
+            clip_model, _, _ = open_clip.create_model_and_transforms("hf-hub:imageomics/bioclip")
             self.backbone = clip_model.visual
             feat_dim = 512
         else:
