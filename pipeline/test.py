@@ -196,7 +196,7 @@ def main():
 
     print("Building model and loading best.pt...")
     model = build_model(args.model, args.backbone, num_classes).to(device)
-    ckpt  = torch.load(best_pt, map_location=device)
+    ckpt  = torch.load(best_pt, map_location=device, weights_only=False)
     model.load_state_dict(ckpt["model"])
 
     test_loader = DataLoader(test_ds, batch_size=args.batch_size, shuffle=False,
