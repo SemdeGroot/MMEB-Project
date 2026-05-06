@@ -2,5 +2,7 @@ CLAUDE.md
 .claude
 venv/
 env/
+**__pycache__/**
+*.pyc
 data/images/
 docs/
