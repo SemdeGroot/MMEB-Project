@@ -1,0 +1,22 @@
+Dataset: Natural History Museum Rotterdam - Specimens 
+Rights as supplied: http://creativecommons.org/licenses/by-nc/4.0/legalcode
+Dataset: International Barcode of Life project (iBOL) 
+Rights as supplied: http://creativecommons.org/licenses/by/4.0/legalcode
+Dataset: Museum of Comparative Zoology, Harvard University 
+Rights as supplied: http://creativecommons.org/licenses/by-nc/4.0/legalcode
+Dataset: Cornell University Insect Collection (CUIC) 
+Rights as supplied: http://creativecommons.org/licenses/by/4.0/legalcode
+Dataset: ZMAA Insect collections of Åbo Akademi 
+Rights as supplied: http://creativecommons.org/licenses/by/4.0/legalcode
+Dataset: Macro-arthropods survey Drentsche Aa 1996 
+Rights as supplied: http://creativecommons.org/licenses/by-nc/4.0/legalcode
+Dataset: Entomologische Sammlung (ETHZ-ENT) of Eidgenössische Technische Hochschule Zürich 
+Rights as supplied: http://creativecommons.org/licenses/by/4.0/legalcode
+Dataset: Historic records Stichting Bargerveen 1983-2024 
+Rights as supplied: http://creativecommons.org/licenses/by/4.0/legalcode
+Dataset: Lepidoptera World (Luomus) (LEPW) 
+Rights as supplied: http://creativecommons.org/licenses/by/4.0/legalcode
+Dataset: iNaturalist Research-grade Observations 
+Rights as supplied: http://creativecommons.org/licenses/by-nc/4.0/legalcode
+Dataset: izeltlabuak.hu observations validated to species level 
+Rights as supplied: http://creativecommons.org/licenses/by-nc/4.0/legalcode

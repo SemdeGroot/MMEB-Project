@@ -1,0 +1,816 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eml:eml xmlns:eml="https://eml.ecoinformatics.org/eml-2.2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://eml.ecoinformatics.org/eml-2.2.0 https://rs.gbif.org/schema/eml-gbif-profile/1.3/eml.xsd"
+packageId="38670987-c8d6-4666-8b42-c263b7c80310"  system="http://gbif.org" scope="system"
+xml:lang="en">
+    <dataset>
+        <alternateIdentifier>10.15468/pywtkc</alternateIdentifier>
+        <alternateIdentifier>38670987-c8d6-4666-8b42-c263b7c80310</alternateIdentifier>
+        <alternateIdentifier>https://ipt.nlbif.nl/resource?r=hist_rec_st_bargerveen</alternateIdentifier>
+        <shortName>Hist_rec_St_Bargerveen</shortName>
+        <title>Historic records Stichting Bargerveen 1983-2024</title>
+        <creator>
+            <individualName>
+                <givenName>Joost</givenName>
+                <surName>Vogels</surName>
+            </individualName>
+            <organizationName>Stichting Bargerveen</organizationName>
+            <positionName>Senior researcher</positionName>
+            <address>
+                <deliveryPoint>Toernooiveld 1</deliveryPoint>
+                <city>Nijmegen</city>
+                <postalCode>NL-6525 ED</postalCode>
+                <country>NETHERLANDS</country>
+            </address>
+            <phone>+31647280685</phone>
+            <electronicMailAddress>j.vogels@science.ru.nl</electronicMailAddress>
+            <onlineUrl>https://stichting-bargerveen.nl</onlineUrl>
+            <userId directory="https://orcid.org/">0000-0003-4599-4320</userId>
+        </creator>
+        <creator>
+            <individualName>
+                <givenName>Hein</givenName>
+                <surName>van Kleef</surName>
+            </individualName>
+            <organizationName>Stichting Bargerveen</organizationName>
+            <positionName>Senior researcher</positionName>
+            <address>
+                <deliveryPoint>Toernooiveld 1</deliveryPoint>
+                <city>Nijmegen</city>
+                <postalCode>NL-6525 ED</postalCode>
+                <country>NETHERLANDS</country>
+            </address>
+            <electronicMailAddress>h.vankleef@science.ru.nl</electronicMailAddress>
+            <onlineUrl>https://stichting-bargerveen.nl</onlineUrl>
+            <userId directory="https://orcid.org/">0009-0005-6733-5600</userId>
+        </creator>
+        <creator>
+            <individualName>
+                <givenName>Marijn</givenName>
+                <surName>Nijssen</surName>
+            </individualName>
+            <organizationName>Stichting Bargerveen</organizationName>
+            <positionName>Senior researcher</positionName>
+            <address>
+                <deliveryPoint>Toernooiveld 1</deliveryPoint>
+                <city>Nijmegen</city>
+                <postalCode>NL-6525 ED</postalCode>
+                <country>NETHERLANDS</country>
+            </address>
+            <electronicMailAddress>m.nijssen@science.ru.nl</electronicMailAddress>
+            <onlineUrl>https://stichting-bargerveen.nl</onlineUrl>
+            <userId directory="https://orcid.org/">0000-0002-9158-5619</userId>
+        </creator>
+        <creator>
+            <individualName>
+                <givenName>Gert-Jan</givenName>
+                <surName>van Duinen</surName>
+            </individualName>
+            <organizationName>Stichting Bargerveen</organizationName>
+            <positionName>Senior researcher</positionName>
+            <address>
+                <deliveryPoint>Toernooiveld 1</deliveryPoint>
+                <city>Nijmegen</city>
+                <postalCode>NL-6525 ED</postalCode>
+                <country>NETHERLANDS</country>
+            </address>
+            <electronicMailAddress>g.vanduinen@science.ru.nl</electronicMailAddress>
+            <onlineUrl>https://stichting-bargerveen.nl</onlineUrl>
+            <userId directory="http://www.researcherid.com/rid/">EDR-5224-2022</userId>
+        </creator>
+        <creator>
+            <individualName>
+                <givenName>Toos</givenName>
+                <surName>van Noordwijk</surName>
+            </individualName>
+            <userId directory="https://orcid.org/">0000-0002-4326-3092</userId>
+        </creator>
+        <creator>
+            <individualName>
+                <givenName>Bart</givenName>
+                <surName>Wouters</surName>
+            </individualName>
+        </creator>
+        <creator>
+            <individualName>
+                <givenName>Peter</givenName>
+                <surName>Beusink</surName>
+            </individualName>
+        </creator>
+        <creator>
+            <individualName>
+                <givenName>Jan</givenName>
+                <surName>Kuper</surName>
+            </individualName>
+            <organizationName>Stichting Bargerveen</organizationName>
+            <positionName>Research assistent</positionName>
+            <address>
+                <deliveryPoint>Toernooiveld 1</deliveryPoint>
+                <city>Nijmegen</city>
+                <postalCode>NL-6525 ED</postalCode>
+                <country>NETHERLANDS</country>
+            </address>
+            <electronicMailAddress>j.kuper@science.ru.nl</electronicMailAddress>
+            <onlineUrl>https://stichting-bargerveen.nl</onlineUrl>
+        </creator>
+        <metadataProvider>
+            <individualName>
+                <givenName>Joost</givenName>
+                <surName>Vogels</surName>
+            </individualName>
+            <organizationName>Stichting Bargerveen</organizationName>
+            <positionName>Senior researcher</positionName>
+            <address>
+                <city>Nijmegen</city>
+                <postalCode>NL-6525 ED</postalCode>
+                <country>NETHERLANDS</country>
+            </address>
+            <electronicMailAddress>j.vogels@science.ru.nl</electronicMailAddress>
+            <onlineUrl>https://stichting-bargerveen.nl</onlineUrl>
+            <userId directory="https://orcid.org/">0000-0003-4599-4320</userId>
+        </metadataProvider>
+        <associatedParty>
+            <individualName>
+                <givenName>Jeroen</givenName>
+                <surName>Creuwels</surName>
+            </individualName>
+            <organizationName>NLBIF</organizationName>
+            <address>
+                <city>Leiden</city>
+                <administrativeArea>Zuid-Holland</administrativeArea>
+                <country>NETHERLANDS</country>
+            </address>
+            <electronicMailAddress>jeroen.creuwels@naturalis.nl</electronicMailAddress>
+            <userId directory="https://orcid.org/">0000-0001-6131-7026</userId>
+            <role>PROCESSOR</role>
+        </associatedParty>
+        <pubDate>
+                2025-08-26
+        </pubDate>
+        <language>ENGLISH</language>
+        <abstract>
+            <para>This dataset contains records of a total of 50 research projects conducted by Stichting Bargerveen (Bargerveen Foundation) with records spanning the period of 1983-2024. The complete dataset contains a total 113361 records of 1958 species from 62 orders and a total of  810591 recorded individuals. The majority of species records are invertebrates, mostly obtained by sampling using standardized sampling methods. The remaining records are observations of species, also often using standardized methods. For each record, sampling methodology has been provided. The dataset contains records from both aquatic and terrestrial environments, with an emphasis on heathlands, inland dunes, coastal dunes and acidic oak forests for terrestrial habitats and ombrotrophic bogs, shallow soft water lakes and streams for aquatic habitats. </para><para>The majority of records are from the Netherlands (108951), with additional records from Belgium (4297), and some from Germany, Denmark and Sweden (between 38 and 73 records).The majority of records are of Araneae (54760) and Coleoptera (mostly carabidae) (31770). Diptera, Hymenoptera, Lepidoptera, Odonata, Hemiptera , Isopoda and Opiliones complete the top 10 of recorded species with number of records between 4218 and 1213.</para><para>A complete reference list of projects, corresponding project leader 
+and all publication(s) resulting from the project are given in the additional description, and under &amp;#39;citations&amp;#39;. 
+Project leader and project name are included in the dataset, in the field &amp;#34;dynamicProperties&amp;#34;. Corresponding publication(s) age included under &amp;#34;associatedReferences&amp;#34;.</para>
+        </abstract>
+        <keywordSet>
+            <keyword>heathlands</keyword>
+            <keyword>pitfall trapping</keyword>
+            <keyword>eutrophication</keyword>
+            <keyword>nitrogen deposition</keyword>
+            <keyword>lime rich coastal dunes</keyword>
+            <keyword>streams</keyword>
+            <keyword>ombrotrophic bogs</keyword>
+            <keyword>recovery</keyword>
+            <keyword>acidification</keyword>
+            <keyword>coastal dunes</keyword>
+            <keyword>lime poor coastal dunes</keyword>
+            <keyword>salinization</keyword>
+            <keyword>management</keyword>
+            <keyword>ecological restoration</keyword>
+            <keyword>moorland pools</keyword>
+            <keyword>inland drift sands</keyword>
+            <keyword>soft water lakes</keyword>
+            <keyword>restoration</keyword>
+            <keywordThesaurus>GBIF Dataset Type Vocabulary: http://rs.gbif.org/vocabulary/gbif/dataset_type_2015-07-10.xml</keywordThesaurus>
+        </keywordSet>
+        <intellectualRights>
+            <para>This work is licensed under a <ulink url="http://creativecommons.org/licenses/by/4.0/legalcode"><citetitle>Creative Commons Attribution (CC-BY) 4.0 License</citetitle></ulink>.</para>
+        </intellectualRights>
+        <licensed>
+            <licenseName>Creative Commons Attribution 4.0 International</licenseName>
+            <url>https://spdx.org/licenses/CC-BY-4.0.html</url>
+            <identifier>CC-BY-4.0</identifier>
+        </licensed>
+        <distribution scope="document">
+            <online>
+                <url function="download">https://ipt.nlbif.nl/archive.do?r=hist_rec_st_bargerveen</url>
+            </online>
+        </distribution>
+        <coverage>
+            <geographicCoverage>
+                <geographicDescription>North-west Europe</geographicDescription>
+                <boundingCoordinates>
+                    <westBoundingCoordinate>4.502565</westBoundingCoordinate>
+                    <eastBoundingCoordinate>14.8</eastBoundingCoordinate>
+                    <northBoundingCoordinate>61.057024</northBoundingCoordinate>
+                    <southBoundingCoordinate>50.760982</southBoundingCoordinate>
+                </boundingCoordinates>
+            </geographicCoverage>
+            <temporalCoverage>
+                <rangeOfDates>
+                    <beginDate>
+                        <calendarDate>                1983-03-14
+</calendarDate>
+                    </beginDate>
+                    <endDate>
+                        <calendarDate>                2024-09-11
+</calendarDate>
+                    </endDate>
+                </rangeOfDates>
+            </temporalCoverage>
+            <taxonomicCoverage>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Symphypleona</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Phylum</taxonRankName>
+                    <taxonRankValue>Arthropoda</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Amphipoda</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Decapoda</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Hemiptera</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Sarcoptiformes</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Opiliones</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Gasterosteiformes</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Passeriformes</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Scolopendromorpha</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Phylum</taxonRankName>
+                    <taxonRankValue>Annelida</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Polydesmida</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Enchytraeida</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Arhynchobdellida</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Phylum</taxonRankName>
+                    <taxonRankValue>Chordata</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Megaloptera</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Julida</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Rhynchobdellida</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Ixodida</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Crassiclitellata</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Glomerida</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Neuroptera</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Dermaptera</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Salmoniformes</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Anthoathecata</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Soricomorpha</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Ephemeroptera</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Araneae</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Tricladida</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Plecoptera</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Chordeumatida</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Tubificida</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Lepidoptera</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Phylum</taxonRankName>
+                    <taxonRankValue>Mollusca</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Diptera</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Entomobryomorpha</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Trichoptera</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Mysida</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Architaenioglossa</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Geophilomorpha</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Sphaeriida</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Scorpaeniformes</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Kingdom</taxonRankName>
+                    <taxonRankValue>Animalia</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Perciformes</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Pseudoscorpiones</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Neelipleona</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Anura</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Lithobiomorpha</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Esociformes</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Lumbriculida</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Littorinimorpha</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Falconiformes</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Phylum</taxonRankName>
+                    <taxonRankValue>Nematoda</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Orthoptera</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Siluriformes</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Coleoptera</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Odonata</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Phylum</taxonRankName>
+                    <taxonRankValue>Platyhelminthes</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Cypriniformes</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Hymenoptera</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Anguilliformes</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Rodentia</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Petromyzontiformes</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Psocodea</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Trombidiformes</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Stylommatophora</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Poduromorpha</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Caudata</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Isopoda</taxonRankValue>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Phylum</taxonRankName>
+                    <taxonRankValue>Cnidaria</taxonRankValue>
+                </taxonomicClassification>
+            </taxonomicCoverage>
+        </coverage>
+        <purpose><para>This dataset is a result of an effort to obtain as many historical records from many research projects  of Stichting Bargerveen. It contains many different taxa records, habitat types, sampling methods, sampling events or timeframes, and the projects are as diverse as the number of taxa included. In the data file, every record has been accompanied by the related publication(s), also obtainable from the metadata file.</para></purpose>
+        <maintenance>
+            <description>
+                <para></para>
+            </description>
+            <maintenanceUpdateFrequency>notPlanned</maintenanceUpdateFrequency>
+        </maintenance>
+        <contact>
+            <individualName>
+                <givenName>Joost</givenName>
+                <surName>Vogels</surName>
+            </individualName>
+            <organizationName>Stichting Bargerveen</organizationName>
+            <positionName>Senior researcher</positionName>
+            <address>
+                <city>Nijmegen</city>
+                <postalCode>NL-6525 ED</postalCode>
+                <country>NETHERLANDS</country>
+            </address>
+            <electronicMailAddress>j.vogels@science.ru.nl</electronicMailAddress>
+            <onlineUrl>https://stichting-bargerveen.nl</onlineUrl>
+            <userId directory="https://orcid.org/">0000-0003-4599-4320</userId>
+        </contact>
+        <methods>
+            <methodStep>
+                <description>
+                    <para>All identifications were made using recent identification keys and literature. For collected samples of invertebrates, the majority of species were identified using a stereomicroscope.</para>
+                </description>
+            </methodStep>
+            <sampling>
+                <studyExtent>
+                    <description>
+                        <para>1983 - 2024</para>
+                    </description>
+                </studyExtent>
+                <samplingDescription>
+                    <para>Given the nature of the dataset, a wide variety of sampling methods were used, which are provided in the dataset for each record. Below an overview of methods and corresponding number of records
+
+Method					Records
+Pitfall, 4% formaldehyde, 3 traps	44126
+Pitfall, 4% formaldehyde		22858
+Pitfall, 4% formaldehyde, 1 trap	13279
+Pond net, 20x30cm, 0.5mm mesh size	7975
+Sweep net sampling			6528
+Pitfall, 4% formaldehyde, 5 traps	3275
+water sieve				1527
+Leaf sample				1242
+Point counting, 30 min			1108
+surber stream bottom sampler		1088
+transect counting			1053
+Pitfall, 4% formaldehyde, 4 traps	943
+Point counting				934
+Ant collecting tube, fruit wine		699
+Electrofishing, 1 device with backstop	670
+Electrofishing, 2 devices		629
+Vortis insect suction sampler		542
+Tullgren - small soil samples		529
+Soil column				502
+Pitfall, 4% formaldehyde, 9 traps	462
+Pan trap				420
+Hand collecting				342
+Emergence trap				260
+Electrofishing, 1 device		251
+Visual record				232
+point count, calling males		161
+Electrofishing, 2 devices with backstop	147
+Pan trap - yellow			137
+Pan trap - white			131
+Counting, unspecified			123
+Beating of understory			81</para>
+                </samplingDescription>
+            </sampling>
+        </methods>
+
+            <project >
+                <title>Historic records Stichting Bargerveen 1983-2024</title>
+                <personnel>
+                    <individualName>
+                    <givenName>Joost</givenName>
+                    <surName>Vogels</surName>
+                    </individualName>
+            <userId directory="https://orcid.org/">0000-0003-4599-4320</userId>
+                    <role>ORIGINATOR</role>
+                </personnel>
+                <personnel>
+                    <individualName>
+                    <givenName>Hein</givenName>
+                    <surName>van Kleef</surName>
+                    </individualName>
+            <userId directory="https://orcid.org/">0009-0005-6733-5600</userId>
+                    <role>CONTENT_PROVIDER</role>
+                </personnel>
+                <personnel>
+                    <individualName>
+                    <givenName>Marijn</givenName>
+                    <surName>Nijssen</surName>
+                    </individualName>
+            <userId directory="https://orcid.org/">0000-0002-9158-5619</userId>
+                    <role>CONTENT_PROVIDER</role>
+                </personnel>
+                <personnel>
+                    <individualName>
+                    <givenName>Gert-Jan</givenName>
+                    <surName>van Duinen</surName>
+                    </individualName>
+            <userId directory="http://www.researcherid.com/rid/">EDR-5224-2022</userId>
+                    <role>CONTENT_PROVIDER</role>
+                </personnel>
+                <personnel>
+                    <individualName>
+                    <givenName>Juliette</givenName>
+                    <surName>van der Schoor</surName>
+                    </individualName>
+                    <role>PROCESSOR</role>
+                </personnel>
+                <personnel>
+                    <individualName>
+                    <givenName>Joël</givenName>
+                    <surName>Groen</surName>
+                    </individualName>
+                    <role>PROCESSOR</role>
+                </personnel>
+                <personnel>
+                    <individualName>
+                    <givenName>Toos</givenName>
+                    <surName>van Noordwijk</surName>
+                    </individualName>
+            <userId directory="https://orcid.org/">0000-0002-4326-3092</userId>
+                    <role>CONTENT_PROVIDER</role>
+                </personnel>
+                <personnel>
+                    <individualName>
+                    <givenName>Bart</givenName>
+                    <surName>Wouters</surName>
+                    </individualName>
+                    <role>CONTENT_PROVIDER</role>
+                </personnel>
+                <personnel>
+                    <individualName>
+                    <givenName>Peter</givenName>
+                    <surName>Beusink</surName>
+                    </individualName>
+                    <role>CONTENT_PROVIDER</role>
+                </personnel>
+                <personnel>
+                    <individualName>
+                    <givenName>Jan</givenName>
+                    <surName>Kuper</surName>
+                    </individualName>
+                    <role>ORIGINATOR</role>
+                </personnel>
+                <abstract>
+                    <para>An overview is given below for all project names, project leaders and publications, see also &apos;citations&apos; for a list of publications.
+
+Project name | Project leader | Publication(s)
+
+Project quickscan macrofauna Vorrelveen | Hein Van Kleef | van Kleef, H., &amp; Kuper, J. (2022). Quickscan macrofauna Vorrelveen. Nijmegen: Stichting Bargerveen
+
+Project Vennen Chironomidae 1983 + 2004 | Hein Van Kleef | H. van Kleef, W.C.E.P. Verberk, F.F.P. Kimenai, G. van der Velde, R.S.E.W. Leuven. 2015. Natural recovery and restoration of acidified shallow soft-water lakes: Successes and bottlenecks revealed by assessing life-history strategies of chironomid larvae. Basic and Applied Ecology 16(4), 325-334
+
+Project herstel Greveschutven 2015-2017 | Hein Van Kleef | Van Kleef, H., A. J. M. Jansen, W. Bleuten, E. Brouwer, B. P. Van Riet, J. H. Bouwman, O. Bleyenga, J. Kuper, N. De Kort, and M. Fliervoet. 2017. Op weg naar herstel van een iconisch ven - het Greveschutven . Stichting Bargerveen, Unie van Bosgroepen, Onderzoekcentrum B-Ware, Brabants Landschap.
+
+Project OBN vooronderzoek Broekse Wielen 2007 | Hein Van Kleef | Van Kleef, H. &amp; E. Brouwer 2008. OBN-vooronderzoek naar de mogelijkheden voor natuurherstel in de Broekse Wielen. Rapport Stichting Bargerveen, Onderzoekcentrum B-ware,Nijmegen.
+
+Project Monitoring Broekse Wielen 2021 | Hein Van Kleef | Van Kleef, H. &amp; G. Jenniskens 2021. Monitoring libellen, vissen, amfibieën en medicinale bloedzuiger Broekse Wielen (Grave, Noord-Brabant)
+
+Project Macrofaunamonitoring Kingbeek 2014-2015 - Hein Van Kleef - Van Kleef, H. 2015. Tussenrapportage macrofaunamonitoring Kingbeek.
+
+Project Bestrijding en monitoring schadelijke zonnebaars in het Mastbos 2012-2022 | Hein Van Kleef | Van Kleef, H., and L. Van Veenhuisen. 2023. Bestrijding en monitoring schadelijke zonnebaars in het Mastbos. Stichting Bargerveen / Van Kleef, H., and L. Van Veenhuisen. 2023. Uitgezette snoek houdt zonnebaars in toom. De Levende Natuur 124:246-249.
+
+Project hydrologie en biotische nulmeting Laagveld | Hein Van Kleef | Brouwer, E., and H. Van Kleef. 2016. Onderzoek hydrologie en biotische nulmeting Laagveld. Eindrapportage.
+
+Project OBN vooronderzoek natuurherstel Malpievennen 2004-2006 | Hein van Kleef | Van Kleef, H., E. Brouwer, and H. Esselink. 2006. OBN-Vooronderzoek naar de mogelijkheden voor natuurherstel in de Malpievennen., Stichting Bargerveen, Onderzoekcentrum B-Ware en Radboud Universiteit Nijmegen.
+
+Project restoration management effects macroinvertebrates shallow softwater lakes | Hein Van Kleef | Van Kleef, H. H., W. C. E. P. Verberk, R. S. E. W. Leuven, H. Esselink, G. Van der Velde, and G. A. Van Duinen. 2006. Biological traits successfully predict the effects of restoration management on macroinvertebrates in shallow softwater lakes. Hydrobiologia 565:201-216.
+
+Project OBN vennen in een veranderend klimaat | Hein Van Kleef | Van Kleef, H., H. Tomassen, E. Brouwer, and A. Dees. 2014. Vennen in een veranderend klimaat. Effecten van watertemperatuur, afgenomen verzuring en waterpeilfluctuaties op bodemchemie en fauna.
+
+Project Natuurwaarden Taamven 2006-2007 | Hein Van Kleef | Brouwer, E., and H. Van Kleef. 2007. Natuurwaarden in het Taamven en mogelijkheden voor herstel.
+
+Project venherstel Turnhouts Vennengebied-West 2007 | Hein Van Kleef | Vanderhaeghe, F., E. Brouwer, H. van Kleef, S. Van Den Broeck &amp; B. Vercoutere 2008. Expertenadvies prioritair venherstel Turnhouts Vennengebied-West Bestek N4TV02/venherstel
+
+Project Salinization formerly brackish freshwater wetlands | Hein Van Kleef | van Dijk, G., L. P. Lamers, R. Loeb, P.-J. Westendorp, R. Kuiperij, H. H. van Kleef, M. Klinge, and A. J. Smolders. 2019. Salinization lowers nutrient availability in formerly brackish freshwater wetlands; unexpected results from a long-term field experiment. Biogeochemistry 143:67-83.
+
+Project OBN onderzoek Zonnebaars | Hein Van Kleef | Van Kleef, H. 2012. OBN-onderzoek Zonnebaars - Mogelijkheden voor bestrijding van een uitheemse invasieve vis / Van Kleef, H. H., and E. Jongejans. 2014. Identifying drivers of pumpkinseed invasiveness using population models. Aquatic Invasions 9:315-326.
+
+Project Zonnebaars in Noord-Brabant | Hein Van Kleef | Van Kleef, H., R. Van der Burg, J. Van Delft, W. Bosman, and N. De Kort. 2013. Zonnebaars in Noord-Brabant. Onderzoek naar maatregelen tegen negatieve effecten van zonnebaarzen in Brabantse wateren.
+
+Project Macrofauna hervernatting Engbertsdijksvenen 2006-2008 | Gert-Jan van Duinen | Van Duinen, G-J, A. Dees &amp; H. Esselink, 2008. Engbertsdijksvenen - Effecten van hervernatting hoogveenkern op ongewervelde fauna 2006-2008. Eindrapportage. Stichting Bargerveen, Nijmegen, 33 pag.
+
+Project Macrofauna Deurnese Peel/Mariapeel 2006-2007 | Gert-Jan van Duinen | Van Duinen, G-J. 2008. Evaluatie  Hoogveenherstel in Mariapeel &amp; Deurnese Peel - Watermacrofauna. Stichting Bargerveen, Nijmegen, 95 pag.
+
+Project Diverse monsters Watermacrofauna NL 1998-1999 | Gert-Jan van Duinen | van Duinen, G.-J. A., A. M. T. Brock, J. T. Kuper, R. S. E. W. Leuven, T. M. J. Peeters, J. G. M. Roelofs, G. van der Velde, W. C. E. P. Verberk &amp; H. Esselink 2003. Do restoration measures rehabilitate fauna diversity in raised bogs? A comparative study on aquatic macroinvertebrates. Wetlands Ecology and Management 11:447-459.
+
+Project OBN Stuifzanden 2006-2010 | Marijn Nijssen | Nijssen, M., M. J. P. M. Riksen, L. Sparrius, L. Kuiters, A. Kooijman, R. J. Bijlsma, P. Jungerius, A. Van den Burg, H. F. Van Dobben, R. Ketner-Oostra, C. A. M. van Swaay, C. van Turnhout &amp; R. W. de Waal 2011. Effectgerichte maatregelen voor het herstel en beheer van stuifzanden - OBN stuifzandonderzoek 2006-2010. DKI-EL&amp;I, Den Haag, 293 pag.
+
+Project OBN beheeroptimalisatie hellingschraallanden | Marijn Nijssen | Nijssen, M., R. Bobbink, M. Geertsma, R. Huiskes, J. Kuper, M. Scherpenisse, N. Smits, E. Bohnen-Verbaarschot, P. Verbeek, R. Versluijs, M. Wallis de Vries, M. Weijters, B. Wouters &amp; B. Aukema 2016. Beheeroptimalisatie Zuid-Limburgse hellingschraallanden - Effecten van gefaseerde begrazing op bodem, vegetatie en fauna. VBNE, Driebergen, 183 pag.
+
+Project OBN fase 2 Uitbreiding en herstel van Zuid-Limburgse hellingschraallanden 2009-2013 | Toos van Noordwijk | Van Noordwijk, C. G. E., M. J. Weijters, N. A. C. Smits, R. Bobbink, A. T. Kuiters, E. Verbaarschot, R. Versluijs, J. Kuper, W. Floor-Zwart, H. P. J. Huiskes, E. Remke &amp; H. Siepel 2013. Uitbreiding en herstel van Zuid-Limburgse hellingschraallanden. Eindrapportage 2e fase O+BN onderzoek., Directie Agrokennis, Ministerie van Economische Zaken, Den Haag, 167 pag.
+
+Project monitoring Verlengde Winkelberg  2018 | Marijn Nijssen | Nijssen, M. E., W. Bakker, J. Brouwer, J. T. Kuper &amp; N. A. C. Smits 2019. Ontwikkeling van fauna en vegetatie in herstelde hellingschraallanden op de Verlengde Winkelberg. Vereniging van Bos- en Natuurterreineigenaren (VBNE), Driebergen, 56 pag.
+
+OBN project - Effectgerichte maatregelen voor het herstel en beheer van faunagemeenschappen van heideterreinen 2006-2010 | Joost Vogels | Vogels, J., A. Van den Burg, E. Remke &amp; H. Siepel 2011. Effectgerichte maatregelen voor het herstel en beheer van faunagemeenschappen van heideterreinen - Evaluatie en ontwerp van bestaande en nieuwe herstelmaatregelen (2006-2010). DKI-EL&amp;I, Den Haag, 238 pag. / Vogels, J. J., W. C. E. P. Verberk, L. P. M. Lamers &amp; H. Siepel 2017. Can changes in soil biochemistry and plant stoichiometry explain loss of animal diversity of heathlands? Biological conservation 212, Part B:432-447. https://doi.org/10.1016/j.biocon.2016.08.039
+
+Project Monitoring Brand Strabrecht 2011-2012 | Joost Vogels | Vogels, J. J. &amp; J. Frazao 2013. De zomerbrand op de Strabrechtse Heide 2010-2013 - Monitoring van de korte en middellange termijn effecten op bodemchemie, vegetatie en fauna. Stichting Bargerveen, Nijmegen, 50 pag.
+
+OBN project Alternatieven voor plaggen 2011-2013 | Joost Vogels | Wallis de Vries, M. F., R. Bobbink, E. Brouwer, K. Huskens, E. Verbaarschot, R. Versluijs &amp; J. J. Vogels 2014. Drukbegrazing en chopperen als alternatieven voor plaggen van natte heide - Effecten op korte termijn en evaluatie van praktijkervaringen. Rapport OBN191-NZ, Ministerie van Economische Zaken, Den Haag, 178 pag.
+
+Onderzoeksproject Hoeverheide 2005 | Joost Vogels | Bobbink, R., S. de Goeij, J. J. Vogels &amp; P. Verbeek 2006. Wetenschappelijke onderbouwing van de beheergerichte maatregelen in het gebied Hoeverheide (Kamp van Beverlo). Onderzoekcentrum B-WARE, Natuurbalans-Limes Divergens &amp; Stichting Bargerveen, Nijmegen, 136 pag.
+
+Project Voorbereidingsplan Kustduinen en Onderzoeksprogramma levende duinen 2007-2011 | Bart Wouters | Wouters, B. &amp; E. Remke 2012. Onderzoeksprogramma Levende Duinen. Stichting Bargerveen, Nijmegen, 150 pag.
+
+Project - Effectiviteit van slow release mineralengiften op kwaliteit van bodem vegetatie en fauna | Provincie Noord-Brabant | Joost Vogels - Weijters, M., R. Bobbink, E. Bohnen-Verbaarschot, B. Van de Riet, J. Vogels, H. Bergsma &amp; H. Siepel 2018. Herstel van heide door middel van slow release mineralengift. Resultaten van 3 jaar steenmeelonderzoek., VBNE, Driebergen, 216 pag.
+
+Project Opstellen beheerplan Teut, Tenhaagdoornheide en bossen van Kelchterhoef | Joost Vogels | Jansen, A. J. M., G. de Blust, J. J. Vogels &amp; P. de Becker 2016. Landschapsecologische systeemanalyse Vlaams Natuurrterrein Teut, Tenhaagdoorn en de domeinbossen van Kelchterhoef deel 2: uitkomsten vervolgonderzoek. 105 pag.
+
+Project Branden en drukbegrazig als PAS maatregel - Provincie Noord-Brabant | Joost Vogels | Vogels, J. J., R. Loeb, E. Brouwer, R. Felix &amp; M. Scherpenisse 2017. Optimaliseren van herstelmaatregelen voor habitattypen van droge heide - De stikstofverwijderingspotentie van de gecombineerde maatregel branden en drukbegrazen. Stichting Bargerveen, Nijmegen, 81 pag.
+
+Project Monitoring P-bemesting - OBN Droog Zandlandschap | Joost Vogels | Vogels, J., M. Weijters &amp; R. Bobbink 2019. Monitoring fosfaattoevoeging heide. Effecten zeven jaar na inzet experiment., VBNE, Driebergen, 39 pag.
+
+Project Brabant Water effectiviteit Kalkslib | Joost Vogels | Vogels, J. J., E. Verbaarschot &amp; R. Bobbink 2019. Effectiviteit van kalkrijk drinkwaterslib als verzuringsbestrijdende maatregel voor herstel van heidesystemen. Stichting Bargerveen, 54 pag.
+
+Project TKI effectiviteit IJzerslib voor natuurontwikkeling P-rijke gronden | Joost Vogels | Dorland, E., Y. Fujita, W. Chardon &amp; A. L. de Jong 2017. Toepassing van drinkwaterslib op fosfaatrijke gronden t.b.v. natuurontwikkeling. KWR, Nieuwegein, 87 pag.
+
+Dieetonderzoek Grauwe Klauwier Cottessen 2000 | Peter Beusink
+
+OBN project alternatieven voor plaggen fase 2 | Joost Vogels | Wallis de Vries, M., K. Huskens, J. J. Vogels, R. Versluijs, R. Loeb, E. Brouwer &amp; R. Bobbink 2018. Alternatieven voor plaggen van natte heide - Effecten op middellange termijn. VBNE, Driebergen, 109 pag.
+
+Stageonderzoek effecten vermossing Campylopus introflexus op fauna Violo-Corynephoretum | Joost Vogels | Vogels, J. J. 2003. Effecten van vermossing door Campylopus introflexus op de bodem-entomofauna van droge duingraslanden (Violo-corynephoretum). Katholieke Universiteit Nijmegen, Nijmegen. /  Vogels, J., M. Nijssen, W. C. E. P. Verberk &amp; H. Esselink 2005. Effects of moss-encroachment by Campylopus introflexus on soil-entomofauna of dry-dune grasslands (Violo-corynephoretum). Pag 71-80 in proceedings of the Netherlands Entomological Society Meeting, Groningen.
+
+1250 soortendag Bargerveen 18/19 mei 2018
+
+Project BACI Vlieland langlopend begrazingsonderzoek 2018 | Marijn Nijssen | Nijssen, M., Kuiters, L., Smits, N., Kramer, H., Kuper, J., Brouwer, J. and Vogels, J., 2020. Langetermijneffecten van extensieve duinbegrazing in kalkarme kustduinen.
+
+Project - Effectiviteit van slow release mineralengiften op kwaliteit van bodem vegetatie en fauna - Provincie Noord-Brabant - Fase 2 | Joost Vogels  Verbaarschot, E., M. Weijters, B. van de Riet, E. Brouwer, H. Bergsma, J. Vogels &amp; R. Bobbink 2020. Effecten van steenmeeltoediening na 5 jaar op de Strabrechtse heide. RP-17.110.20.17, Onderzoekcentrum B-WARE B.V., Nijmegen, 117 pag.
+
+Project Life Nardus Limosa | Joost Vogels | Vogels, J. 2022. Voedselbeschikbaarheid weidevogels in relatie tot herstel heischrale graslanden - 2e voortgangsrapport LIFE18 NAT/BE/000576 – LIFE NARDUS LIMOSA. Stichting Bargerveen, Nijmegen, 63 pag.
+
+Project Herstel Heischrale graslanden Gelderland | Joost Vogels | Loeb, R., J. Vogels, M. Scherpenisse, E. Verbaarschot, M. Weijters, E. Verbruggen, W.-J. Emsens, S. Findeisen, P. Verbeek, D. Tak &amp; R. Bobbink 2025. Herstelmaatregelen heischrale graslanden provincie Gelderland. Onderzoekcentrum B-WARE, Nijmegen, 213 pag.
+
+Project OBN veranderingen voedselkwaliteit - Be00744 | Joost Vogels | Project Steenmeel Oude eikenbossen (BE00567) - 2021-2025 | Joost Vogels | Sitters, J., M. Weijters, D. van Pul, R. Bobbink, J. Bruggink, M.-C. Petersdorf, H. Siepel, J. Vogels, K. Geurts, J. van der Schoor, P. C. Jansen, E. Verbruggen, W. J. Emsens, S. de Goeij &amp; M. Scherpenisse (in prep). Steenmeeltrials voor herstel van Oude eikenbossen op arme zandgronden (H9190).  Onderzoekcentrum B-WARE iov Provincie Gelderland
+
+Project SUPERB (BE00717) - 2023 | Joost Vogels
+
+Project - BE00653 - Effectiviteit van slow release mineralengiften op kwaliteit van bodem vegetatie en fauna - Provincie Noord-Brabant - Fase 3 | Joost Vogels | Verbaarschot, E., D. Tak, J. Vogels, B. van de Riet, E. Verbruggen, W.-J. Emsens, S. Findeisen, M. Weijters &amp; R. Bobbink 2025. Effectiviteit van steenmeel als herstelmaatregel van droge heide (H4030) in het Natura 2000-gebied Strabrechtse heide. 152 pag.
+
+OBN Onderzoeksproject Akkers in Heidelandschap 2010-2012 | Joost Vogels | Vogels, J. J., H. A. H. Jansman, R. Bobbink, M. Weijters, E. Verbaarschot, P. G. A. Ten Den, R. Versluijs &amp; S. Waasdorp 2013. Herstellen van akkers als onderdeel van een intact heidelandschap  -  de koppeling tussen arme heidegebieden en rijkere gronden. Directie Agrokennis, Ministerie van Economische Zaken, Den Haag, 175 pag.
+
+Project Begrazing Kraansvlak 2004-2005 | Joost Vogels | Vogels, J. J., M. Nijssen &amp; H. Esselink 2007. Begrazing in het Kraansvlak - Effecten op de entomofauna. Nulmeting 2004-2005. Stichting Bargerveen, Nijmegen, 62 pag.
+
+Project OBN Ontwikkeling droge heischrale graslanden op voormalige landbouwgronden | Joost Vogels | Loeb, R., A. van der Bij, R. Bobbink, J. Frouz, J. Vogels, P. Benetková &amp; R. van Diggelen 2017. Ontwikkeling van droge heischrale graslanden op voormalige landbouwgronden: eindrapportage fase 2. VBNE, Vereniging van Bos- en Natuurterreineigenaren, Driebergen, 159 pag.
+
+Project effecten van brand op vegetatie en fauna in de Nederlandse duinen 2004-2006 | Joost Vogels | Vogels, J. J., M. Nijssen, P. Boer, A. M. Kooijman &amp; H. Esselink 2006. Effecten van brand op vegetatie en fauna in de Nederlandse duinen - Een evaluatie van directe en kortetermijneffecten van experimentele branden op Ameland en Terschelling, het Noord-Hollands duinreservaat en de Amsterdamse Waterleidingduinen. Stichting Bargerveen, Nijmegen, 66 pag.</para>
+                </abstract>
+                <funding>
+                    <para>Funding through NLBIF call 2023</para>
+                </funding>
+            </project>
+    </dataset>
+
+    <additionalMetadata>
+        <metadata>
+            <gbif>
+                <dateStamp>2026-05-06T06:39:46Z</dateStamp>
+                <citation>Vogels J, van Kleef H, Nijssen M, van Duinen G, van Noordwijk T, Wouters B, Beusink P, Kuper J (2025). Historic records Stichting Bargerveen 1983-2024. Version 1.1. Stichting Bargerveen. Occurrence dataset https://doi.org/10.15468/pywtkc accessed via GBIF.org on 2026-05-06.</citation>
+                <bibliography>
+                <citation>van Kleef, H., &amp; Kuper, J. (2022). Quickscan macrofauna Vorrelveen. Nijmegen: Stichting Bargerveen</citation>
+                <citation identifier="https://doi.org/10.1016/j.baae.2015.02.007">H. van Kleef, W.C.E.P. Verberk, F.F.P. Kimenai, G. van der Velde, R.S.E.W. Leuven. 2015. Natural recovery and restoration of acidified shallow soft-water lakes: Successes and bottlenecks revealed by assessing life-history strategies of chironomid larvae. Basic and Applied Ecology 16(4), 325-334</citation>
+                <citation>Van Kleef, H., A. J. M. Jansen, W. Bleuten, E. Brouwer, B. P. Van Riet, J. H. Bouwman, O. Bleyenga, J. Kuper, N. De Kort, and M. Fliervoet. 2017. Op weg naar herstel van een iconisch ven - het Greveschutven . Stichting Bargerveen, Unie van Bosgroepen, Onderzoekcentrum B-Ware, Brabants Landschap.</citation>
+                <citation>Van Kleef, H. &amp; E. Brouwer 2008. OBN-vooronderzoek naar de mogelijkheden voor natuurherstel in de Broekse Wielen. Rapport Stichting Bargerveen, Onderzoekcentrum B-ware,Nijmegen.</citation>
+                <citation>Van Kleef, H. &amp; G. Jenniskens 2021. Monitoring libellen, vissen, amfibieën en medicinale bloedzuiger Broekse Wielen (Grave, Noord-Brabant)</citation>
+                <citation>Van Kleef, H. 2015. Tussenrapportage macrofaunamonitoring Kingbeek.</citation>
+                <citation>Van Kleef, H., and L. Van Veenhuisen. 2023. Bestrijding en monitoring schadelijke zonnebaars in het Mastbos. Stichting Bargerveen</citation>
+                <citation>Brouwer, E., and H. Van Kleef. 2016. Onderzoek hydrologie en biotische nulmeting Laagveld. Eindrapportage.</citation>
+                <citation>Van Kleef, H., E. Brouwer, and H. Esselink. 2006. OBN-Vooronderzoek naar de mogelijkheden voor natuurherstel in de Malpievennen., Stichting Bargerveen, Onderzoekcentrum B-Ware en Radboud Universiteit Nijmegen.</citation>
+                <citation identifier="https://doi.org/10.1007/s10750-005-1914-6">Van Kleef, H. H., W. C. E. P. Verberk, R. S. E. W. Leuven, H. Esselink, G. Van der Velde, and G. A. Van Duinen. 2006. Biological traits successfully predict the effects of restoration management on macroinvertebrates in shallow softwater lakes. Hydrobiologia 565:201-216.</citation>
+                <citation>Van Kleef, H., H. Tomassen, E. Brouwer, and A. Dees. 2014. Vennen in een veranderend klimaat. Effecten van watertemperatuur, afgenomen verzuring en waterpeilfluctuaties op bodemchemie en fauna.</citation>
+                <citation>Brouwer, E., and H. Van Kleef. 2007. Natuurwaarden in het Taamven en mogelijkheden voor herstel.</citation>
+                <citation>Vanderhaeghe, F., E. Brouwer, H. van Kleef, S. Van Den Broeck &amp; B. Vercoutere 2008. Expertenadvies prioritair venherstel Turnhouts Vennengebied-West Bestek N4TV02/venherstel</citation>
+                <citation identifier="https://doi.org/10.1007/s10533-019-00549-6">van Dijk, G., L. P. Lamers, R. Loeb, P.-J. Westendorp, R. Kuiperij, H. H. van Kleef, M. Klinge, and A. J. Smolders. 2019. Salinization lowers nutrient availability in formerly brackish freshwater wetlands; unexpected results from a long-term field experiment. Biogeochemistry 143:67-83.</citation>
+                <citation>Van Kleef, H., and L. Van Veenhuisen. 2023. Uitgezette snoek houdt zonnebaars in toom. De Levende Natuur 124:246-249.</citation>
+                <citation>Van Kleef, H. 2012. OBN-onderzoek Zonnebaars - Mogelijkheden voor bestrijding van een uitheemse invasieve vis</citation>
+                <citation identifier="http://dx.doi.org/10.3391/ai.2014.9.3.07">Van Kleef, H. H., and E. Jongejans. 2014. Identifying drivers of pumpkinseed invasiveness using population models. Aquatic Invasions 9:315-326.</citation>
+                <citation>Van Kleef, H., R. Van der Burg, J. Van Delft, W. Bosman, and N. De Kort. 2013. Zonnebaars in Noord-Brabant. Onderzoek naar maatregelen tegen negatieve effecten van zonnebaarzen in Brabantse wateren.</citation>
+                <citation>Van Duinen, G-J, A. Dees &amp; H. Esselink, 2008. Engbertsdijksvenen - Effecten van hervernatting hoogveenkern op ongewervelde fauna 2006-2008. Eindrapportage. Stichting Bargerveen, Nijmegen, 33 pag.</citation>
+                <citation>Van Duinen, G-J. 2008. Evaluatie  Hoogveenherstel in Mariapeel &amp; Deurnese Peel - Watermacrofauna. Stichting Bargerveen, Nijmegen, 95 pag.</citation>
+                <citation identifier="https://doi.org/10.1023/B:WETL.0000007196.75248.a5">van Duinen, G.-J. A., A. M. T. Brock, J. T. Kuper, R. S. E. W. Leuven, T. M. J. Peeters, J. G. M. Roelofs, G. van der Velde, W. C. E. P. Verberk &amp; H. Esselink 2003. Do restoration measures rehabilitate fauna diversity in raised bogs? A comparative study on aquatic macroinvertebrates. Wetlands Ecology and Management 11:447-459.</citation>
+                <citation>Nijssen, M., M. J. P. M. Riksen, L. Sparrius, L. Kuiters, A. Kooijman, R. J. Bijlsma, P. Jungerius, A. Van den Burg, H. F. Van Dobben, R. Ketner-Oostra, C. A. M. van Swaay, C. van Turnhout &amp; R. W. de Waal 2011. Effectgerichte maatregelen voor het herstel en beheer van stuifzanden - OBN stuifzandonderzoek 2006-2010. DKI-EL&amp;I, Den Haag, 293 pag.</citation>
+                <citation>Nijssen, M., R. Bobbink, M. Geertsma, R. Huiskes, J. Kuper, M. Scherpenisse, N. Smits, E. Bohnen-Verbaarschot, P. Verbeek, R. Versluijs, M. Wallis de Vries, M. Weijters, B. Wouters &amp; B. Aukema 2016. Beheeroptimalisatie Zuid-Limburgse hellingschraallanden - Effecten van gefaseerde begrazing op bodem, vegetatie en fauna. VBNE, Driebergen, 183 pag.</citation>
+                <citation>Van Noordwijk, C. G. E., M. J. Weijters, N. A. C. Smits, R. Bobbink, A. T. Kuiters, E. Verbaarschot, R. Versluijs, J. Kuper, W. Floor-Zwart, H. P. J. Huiskes, E. Remke &amp; H. Siepel 2013. Uitbreiding en herstel van Zuid-Limburgse hellingschraallanden. Eindrapportage 2e fase O+BN onderzoek., Directie Agrokennis, Ministerie van Economische Zaken, Den Haag, 167 pag.</citation>
+                <citation>Nijssen, M. E., W. Bakker, J. Brouwer, J. T. Kuper &amp; N. A. C. Smits 2019. Ontwikkeling van fauna en vegetatie in herstelde hellingschraallanden op de Verlengde Winkelberg. Vereniging van Bos- en Natuurterreineigenaren (VBNE), Driebergen, 56 pag.</citation>
+                <citation>Vogels, J., A. Van den Burg, E. Remke &amp; H. Siepel 2011. Effectgerichte maatregelen voor het herstel en beheer van faunagemeenschappen van heideterreinen - Evaluatie en ontwerp van bestaande en nieuwe herstelmaatregelen (2006-2010). DKI-EL&amp;I, Den Haag, 238 pag.</citation>
+                <citation identifier="https://doi.org/10.1016/j.biocon.2016.08.039">Vogels, J. J., W. C. E. P. Verberk, L. P. M. Lamers &amp; H. Siepel 2017. Can changes in soil biochemistry and plant stoichiometry explain loss of animal diversity of heathlands? Biological conservation 212, Part B:432-447.</citation>
+                <citation>Vogels, J. J. &amp; J. Frazao 2013. De zomerbrand op de Strabrechtse Heide 2010-2013 - Monitoring van de korte en middellange termijn effecten op bodemchemie, vegetatie en fauna. Stichting Bargerveen, Nijmegen, 50 pag.</citation>
+                <citation>Wallis de Vries, M. F., R. Bobbink, E. Brouwer, K. Huskens, E. Verbaarschot, R. Versluijs &amp; J. J. Vogels 2014. Drukbegrazing en chopperen als alternatieven voor plaggen van natte heide - Effecten op korte termijn en evaluatie van praktijkervaringen. Rapport OBN191-NZ, Ministerie van Economische Zaken, Den Haag, 178 pag.</citation>
+                <citation>Bobbink, R., S. de Goeij, J. J. Vogels &amp; P. Verbeek 2006. Wetenschappelijke onderbouwing van de beheergerichte maatregelen in het gebied Hoeverheide (Kamp van Beverlo). Onderzoekcentrum B-WARE, Natuurbalans-Limes Divergens &amp; Stichting Bargerveen, Nijmegen, 136 pag.</citation>
+                <citation>Wouters, B. &amp; E. Remke 2012. Onderzoeksprogramma Levende Duinen. Stichting Bargerveen, Nijmegen, 150 pag.</citation>
+                <citation>Weijters, M., R. Bobbink, E. Bohnen-Verbaarschot, B. Van de Riet, J. Vogels, H. Bergsma &amp; H. Siepel 2018. Herstel van heide door middel van slow release mineralengift. Resultaten van 3 jaar steenmeelonderzoek., VBNE, Driebergen, 216 pag.</citation>
+                <citation>Jansen, A. J. M., G. de Blust, J. J. Vogels &amp; P. de Becker 2016. Landschapsecologische systeemanalyse Vlaams Natuurrterrein Teut, Tenhaagdoorn en de domeinbossen van Kelchterhoef deel 2: uitkomsten vervolgonderzoek. 105 pag.</citation>
+                <citation>Vogels, J. J., R. Loeb, E. Brouwer, R. Felix &amp; M. Scherpenisse 2017. Optimaliseren van herstelmaatregelen voor habitattypen van droge heide - De stikstofverwijderingspotentie van de gecombineerde maatregel branden en drukbegrazen. Stichting Bargerveen, Nijmegen, 81 pag.</citation>
+                <citation>Vogels, J., M. Weijters &amp; R. Bobbink 2019. Monitoring fosfaattoevoeging heide. Effecten zeven jaar na inzet experiment., VBNE, Driebergen, 39 pag.</citation>
+                <citation>Vogels, J. J., E. Verbaarschot &amp; R. Bobbink 2019. Effectiviteit van kalkrijk drinkwaterslib als verzuringsbestrijdende maatregel voor herstel van heidesystemen. Stichting Bargerveen, 54 pag.</citation>
+                <citation>Dorland, E., Y. Fujita, W. Chardon &amp; A. L. de Jong 2017. Toepassing van drinkwaterslib op fosfaatrijke gronden t.b.v. natuurontwikkeling. KWR, Nieuwegein, 87 pag.</citation>
+                <citation>Wallis de Vries, M., K. Huskens, J. J. Vogels, R. Versluijs, R. Loeb, E. Brouwer &amp; R. Bobbink 2018. Alternatieven voor plaggen van natte heide - Effecten op middellange termijn. VBNE, Driebergen, 109 pag.</citation>
+                <citation>Vogels, J. J. 2003. Effecten van vermossing door Campylopus introflexus op de bodem-entomofauna van droge duingraslanden (Violo-corynephoretum). Katholieke Universiteit Nijmegen, Nijmegen.</citation>
+                <citation>Vogels, J., M. Nijssen, W. C. E. P. Verberk &amp; H. Esselink 2005. Effects of moss-encroachment by Campylopus introflexus on soil-entomofauna of dry-dune grasslands (Violo-corynephoretum). Pag 71-80 in proceedings of the Netherlands Entomological Society Meeting, Groningen.</citation>
+                <citation>Nijssen, M., Kuiters, L., Smits, N., Kramer, H., Kuper, J., Brouwer, J. and Vogels, J., 2020. Langetermijneffecten van extensieve duinbegrazing in kalkarme kustduinen.</citation>
+                <citation>Verbaarschot, E., M. Weijters, B. van de Riet, E. Brouwer, H. Bergsma, J. Vogels &amp; R. Bobbink 2020. Effecten van steenmeeltoediening na 5 jaar op de Strabrechtse heide. RP-17.110.20.17, Onderzoekcentrum B-WARE B.V., Nijmegen, 117 pag.</citation>
+                <citation>Vogels, J. 2022. Voedselbeschikbaarheid weidevogels in relatie tot herstel heischrale graslanden - 2e voortgangsrapport LIFE18 NAT/BE/000576 – LIFE NARDUS LIMOSA. Stichting Bargerveen, Nijmegen, 63 pag.</citation>
+                <citation>Loeb, R., J. Vogels, M. Scherpenisse, E. Verbaarschot, M. Weijters, E. Verbruggen, W.-J. Emsens, S. Findeisen, P. Verbeek, D. Tak &amp; R. Bobbink 2025. Herstelmaatregelen heischrale graslanden provincie Gelderland. Onderzoekcentrum B-WARE, Nijmegen, 213 pag.</citation>
+                <citation>Sitters, J., M. Weijters, D. van Pul, R. Bobbink, J. Bruggink, M.-C. Petersdorf, H. Siepel, J. Vogels, K. Geurts, J. van der Schoor, P. C. Jansen, E. Verbruggen, W. J. Emsens, S. de Goeij &amp; M. Scherpenisse (in prep). Steenmeeltrials voor herstel van Oude eikenbossen op arme zandgronden (H9190).  Onderzoekcentrum B-WARE iov Provincie Gelderland</citation>
+                <citation>Verbaarschot, E., D. Tak, J. Vogels, B. van de Riet, E. Verbruggen, W.-J. Emsens, S. Findeisen, M. Weijters &amp; R. Bobbink 2025. Effectiviteit van steenmeel als herstelmaatregel van droge heide (H4030) in het Natura 2000-gebied Strabrechtse heide. 152 pag.</citation>
+                <citation>Vogels, J. J., H. A. H. Jansman, R. Bobbink, M. Weijters, E. Verbaarschot, P. G. A. Ten Den, R. Versluijs &amp; S. Waasdorp 2013. Herstellen van akkers als onderdeel van een intact heidelandschap  -  de koppeling tussen arme heidegebieden en rijkere gronden. Directie Agrokennis, Ministerie van Economische Zaken, Den Haag, 175 pag.</citation>
+                <citation>Vogels, J. J., M. Nijssen &amp; H. Esselink 2007. Begrazing in het Kraansvlak - Effecten op de entomofauna. Nulmeting 2004-2005. Stichting Bargerveen, Nijmegen, 62 pag.</citation>
+                <citation>Loeb, R., A. van der Bij, R. Bobbink, J. Frouz, J. Vogels, P. Benetková &amp; R. van Diggelen 2017. Ontwikkeling van droge heischrale graslanden op voormalige landbouwgronden: eindrapportage fase 2. VBNE, Vereniging van Bos- en Natuurterreineigenaren, Driebergen, 159 pag.</citation>
+                <citation>Vogels, J. J., M. Nijssen, P. Boer, A. M. Kooijman &amp; H. Esselink 2006. Effecten van brand op vegetatie en fauna in de Nederlandse duinen - Een evaluatie van directe en kortetermijneffecten van experimentele branden op Ameland en Terschelling, het Noord-Hollands duinreservaat en de Amsterdamse Waterleidingduinen. Stichting Bargerveen, Nijmegen, 66 pag.</citation>
+                </bibliography>
+                <resourceLogoUrl>http://ipt.nlbif.nl/resources/Logo_St_Bargerveen.png</resourceLogoUrl>
+            </gbif>
+        </metadata>
+    </additionalMetadata>
+    </eml:eml>

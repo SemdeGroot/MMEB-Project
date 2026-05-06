@@ -1,0 +1,12 @@
+When using this dataset please use the following citation and pay attention to the rights documented in rights.txt:
+Slieker F J A, van der Es H, Andeweg R, Langeveld B W, Schnörr S (2025). Natural History Museum Rotterdam - Specimens. Version 1.46. Natural History Museum Rotterdam. Occurrence dataset https://doi.org/10.15468/kwqaay accessed via GBIF.org on 2026-05-06.
+The International Barcode of Life Consortium (2026). International Barcode of Life project (iBOL). Occurrence dataset https://doi.org/10.15468/inygc6 accessed via GBIF.org on 2026-05-06.
+Harvard University M, Morris P J (2026). Museum of Comparative Zoology, Harvard University. Version 162.510. Museum of Comparative Zoology, Harvard University. Occurrence dataset https://doi.org/10.15468/p5rupv accessed via GBIF.org on 2026-05-06.
+Dombroskie J, Whisenant J (2026). Cornell University Insect Collection (CUIC). Version 1.6. Cornell University Insect Collection (CUIC). Occurrence dataset https://doi.org/10.15468/w9b6ap accessed via GBIF.org on 2026-05-06.
+University of Turku - Biodiversity Unit (2026). ZMAA Insect collections of Åbo Akademi. Occurrence dataset https://doi.org/10.15468/m6dets accessed via GBIF.org on 2026-05-06.
+Hemerik L, Creuwels J (2025). Macro-arthropods survey Drentsche Aa 1996. Version 1.19. Biometris Wageningen Plant Science group. Sampling event dataset https://doi.org/10.15468/7n499e accessed via GBIF.org on 2026-05-06.
+Entomologische Sammlung der ETH Zürich (2026). Entomologische Sammlung (ETHZ-ENT) of Eidgenössische Technische Hochschule Zürich. SwissNatColl. Occurrence dataset https://doi.org/10.15468/9jutqw accessed via GBIF.org on 2026-05-06.
+Vogels J, van Kleef H, Nijssen M, van Duinen G, van Noordwijk T, Wouters B, Beusink P, Kuper J (2025). Historic records Stichting Bargerveen 1983-2024. Version 1.1. Stichting Bargerveen. Occurrence dataset https://doi.org/10.15468/pywtkc accessed via GBIF.org on 2026-05-06.
+Finnish Museum of Natural History - Zoology Unit (2026). Lepidoptera World (Luomus) (LEPW). Occurrence dataset https://doi.org/10.15468/mcarqb accessed via GBIF.org on 2026-05-06.
+iNaturalist contributors, iNaturalist (2026). iNaturalist Research-grade Observations. iNaturalist.org. Occurrence dataset https://doi.org/10.15468/ab3s5x accessed via GBIF.org on 2026-05-06.
+izeltlabuak.hu observers, izeltlabuak.hu (2026). izeltlabuak.hu observations validated to species level. izeltlabuak.hu. Occurrence dataset https://doi.org/10.15468/rsmdu9 accessed via GBIF.org on 2026-05-06.

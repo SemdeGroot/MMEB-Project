@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+<eml:eml xmlns:eml="https://eml.ecoinformatics.org/eml-2.2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://eml.ecoinformatics.org/eml-2.2.0 https://rs.gbif.org/schema/eml-gbif-profile/1.3/eml.xsd"
+packageId="a90782f8-e60e-46d8-82a4-e749b5cf69c3"  system="http://gbif.org" scope="system"
+xml:lang="en">
+    <dataset>
+        <alternateIdentifier>10.15468/7n499e</alternateIdentifier>
+        <alternateIdentifier>a90782f8-e60e-46d8-82a4-e749b5cf69c3</alternateIdentifier>
+        <alternateIdentifier>https://ipt.nlbif.nl/resource?r=drentse_a</alternateIdentifier>
+        <title>Macro-arthropods survey Drentsche Aa 1996</title>
+        <creator>
+            <individualName>
+                <givenName>Lia</givenName>
+                <surName>Hemerik</surName>
+            </individualName>
+            <organizationName>Biometris, Plant Sciences Group, Wageningen University</organizationName>
+            <positionName>Associate Professor</positionName>
+            <address>
+                <deliveryPoint>PO Box 16</deliveryPoint>
+                <city>Wageningen</city>
+                <postalCode>6700AA</postalCode>
+                <country>NETHERLANDS</country>
+            </address>
+            <electronicMailAddress>lia.hemerik@wur.nl</electronicMailAddress>
+            <onlineUrl>https://www.wur.nl/en/Research-Results/Research-Institutes/plant-research/biometris.htm</onlineUrl>
+            <userId directory="https://orcid.org/">0000-0002-6892-2840</userId>
+        </creator>
+        <creator>
+            <individualName>
+                <givenName>Jeroen</givenName>
+                <surName>Creuwels</surName>
+            </individualName>
+            <organizationName>NLBIF</organizationName>
+            <positionName>Data manager</positionName>
+            <address>
+                <deliveryPoint>PO Box 9517</deliveryPoint>
+                <city>Leiden</city>
+                <administrativeArea>Zuid-Holland</administrativeArea>
+                <postalCode>NL-2300 RA</postalCode>
+                <country>NETHERLANDS</country>
+            </address>
+            <phone>+31717519362</phone>
+            <electronicMailAddress>nlbif@naturalis.nl</electronicMailAddress>
+            <onlineUrl>https://www.nlbif.nl</onlineUrl>
+            <userId directory="https://orcid.org/">0000-0001-6131-7026</userId>
+        </creator>
+        <metadataProvider>
+            <individualName>
+                <givenName>Lia</givenName>
+                <surName>Hemerik</surName>
+            </individualName>
+            <organizationName>Biometris, Plant Sciences Group, Wageningen University</organizationName>
+            <positionName>Associate Professor</positionName>
+            <address>
+                <deliveryPoint>PO Box 16</deliveryPoint>
+                <city>Wageningen</city>
+                <postalCode>6700AA</postalCode>
+                <country>NETHERLANDS</country>
+            </address>
+            <electronicMailAddress>lia.hemerik@wur.nl</electronicMailAddress>
+            <onlineUrl>https://www.wur.nl/en/Research-Results/Research-Institutes/plant-research/biometris.htm</onlineUrl>
+            <userId directory="https://orcid.org/">0000-0002-6892-2840</userId>
+        </metadataProvider>
+        <pubDate>
+                2025-05-01
+        </pubDate>
+        <language>ENGLISH</language>
+        <abstract>
+            <para>In 1996, a nine-month research program was carried out at Wageningen University in the soil biology department in collaboration with the Wijster Biological Station. The aim was to gain insight into which underground herbivores were present in the grasslands. The monitoring took place on four grasslands that had been taken out of agricultural production, which were no longer fertilized and were mowed annually to preserve the fields. These four lawns have not been fertilized since 1989, 1985, 1972 and 1967 respectively. On each of the fields, a section of 30m x 45m was chosen for the sampling. Pyramid falls were placed a ndmoved every two weeks, each within a section of 10m x 15m so as not to deprive the grass of light for a long time. The soil from places where the pitfalls were dug every fortnight was taken to the laboratory to sort these samples by hand for all kinds of larger arthropods and/or earthworms. Light traps and pot traps, all containing a 2% formalin solution, were emptied weekly. The captured ground beetles were identified to species by employees of the Wijster Biological Station and the other animals were first sorted into order or family. The spiders, harvestmen, beetle larvae, millipedes and centipedes were then identified to species by various specialists.</para>
+        </abstract>
+        <keywordSet>
+            <keyword>Historical data</keyword>
+            <keyword>Drentse A</keyword>
+            <keyword>lightfall</keyword>
+            <keyword>soil samples</keyword>
+            <keyword>pitfall</keyword>
+            <keywordThesaurus>GBIF Dataset Type Vocabulary: http://rs.gbif.org/vocabulary/gbif/dataset_type_2015-07-10.xml</keywordThesaurus>
+        </keywordSet>
+        <intellectualRights>
+            <para>This work is licensed under a <ulink url="http://creativecommons.org/licenses/by-nc/4.0/legalcode"><citetitle>Creative Commons Attribution Non Commercial (CC-BY-NC) 4.0 License</citetitle></ulink>.</para>
+        </intellectualRights>
+        <licensed>
+            <licenseName>Creative Commons Attribution Non Commercial 4.0 International</licenseName>
+            <url>https://spdx.org/licenses/CC-BY-NC-4.0.html</url>
+            <identifier>CC-BY-NC-4.0</identifier>
+        </licensed>
+        <distribution scope="document">
+            <online>
+                <url function="download">https://ipt.nlbif.nl/archive.do?r=drentse_a</url>
+            </online>
+        </distribution>
+        <coverage>
+            <geographicCoverage>
+                <geographicDescription>Streamdal valley of the Drentsche Aa, Anloo, The Netherlands</geographicDescription>
+                <boundingCoordinates>
+                    <westBoundingCoordinate>6.674</westBoundingCoordinate>
+                    <eastBoundingCoordinate>6.695</eastBoundingCoordinate>
+                    <northBoundingCoordinate>53.047</northBoundingCoordinate>
+                    <southBoundingCoordinate>53.04</southBoundingCoordinate>
+                </boundingCoordinates>
+            </geographicCoverage>
+            <temporalCoverage>
+                <rangeOfDates>
+                    <beginDate>
+                        <calendarDate>                1996-03-11
+</calendarDate>
+                    </beginDate>
+                    <endDate>
+                        <calendarDate>                1996-12-23
+</calendarDate>
+                    </endDate>
+                </rangeOfDates>
+            </temporalCoverage>
+            <taxonomicCoverage>
+                <generalTaxonomicCoverage>Beetles, flies, midges, spiders, harvestmen, centipedes, millipedes, isopods, cicadas, moths, earwigs, earthworms</generalTaxonomicCoverage>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Annelida; Lumbricidae</taxonRankValue>
+                    <commonName>earthworms</commonName>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Arachnidae; Liniphiidae</taxonRankValue>
+                    <commonName>spiders</commonName>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Subfamily</taxonRankName>
+                    <taxonRankValue>Arachnidae; Erigoninae</taxonRankValue>
+                    <commonName>spiders</commonName>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Species</taxonRankName>
+                    <taxonRankValue>Arachnidae</taxonRankValue>
+                    <commonName>spiders</commonName>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Species</taxonRankName>
+                    <taxonRankValue>Opilionidae</taxonRankValue>
+                    <commonName>harvestmen</commonName>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Species</taxonRankName>
+                    <taxonRankValue>Chilopoda</taxonRankValue>
+                    <commonName>centipedes</commonName>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Species</taxonRankName>
+                    <taxonRankValue>Diplopoda</taxonRankValue>
+                    <commonName>millipedes</commonName>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Auchenorrhyncha</taxonRankValue>
+                    <commonName>cicadas</commonName>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Coleoptera</taxonRankValue>
+                    <commonName>beetles</commonName>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Subfamily</taxonRankName>
+                    <taxonRankValue>Coleoptera</taxonRankValue>
+                    <commonName>beetles</commonName>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Species</taxonRankName>
+                    <taxonRankValue>Cantharidae</taxonRankValue>
+                    <commonName>soldier beetles</commonName>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Genus</taxonRankName>
+                    <taxonRankValue>Carabidae</taxonRankValue>
+                    <commonName>carabid beetles</commonName>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Species</taxonRankName>
+                    <taxonRankValue>Carabidae</taxonRankValue>
+                    <commonName>carabid beetles</commonName>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Genus</taxonRankName>
+                    <taxonRankValue>Curculionidae</taxonRankValue>
+                    <commonName>weevils</commonName>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Species</taxonRankName>
+                    <taxonRankValue>Curculionidae</taxonRankValue>
+                    <commonName>weevils</commonName>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Elateridae</taxonRankValue>
+                    <commonName>click beetles</commonName>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Genus</taxonRankName>
+                    <taxonRankValue>Elateridae</taxonRankValue>
+                    <commonName>click beetles</commonName>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Species</taxonRankName>
+                    <taxonRankValue>Elateridae</taxonRankValue>
+                    <commonName>click beetles</commonName>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Species</taxonRankName>
+                    <taxonRankValue>Silphidae</taxonRankValue>
+                    <commonName>carrion beetles</commonName>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Staphylinidae</taxonRankValue>
+                    <commonName>rove beetles</commonName>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Genus</taxonRankName>
+                    <taxonRankValue>Staphylinidae</taxonRankValue>
+                    <commonName>rove beetles</commonName>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Species</taxonRankName>
+                    <taxonRankValue>Staphylinidae</taxonRankValue>
+                    <commonName>rove beetles</commonName>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Dermaptera</taxonRankValue>
+                    <commonName>earwigs</commonName>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Suborder</taxonRankName>
+                    <taxonRankValue>Diptera</taxonRankValue>
+                    <commonName>flies and midges</commonName>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Family</taxonRankName>
+                    <taxonRankValue>Diptera</taxonRankValue>
+                    <commonName>flies and midges</commonName>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Suborder</taxonRankName>
+                    <taxonRankValue>Heteroptera</taxonRankValue>
+                    <commonName>true bugs</commonName>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Suborder</taxonRankName>
+                    <taxonRankValue>Hymenoptera</taxonRankValue>
+                    <commonName>wasps</commonName>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Suborder</taxonRankName>
+                    <taxonRankValue>Symphyta</taxonRankValue>
+                    <commonName>sawflies</commonName>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Order</taxonRankName>
+                    <taxonRankValue>Lepidoptera</taxonRankValue>
+                    <commonName>butterflies and moths</commonName>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Suborder</taxonRankName>
+                    <taxonRankValue>Lepidoptera</taxonRankValue>
+                    <commonName>butterflies and moths</commonName>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Suborder</taxonRankName>
+                    <taxonRankValue>Caelifera</taxonRankValue>
+                    <commonName>grasshoppers and grasshopper-like insects</commonName>
+                </taxonomicClassification>
+                <taxonomicClassification>
+                    <taxonRankName>Species</taxonRankName>
+                    <taxonRankValue>Isopoda</taxonRankValue>
+                    <commonName>isopods</commonName>
+                </taxonomicClassification>
+            </taxonomicCoverage>
+        </coverage>
+        <purpose><para>monitoring</para></purpose>
+        <maintenance>
+            <description>
+                <para>not planned</para>
+            </description>
+            <maintenanceUpdateFrequency>daily</maintenanceUpdateFrequency>
+        </maintenance>
+        <contact>
+            <individualName>
+                <givenName>Niels</givenName>
+                <surName>Raes</surName>
+            </individualName>
+            <organizationName>NLBIF</organizationName>
+            <positionName>Node manager</positionName>
+            <address>
+                <deliveryPoint>PO Box 9517</deliveryPoint>
+                <city>Leiden</city>
+                <postalCode>NL-2300 RA</postalCode>
+                <country>NETHERLANDS</country>
+            </address>
+            <phone>+31.71.7519362</phone>
+            <electronicMailAddress>nlbif@naturalis.nl</electronicMailAddress>
+            <onlineUrl>https://www.nlbif.nl</onlineUrl>
+            <userId directory="https://orcid.org/">0000-0002-4329-4892</userId>
+        </contact>
+        <contact>
+            <individualName>
+                <givenName>Lia</givenName>
+                <surName>Hemerik</surName>
+            </individualName>
+            <organizationName>Biometris, Plant Sciences Group, Wageningen University</organizationName>
+            <positionName>Associate Professor</positionName>
+            <address>
+                <deliveryPoint>PO Box 16</deliveryPoint>
+                <city>Wageningen</city>
+                <postalCode>6700AA</postalCode>
+                <country>NETHERLANDS</country>
+            </address>
+            <electronicMailAddress>lia.hemerik@wur.nl</electronicMailAddress>
+            <onlineUrl>https://www.wur.nl/en/Research-Results/Research-Institutes/plant-research/biometris.htm</onlineUrl>
+            <userId directory="https://orcid.org/">0000-0002-6892-2840</userId>
+        </contact>
+        <methods>
+            <methodStep>
+                <description>
+                    <para>All identifications, to order, family, genus or species were stored in excel files; these were checked thoroughly. Thereafter, the dataset was generated in GBIF style with the help of an R program.</para>
+                </description>
+            </methodStep>
+            <sampling>
+                <studyExtent>
+                    <description>
+                        <para>March -December 1996</para>
+                    </description>
+                </studyExtent>
+                <samplingDescription>
+                    <para>Bio-photo eklektors with one lightfall in the top and two pitfalls at ground level, for which the space was created by getting soil out of the grasslands were moved every fortnight. The lightfalls and pitfalls contained formaldehyde solution 2%. Soil samples were taken bi-weekly, lightfalls were emptied weekly and pitfalls were emptied weekly.</para>
+                </samplingDescription>
+            </sampling>
+            <qualityControl>
+                <description>
+                    <para>Identifications of ground beetles were done by personnel of the biological station in Wijster; beetle larvae were identified by Michael Traugeot; weevils were identified by Theodoor Heijermans; click beetles were checked by Alterra; spiders and harvestmen were identified by Aart Noordam; millipedes, centipedes were identified by Matty Berg</para>
+                </description>
+            </qualityControl>
+        </methods>
+
+            <project id="nlbif2021.003">
+                <title>Beschikbaar maken van monitoringsgegevens van insecten uit het stroomdallandschap van de Drentsche Aa.</title>
+                <personnel>
+                    <individualName>
+                    <givenName>Gijs</givenName>
+                    <surName>Gerrits</surName>
+                    </individualName>
+            <userId directory="https://orcid.org/">0000-0002-2315-9677</userId>
+                    <role>AUTHOR</role>
+                </personnel>
+                <abstract>
+                    <para>publishing historic data from the monitoring carried out in 1996 in the Streamvalley of the Drentsche A</para>
+                </abstract>
+                <funding>
+                    <para>NLBIF</para>
+                </funding>
+                <studyAreaDescription>
+                    <descriptor name="generic" citableClassificationSystem="false">
+                        <descriptorValue>see data paper</descriptorValue>
+                    </descriptor>
+                </studyAreaDescription>
+                <designDescription>
+                    <description>
+                        <para>see data paper</para>
+                    </description>
+                </designDescription>
+            </project>
+    </dataset>
+
+    <additionalMetadata>
+        <metadata>
+            <gbif>
+                <dateStamp>2026-05-06T06:39:46Z</dateStamp>
+                <citation>Hemerik L, Creuwels J (2025). Macro-arthropods survey Drentsche Aa 1996. Version 1.19. Biometris Wageningen Plant Science group. Sampling event dataset https://doi.org/10.15468/7n499e accessed via GBIF.org on 2026-05-06.</citation>
+                <bibliography>
+                <citation identifier="DOI: 10.1016/S1164-5563(02)01136-6">Hemerik and Brussaard 2002</citation>
+                <citation identifier="DOI: 10.1007/s00374-004-0765-z">Berg and Hemerik 2004</citation>
+                </bibliography>
+                <resourceLogoUrl>https://ipt.nlbif.nl/logo.do?r=drentse_a</resourceLogoUrl>
+            </gbif>
+        </metadata>
+    </additionalMetadata>
+    </eml:eml>
