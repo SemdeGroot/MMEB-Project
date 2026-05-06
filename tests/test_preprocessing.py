@@ -3,7 +3,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from dataset import load_occurrence_metadata, encode_location, make_splits, get_datasets, IMAGES_DIR
+from preprocessing import load_occurrence_metadata, encode_location, make_splits, get_datasets, IMAGES_DIR
 import torch
 
 print("--- metadata loading ---")
