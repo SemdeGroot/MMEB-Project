@@ -21,8 +21,8 @@ if [ $# -eq 0 ]; then
     sbatch --time=02:00:00 -p gpu-short "$0" early_fusion resnet50
     sbatch --time=02:00:00 -p gpu-short "$0" late_fusion  resnet50
     sbatch --time=04:00:00 -p gpu-short "$0" baseline     bioclip
-    sbatch --time=08:00:00 -p gpu-long  "$0" early_fusion bioclip
-    sbatch --time=08:00:00 -p gpu-long  "$0" late_fusion  bioclip
+    sbatch --time=08:00:00 -p gpu-2080ti-11g "$0" early_fusion bioclip
+    sbatch --time=08:00:00 -p gpu-2080ti-11g "$0" late_fusion  bioclip
     echo "All 7 jobs submitted. Check status with: squeue --me"
     exit 0
 fi
