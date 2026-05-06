@@ -21,7 +21,7 @@ BUCKET_RANGES = {
     "common": (100, float("inf")),
 }
 
-GRADCAM_PER_BUCKET = 4
+GRADCAM_PER_BUCKET = 3
 GRADCAM_SEED       = 42
 
 
