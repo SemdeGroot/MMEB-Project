@@ -51,11 +51,14 @@ def out_dir(model_name, backbone):
 
 
 def compute_class_weights(train_ds, num_classes, device):
+    # Sqrt-inverse frequency: with a 182x top/tail ratio in this dataset, pure 1/count
+    # gradient hefboom destabilises rare classes. Sqrt scales the ratio to ~13.5x while
+    # still upweighting the tail. See Cui et al. CVPR 2019 ("Class-Balanced Loss").
     counts = torch.zeros(num_classes)
     for sample in train_ds.samples:
         counts[train_ds.label_to_idx[sample[-1]]] += 1
     counts = counts.clamp(min=1)
-    weights = 1.0 / counts
+    weights = 1.0 / counts.sqrt()
     return (weights / weights.sum() * num_classes).to(device)
 
 
@@ -150,7 +153,7 @@ def main():
     result_dir.mkdir(parents=True, exist_ok=True)
 
     print("Loading datasets...")
-    train_ds, val_ds, _, num_classes, label_to_idx = get_datasets()
+    train_ds, val_ds, _, num_classes, label_to_idx = get_datasets(backbone=args.backbone)
     print(f"Classes: {num_classes} | train: {len(train_ds)} | val: {len(val_ds)}")
 
     train_loader = DataLoader(train_ds, batch_size=args.batch_size, shuffle=True,
@@ -203,7 +206,10 @@ def main():
 
         train_loss            = train_one_epoch(model, train_loader, criterion, optimizer, device, scaler)
         val_loss, val_acc     = evaluate(model, val_loader, criterion, device, use_amp)
-        scheduler.step()
+        # Pause cosine schedule while the BioCLIP backbone is frozen, so neither the
+        # backbone nor the head burn LR before the backbone has even started training.
+        if not (uses_bioclip and epoch < BIOCLIP_FREEZE_EPOCHS):
+            scheduler.step()
 
         print(f"Epoch {epoch:3d} | train_loss={train_loss:.4f} | "
               f"val_loss={val_loss:.4f} | val_acc={val_acc:.4f}")
