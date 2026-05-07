@@ -115,6 +115,7 @@ def vit_reshape_transform(tensor):
 def run_gradcam(model, test_ds, backbone, result_dir, preds_all, species_counts, device):
     from pytorch_grad_cam import GradCAM
     from pytorch_grad_cam.utils.image import show_cam_on_image
+    from pytorch_grad_cam.utils.model_targets import ClassifierOutputTarget
     from PIL import Image as PILImage
 
     if backbone == "resnet50":
@@ -156,11 +157,18 @@ def run_gradcam(model, test_ds, backbone, result_dir, preds_all, species_counts,
 
     model.eval()
     for idx, bucket, outcome in selected:
-        img_t, loc_t, _ = test_ds[idx]
+        img_t, loc_t, true_label = test_ds[idx]
         img_batch = img_t.unsqueeze(0).to(device)
         loc_batch = loc_t.unsqueeze(0).to(device)
 
-        grayscale_cam = cam(input_tensor=img_batch, targets=None)[0]
+        # For wrong predictions, target the true class so the heatmap shows where the model
+        # failed to look. For correct predictions, argmax (None) is the true class anyway.
+        if outcome == "wrong":
+            targets = [ClassifierOutputTarget(int(true_label))]
+        else:
+            targets = None
+
+        grayscale_cam = cam(input_tensor=img_batch, targets=targets)[0]
 
         rgb = (img_t * inv_std + inv_mean).permute(1, 2, 0).numpy().clip(0, 1)
         overlay = show_cam_on_image(rgb.astype(np.float32), grayscale_cam, use_rgb=True)
