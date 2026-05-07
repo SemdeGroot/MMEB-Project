@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH -J mmeb-train
-#SBATCH -t 04:00:00
-#SBATCH -p gpu-short
+#SBATCH -t 08:00:00
+#SBATCH -p gpu-2080ti-11g
 #SBATCH --gres=gpu:2080_ti:1
 #SBATCH --mem=32G
 #SBATCH --cpus-per-task=8
@@ -10,8 +10,8 @@
 #SBATCH --output=logs/%j.out
 
 # Usage:
-#   bash job.sh                           submit all 7 experiments at once
-#   sbatch --time=02:00:00 job.sh baseline resnet50   run one experiment
+# bash job.sh   submit all 9 experiments at once
+# sbatch --time=02:00:00 job.sh baseline resnet50   run one experiment
 
 # When called with no arguments, submit all 9 jobs and exit.
 if [ $# -eq 0 ]; then
