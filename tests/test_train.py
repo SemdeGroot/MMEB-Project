@@ -43,7 +43,7 @@ class FakeDataset(Dataset):
         return self._imgs[idx], self._locs[idx], self._labels[idx].item()
 
 
-def make_fake_datasets():
+def make_fake_datasets(*_args, **_kwargs):
     ds = FakeDataset(N_SAMPLES)
     return ds, FakeDataset(10), FakeDataset(10), NUM_CLASSES, ds.label_to_idx
 
@@ -123,8 +123,9 @@ else:
 
     REAL_N = 80  # enough to cover all NUM_CLASSES with some left for val/test
 
-    def make_small_datasets():
-        train_ds, val_ds, test_ds, num_classes, label_to_idx = get_datasets()
+    def make_small_datasets(*_args, **kwargs):
+        backbone = kwargs.get("backbone", "resnet50")
+        train_ds, val_ds, test_ds, num_classes, label_to_idx = get_datasets(backbone=backbone)
         small_train = MothDataset(train_ds.samples[:REAL_N], label_to_idx, train_ds.transform)
         small_val   = MothDataset(val_ds.samples[:20],       label_to_idx, val_ds.transform)
         small_test  = MothDataset(test_ds.samples[:20],      label_to_idx, test_ds.transform)

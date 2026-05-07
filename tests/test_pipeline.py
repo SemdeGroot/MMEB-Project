@@ -42,7 +42,7 @@ small_test  = MothDataset(test_ds_full.samples[:SMALL_VALTEST], label_to_idx, te
 print(f"Classes: {num_classes}, train={len(small_train)}, val={len(small_val)}, test={len(small_test)}")
 
 
-def small_datasets():
+def small_datasets(*_args, **_kwargs):
     return small_train, small_val, small_test, num_classes, label_to_idx
 
 
