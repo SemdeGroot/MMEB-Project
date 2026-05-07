@@ -193,6 +193,98 @@ def plot_bucket_gain(metrics):
     print("Saved bucket_gain.png")
 
 
+def write_main_table(metrics):
+    """LaTeX table: overall macro-F1 + per-bucket macro-F1 for every experiment.
+    Best value in each column is bolded."""
+    rows = []
+    for key, lbl in EXPERIMENTS:
+        m = metrics.get(key)
+        if not m or "macro_f1" not in m:
+            continue
+        bf = m.get("bucket_f1", {})
+        rows.append((lbl.replace("\n", " "), m["macro_f1"],
+                     bf.get("rare"), bf.get("medium"), bf.get("common")))
+
+    if not rows:
+        print("No data for main_results.tex — skipping")
+        return
+
+    cols = list(zip(*[r[1:] for r in rows]))
+    maxes = [max((v for v in c if v is not None), default=None) for c in cols]
+
+    def fmt(v, mx):
+        if v is None:
+            return "--"
+        s = f"{v:.3f}"
+        return f"\\textbf{{{s}}}" if mx is not None and abs(v - mx) < 1e-9 else s
+
+    lines = [
+        r"\begin{tabular}{lcccc}",
+        r"\toprule",
+        r"Experiment & Overall & Rare (10--29) & Medium (30--99) & Common (100+) \\",
+        r"\midrule",
+    ]
+    for lbl, ov, rare, med, com in rows:
+        lines.append(
+            f"{lbl} & {fmt(ov, maxes[0])} & {fmt(rare, maxes[1])} & "
+            f"{fmt(med, maxes[2])} & {fmt(com, maxes[3])} \\\\"
+        )
+    lines += [r"\bottomrule", r"\end{tabular}", ""]
+
+    (OUT_DIR / "main_results.tex").write_text("\n".join(lines))
+    print("Saved main_results.tex")
+
+
+def write_gain_table(metrics):
+    """LaTeX table: macro-F1 gain (fusion - baseline), overall and per bucket."""
+    pairs = [
+        ("ResNet-50 early",  "baseline_resnet50", "early_fusion_resnet50"),
+        ("ResNet-50 late",   "baseline_resnet50", "late_fusion_resnet50"),
+        ("ResNet-50 gated",  "baseline_resnet50", "gated_fusion_resnet50"),
+        ("BioCLIP early",    "baseline_bioclip",  "early_fusion_bioclip"),
+        ("BioCLIP late",     "baseline_bioclip",  "late_fusion_bioclip"),
+        ("BioCLIP gated",    "baseline_bioclip",  "gated_fusion_bioclip"),
+    ]
+
+    def diff(a, b):
+        return None if a is None or b is None else b - a
+
+    rows = []
+    for label, base, fus in pairs:
+        mb, mf = metrics.get(base), metrics.get(fus)
+        if not mb or not mf or "macro_f1" not in mb or "macro_f1" not in mf:
+            continue
+        bb = mb.get("bucket_f1", {})
+        bf = mf.get("bucket_f1", {})
+        rows.append((
+            label,
+            mf["macro_f1"] - mb["macro_f1"],
+            diff(bb.get("rare"),   bf.get("rare")),
+            diff(bb.get("medium"), bf.get("medium")),
+            diff(bb.get("common"), bf.get("common")),
+        ))
+
+    if not rows:
+        print("No data for gain_table.tex — skipping")
+        return
+
+    def fmt(v):
+        return "--" if v is None else f"{v:+.3f}"
+
+    lines = [
+        r"\begin{tabular}{lcccc}",
+        r"\toprule",
+        r"Variant & Overall & Rare & Medium & Common \\",
+        r"\midrule",
+    ]
+    for lbl, ov, rare, med, com in rows:
+        lines.append(f"{lbl} & {fmt(ov)} & {fmt(rare)} & {fmt(med)} & {fmt(com)} \\\\")
+    lines += [r"\bottomrule", r"\end{tabular}", ""]
+
+    (OUT_DIR / "gain_table.tex").write_text("\n".join(lines))
+    print("Saved gain_table.tex")
+
+
 def load_histories():
     """Return dict mapping experiment key → list of per-epoch dicts from history.json."""
     data = {}
