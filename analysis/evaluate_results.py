@@ -136,6 +136,11 @@ def plot_location_gain(metrics):
     ax.set_ylabel("ΔMacro-F1 (fusion - baseline)")
     ax.set_title("Macro-F1 gain from adding location data")
 
+    ymax = max(gains)
+    ymin = min(gains)
+    pad = max(0.01, (ymax - min(0, ymin)) * 0.18)
+    ax.set_ylim(min(0, ymin) - (pad if ymin < 0 else 0), ymax + pad)
+
     for bar, g in zip(bars, gains):
         va  = "bottom" if g >= 0 else "top"
         off = 0.002 if g >= 0 else -0.002
@@ -305,7 +310,7 @@ def plot_learning_curves(histories):
         print("No history.json files found — skipping learning_curves.png")
         return
 
-    ncols = min(4, len(keys))
+    ncols = 3
     nrows = (len(keys) + ncols - 1) // ncols
     fig, axes = plt.subplots(nrows, ncols, figsize=(4 * ncols, 3 * nrows), squeeze=False)
 
