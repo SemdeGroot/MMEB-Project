@@ -51,11 +51,17 @@ def build_model(model_name, backbone, num_classes):
 
 
 def get_species_counts(train_ds):
-    """Return dict mapping class index → number of training samples."""
-    counts = defaultdict(int)
+    """Return dict mapping class index → number of unique training gbifIDs.
+
+    Counted at the occurrence (gbifID) level, not the image level: bucket
+    thresholds (rare 10–29, medium 30–99, common 100+) are defined as records,
+    not photos, so multiple photos of one observation must not inflate the count.
+    """
+    gbifids_per_class = defaultdict(set)
     for sample in train_ds.samples:
-        counts[train_ds.label_to_idx[sample[-1]]] += 1
-    return dict(counts)
+        cls = train_ds.label_to_idx[sample[-1]]
+        gbifids_per_class[cls].add(sample[1])
+    return {cls: len(ids) for cls, ids in gbifids_per_class.items()}
 
 
 def bucket_for_count(count):
@@ -202,7 +208,7 @@ def main():
     num_classes = len(label_to_idx)
 
     print("Loading datasets...")
-    train_ds, _, test_ds, _, _ = get_datasets()
+    train_ds, _, test_ds, _, _ = get_datasets(backbone=args.backbone)
     species_counts = get_species_counts(train_ds)
 
     print("Building model and loading best.pt...")
