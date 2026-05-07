@@ -14,7 +14,7 @@ DATA_DIR   = Path(__file__).parent.parent / "data"
 IMAGES_DIR = DATA_DIR / "images"
 OCCURRENCE = DATA_DIR / "occurrence.txt"
 
-MIN_SAMPLES = 10  # species with fewer images are excluded
+MIN_GBIFIDS = 10  # species with fewer unique gbifIDs (records) are excluded
 
 # Netherlands bounding box, used to normalize coordinates to [-1, 1]
 LAT_MIN, LAT_MAX = 50.7, 53.6
@@ -22,20 +22,34 @@ LON_MIN, LON_MAX = 3.3, 7.2
 
 DAYS_PER_MONTH = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 
-train_transform = T.Compose([
-    T.RandomResizedCrop(224, scale=(0.7, 1.0)),
-    T.RandomHorizontalFlip(),
-    T.ColorJitter(brightness=0.2, contrast=0.2, saturation=0.2, hue=0.05),
-    T.ToTensor(),
-    T.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]),
-])
+# ResNet uses ImageNet stats (it was pretrained on ImageNet). BioCLIP inherits CLIP's
+# own normalisation, so feeding ImageNet-normalised inputs would be off-distribution.
+NORMALIZE_STATS = {
+    "resnet50": ((0.485, 0.456, 0.406),     (0.229, 0.224, 0.225)),
+    "bioclip":  ((0.48145466, 0.4578275, 0.40821073),
+                 (0.26862954, 0.26130258, 0.27577711)),
+}
 
-val_transform = T.Compose([
-    T.Resize(256),
-    T.CenterCrop(224),
-    T.ToTensor(),
-    T.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]),
-])
+
+def make_train_transform(backbone):
+    mean, std = NORMALIZE_STATS[backbone]
+    return T.Compose([
+        T.RandomResizedCrop(224, scale=(0.7, 1.0)),
+        T.RandomHorizontalFlip(),
+        T.ColorJitter(brightness=0.2, contrast=0.2, saturation=0.2, hue=0.05),
+        T.ToTensor(),
+        T.Normalize(mean=mean, std=std),
+    ])
+
+
+def make_val_transform(backbone):
+    mean, std = NORMALIZE_STATS[backbone]
+    return T.Compose([
+        T.Resize(256),
+        T.CenterCrop(224),
+        T.ToTensor(),
+        T.Normalize(mean=mean, std=std),
+    ])
 
 
 def load_occurrence_metadata():
@@ -124,16 +138,18 @@ def make_splits(samples, train_ratio=0.7, val_ratio=0.15, seed=42):
     return train, val, test
 
 
-def get_datasets(min_samples=MIN_SAMPLES):
+def get_datasets(min_gbifids=MIN_GBIFIDS, backbone="resnet50"):
     """Build and return train, val, test datasets and the number of classes.
 
     Called from train.py. Scans the images directory, matches each image to its
-    occurrence metadata, filters species below min_samples, and splits the data.
+    occurrence metadata, filters species with fewer than min_gbifids unique
+    observations (records), and splits the data. Backbone selects normalisation
+    statistics for the image transform.
     """
     metadata = load_occurrence_metadata()
 
     # collect all samples that have both an image and valid metadata
-    species_counts = defaultdict(int)
+    species_gbifids = defaultdict(set)
     all_samples = []
 
     for img_path in IMAGES_DIR.glob("*/*.jpg"):
@@ -142,23 +158,27 @@ def get_datasets(min_samples=MIN_SAMPLES):
             continue
         species, lat, lon, month, day = metadata[gbif_id]
         all_samples.append((img_path, gbif_id, lat, lon, month, day, species))
-        species_counts[species] += 1
+        species_gbifids[species].add(gbif_id)
 
-    # filter species that don't have enough samples
-    allowed = {sp for sp, n in species_counts.items() if n >= min_samples}
+    # Threshold is on unique gbifIDs (occurrences), not on image rows. Multiple
+    # photos of one observation share GPS+timestamp and look near-identical, so
+    # they do not count as independent samples for this filter.
+    allowed = {sp for sp, ids in species_gbifids.items() if len(ids) >= min_gbifids}
     samples = [s for s in all_samples if s[-1] in allowed]
 
-    dropped_species = len(species_counts) - len(allowed)
+    dropped_species = len(species_gbifids) - len(allowed)
     dropped_records = len(all_samples) - len(samples)
     print(f"Classes: {len(allowed)}, total samples: {len(samples)}")
     print(f"Discarded {dropped_species} species ({dropped_records} records) "
-          f"below MIN_SAMPLES={min_samples}")
+          f"below MIN_GBIFIDS={min_gbifids}")
 
     label_to_idx = {sp: i for i, sp in enumerate(sorted(allowed))}
     train_samples, val_samples, test_samples = make_splits(samples)
 
-    train_ds = MothDataset(train_samples, label_to_idx, transform=train_transform)
-    val_ds   = MothDataset(val_samples,   label_to_idx, transform=val_transform)
-    test_ds  = MothDataset(test_samples,  label_to_idx, transform=val_transform)
+    train_tf = make_train_transform(backbone)
+    val_tf   = make_val_transform(backbone)
+    train_ds = MothDataset(train_samples, label_to_idx, transform=train_tf)
+    val_ds   = MothDataset(val_samples,   label_to_idx, transform=val_tf)
+    test_ds  = MothDataset(test_samples,  label_to_idx, transform=val_tf)
 
     return train_ds, val_ds, test_ds, len(allowed), label_to_idx
