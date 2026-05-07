@@ -1,0 +1,2292 @@
+Loading occurrence data...
+Loading multimedia data...
+Image sources: 30208 local | 375 URL fallback
+Before cleaning: 30583 samples
+After cleaning: 28477 samples, 241 species
+Train: 19933 | Val: 4272 | Test: 4272
+
+============================================================
+ADVANCED EVALUATION: Image Only
+============================================================
+
+Top 10 easiest species:
+                species  accuracy  n_samples
+     Acronicta leporina     100.0         10
+    Asteroscopus sphinx     100.0          6
+            Arctia caja     100.0          9
+        Anarta myrtilli     100.0          3
+           Amata phegea     100.0          8
+          Cryphia algae     100.0         15
+       Deltote bankiana     100.0         13
+        Cidaria fulvata     100.0          3
+       Eulithis testata     100.0         10
+Dypterygia scabriuscula     100.0          7
+
+Top 10 hardest species:
+                species  accuracy  n_samples
+   Agriopis aurantiaria 25.000000          4
+Conistra erythrocephala 25.000000          4
+       Globia sparganii 25.000000          4
+         Lycia hirtaria 25.000000          4
+  Charanyca trigrammica 25.000000          4
+   Charanyca ferruginea 16.666667          6
+        Rhizedra lutosa 16.666667          6
+         Agrochola lota  0.000000          3
+       Diacrisia sannio  0.000000          3
+    Hypomecis roboraria  0.000000          4
+
+Classification Report:
+                             precision    recall  f1-score   support
+
+      Abraxas grossulariata       1.00      0.83      0.91         6
+            Abraxas sylvata       1.00      0.50      0.67         4
+        Abrostola triplasia       0.80      0.67      0.73         6
+           Acronicta aceris       0.89      0.89      0.89         9
+         Acronicta leporina       0.91      1.00      0.95        10
+      Acronicta megacephala       0.65      0.93      0.76        14
+          Acronicta rumicis       0.78      0.81      0.79        31
+       Agriopis aurantiaria       1.00      0.25      0.40         4
+     Agriopis leucophaearia       0.57      0.80      0.67        10
+        Agriopis marginaria       0.80      0.80      0.80        15
+          Agrius convolvuli       0.86      0.67      0.75         9
+             Agrochola lota       0.00      0.00      0.00         3
+           Agrochola lunosa       0.83      0.62      0.71         8
+        Agrochola macilenta       1.00      0.50      0.67         4
+             Agrotis clavis       0.56      0.67      0.61        15
+      Agrotis exclamationis       0.82      0.80      0.81        40
+            Agrotis ipsilon       0.55      0.79      0.65        14
+               Agrotis puta       0.90      0.88      0.89        42
+            Agrotis segetum       0.44      0.35      0.39        23
+        Agrotis vestigialis       1.00      0.92      0.96        12
+            Alcis repandata       0.86      0.86      0.86         7
+      Allophyes oxyacanthae       1.00      0.33      0.50         3
+       Alsophila aescularia       0.64      0.64      0.64        11
+               Amata phegea       0.80      1.00      0.89         8
+          Amphipyra berbera       1.00      0.33      0.50         3
+        Amphipyra pyramidea       0.95      0.78      0.86        23
+            Anarta myrtilli       1.00      1.00      1.00         3
+            Anarta trifolii       1.00      0.62      0.76        13
+             Anorthoa munda       0.78      0.88      0.82         8
+          Apamea monoglypha       0.85      0.83      0.84        35
+       Apterogenum ypsillon       0.50      0.67      0.57         3
+                Arctia caja       1.00      1.00      1.00         9
+    Arenostola phragmitidis       0.45      0.71      0.56         7
+        Asteroscopus sphinx       1.00      1.00      1.00         6
+          Atethmia centrago       1.00      0.71      0.83         7
+        Atolmis rubricollis       1.00      0.67      0.80         6
+           Autographa gamma       0.91      0.90      0.91       146
+              Axylia putris       0.96      0.96      0.96        26
+           Biston betularia       1.00      0.86      0.92        21
+           Biston strataria       0.75      0.75      0.75         4
+           Bupalus piniaria       1.00      0.62      0.77         8
+         Cabera exanthemata       0.80      0.88      0.84        32
+             Cabera pusaria       0.67      0.60      0.63        20
+              Callistege mi       0.62      0.71      0.67         7
+       Calliteara pudibunda       0.65      0.65      0.65        17
+       Campaea margaritaria       0.91      0.93      0.92        46
+     Camptogramma bilineata       0.87      0.84      0.85        86
+      Caradrina clavipalpis       0.70      0.78      0.74         9
+          Caradrina kadenii       1.00      0.67      0.80         3
+         Caradrina morpheus       0.67      0.36      0.47        11
+             Catocala nupta       0.91      0.59      0.71        17
+            Catocala sponsa       0.75      0.86      0.80         7
+       Charanyca ferruginea       1.00      0.17      0.29         6
+      Charanyca trigrammica       1.00      0.25      0.40         4
+         Chiasmia clathrata       0.95      0.83      0.88        23
+      Chloroclysta siterata       0.67      0.50      0.57         4
+        Chloroclystis v-ata       0.86      0.90      0.88        21
+            Cidaria fulvata       1.00      1.00      1.00         3
+           Collita griseola       0.92      0.88      0.90        25
+           Colocasia coryli       0.78      0.88      0.82        16
+    Colostygia pectinataria       0.85      0.79      0.81        14
+          Colotois pennaria       0.60      0.50      0.55         6
+        Comibaena bajularia       1.00      1.00      1.00         4
+    Conistra erythrocephala       1.00      0.25      0.40         4
+          Conistra vaccinii       0.88      0.70      0.78        20
+         Coscinia cribraria       0.82      0.90      0.86        10
+           Cosmia trapezina       0.76      0.83      0.79        30
+         Cosmorhoe ocellata       1.00      0.50      0.67         6
+       Craniophora ligustri       0.94      0.89      0.92        19
+       Crocallis elinguaria       1.00      0.81      0.90        16
+              Cryphia algae       0.75      1.00      0.86        15
+    Cyclophora albipunctata       1.00      0.33      0.50         3
+        Cyclophora linearia       0.50      0.43      0.46         7
+       Cyclophora punctaria       0.80      0.80      0.80        15
+         Deilephila elpenor       0.96      0.93      0.94        27
+       Deilephila porcellus       1.00      0.70      0.82        10
+           Deltote bankiana       1.00      1.00      1.00        13
+            Deltote pygarga       0.62      0.78      0.69        23
+       Diachrysia chrysitis       0.90      1.00      0.95         9
+           Diacrisia sannio       0.00      0.00      0.00         3
+           Diaphora mendica       0.67      0.33      0.44         6
+               Diarsia rubi       0.67      0.71      0.69        28
+        Dryobotodes eremita       1.00      0.83      0.91         6
+    Dypterygia scabriuscula       0.88      1.00      0.93         7
+         Dysstroma truncata       1.00      0.60      0.75        15
+      Ecliptopera silaceata       0.88      0.70      0.78        10
+     Ectropis crepuscularia       0.88      0.92      0.90        49
+             Eilema caniola       0.55      0.86      0.67         7
+          Ematurga atomaria       0.77      0.83      0.80        24
+           Ennomos alniaria       0.80      0.57      0.67         7
+           Ennomos erosaria       0.83      0.83      0.83         6
+        Ennomos quercinaria       0.67      0.67      0.67         3
+          Epione repandaria       0.75      0.75      0.75         4
+         Epirrhoe alternata       0.84      0.93      0.88        44
+         Erannis defoliaria       0.73      0.57      0.64        14
+          Euchoeca nebulata       0.67      0.67      0.67         3
+          Euclidia glyphica       0.86      0.80      0.83        15
+           Eulithis prunata       1.00      0.83      0.91         6
+         Eulithis pyraliata       0.83      0.71      0.77         7
+           Eulithis testata       0.77      1.00      0.87        10
+      Eupithecia abbreviata       0.50      0.50      0.50         4
+     Eupithecia absinthiata       1.00      0.50      0.67         4
+     Eupithecia centaureata       0.85      0.92      0.88        12
+       Eupithecia linariata       0.75      0.75      0.75         4
+          Eupithecia nanata       1.00      1.00      1.00         6
+     Eupithecia tantillaria       0.40      0.50      0.44         4
+         Eupithecia vulgata       0.62      1.00      0.77         5
+   Euplagia quadripunctaria       1.00      0.91      0.95        11
+          Euplexia lucipara       1.00      0.50      0.67         4
+     Euproctis chrysorrhoea       0.54      0.58      0.56        12
+        Eupsilia transversa       0.83      0.56      0.67         9
+             Euxoa cursoria       0.75      0.50      0.60         6
+      Geometra papilionaria       1.00      0.88      0.93         8
+           Globia sparganii       1.00      0.25      0.40         4
+   Gymnoscelis rufifasciata       0.80      0.83      0.82        72
+               Hada plebeja       0.67      0.40      0.50         5
+        Hecatera bicolorata       0.86      0.86      0.86         7
+         Hemaris fuciformis       1.00      0.67      0.80         6
+        Hemithea aestivaria       0.94      0.89      0.92        19
+         Herminia grisealis       0.86      0.86      0.86         7
+     Herminia tarsipennalis       0.83      0.71      0.77         7
+         Hoplodrina ambigua       0.69      0.79      0.73        28
+     Hoplodrina octogenaria       0.84      0.90      0.87        29
+          Hydraecia micacea       0.67      0.40      0.50         5
+      Hydriomena impluviata       0.50      0.40      0.44         5
+           Hylaea fasciaria       1.00      0.50      0.67         6
+               Hyles gallii       0.60      0.75      0.67         4
+       Hypena proboscidalis       0.82      0.90      0.86        40
+           Hypena rostralis       0.67      0.50      0.57         8
+      Hypomecis punctinalis       0.56      0.59      0.57        17
+        Hypomecis roboraria       0.00      0.00      0.00         4
+             Idaea aversata       0.83      0.92      0.88        99
+             Idaea biselata       0.75      0.94      0.83        16
+            Idaea dimidiata       0.83      0.96      0.89        50
+           Idaea emarginata       0.79      0.92      0.85        12
+          Idaea fuscovenosa       0.86      0.80      0.83        15
+            Idaea rusticata       0.88      0.83      0.85        35
+              Idaea seriata       0.90      0.89      0.89        88
+           Idaea straminata       1.00      0.80      0.89         5
+         Idaea subsericeata       0.93      1.00      0.96        13
+         Idaea sylvestraria       1.00      0.75      0.86         4
+            Jodis lactearia       0.60      0.60      0.60         5
+             Katha depressa       1.00      1.00      1.00         3
+         Lacanobia oleracea       0.74      0.72      0.73        36
+            Lacanobia suasa       0.73      0.47      0.57        17
+             Laothoe populi       0.91      0.91      0.91        22
+          Laspeyria flexula       0.92      1.00      0.96        12
+    Lateroligia ophiogramma       1.00      0.50      0.67         4
+          Leucania obsoleta       0.50      0.50      0.50         4
+            Leucoma salicis       1.00      0.80      0.89         5
+            Ligdia adustata       0.91      0.84      0.88        25
+            Lithosia quadra       1.00      1.00      1.00         3
+         Litoligia literosa       0.83      0.83      0.83         6
+       Lomaspilis marginata       0.93      0.93      0.93        43
+        Lomographa temerata       1.00      0.50      0.67         4
+          Luperina testacea       0.82      0.89      0.85        56
+             Lycia hirtaria       1.00      0.25      0.40         4
+       Lycophotia porphyrea       1.00      1.00      1.00         5
+           Lymantria dispar       0.88      0.83      0.85        35
+         Lythria cruentaria       0.95      0.86      0.90        22
+          Macaria alternata       0.93      0.78      0.85        18
+           Macaria liturata       1.00      0.92      0.96        12
+             Macaria notata       1.00      0.83      0.91         6
+      Macdunnoughia confusa       1.00      0.71      0.83         7
+   Macroglossum stellatarum       0.89      0.94      0.91        51
+         Mamestra brassicae       0.50      0.67      0.57         9
+           Manulea complana       1.00      0.70      0.82        10
+      Melanchra persicariae       1.00      1.00      1.00         3
+        Mesoligia furuncula       0.71      0.78      0.74        46
+       Miltochrista miniata       1.00      0.67      0.80         6
+               Mimas tiliae       0.86      0.86      0.86        14
+                Mormo maura       0.97      0.97      0.97        29
+        Mythimna albipuncta       0.86      0.75      0.80        16
+           Mythimna ferrago       0.67      0.40      0.50        10
+            Mythimna impura       0.80      0.57      0.67         7
+           Mythimna l-album       0.75      1.00      0.86         3
+           Mythimna pallens       0.54      0.64      0.58        11
+         Mythimna straminea       0.38      0.50      0.43         6
+         Mythimna vitellina       0.50      0.33      0.40         3
+               Noctua comes       0.87      0.88      0.88        60
+           Noctua fimbriata       0.75      0.80      0.77        15
+          Noctua interjecta       0.70      0.58      0.64        12
+             Noctua pronuba       0.84      0.94      0.89       270
+          Nyctobrya muralis       1.00      0.60      0.75         5
+         Ochropleura plecta       0.78      0.93      0.85        55
+         Oligia fasciuncula       0.92      0.92      0.92        13
+        Operophtera brumata       0.76      0.72      0.74        40
+   Opisthograptis luteolata       0.90      0.98      0.94        46
+             Orgyia antiqua       0.80      0.57      0.67         7
+            Orthosia cerasi       0.67      0.67      0.67        33
+             Orthosia cruda       0.73      0.79      0.76        14
+           Orthosia gothica       0.80      0.76      0.78        21
+           Orthosia incerta       0.60      0.60      0.60        15
+      Ourapteryx sambucaria       1.00      1.00      1.00        10
+Pachycnemia hippocastanaria       0.75      0.75      0.75         4
+        Panemeria tenebrata       0.50      0.67      0.57         3
+            Panolis flammea       1.00      1.00      1.00         4
+     Parascotia fuliginaria       1.00      0.75      0.86         4
+     Pasiphila rectangulata       0.82      0.93      0.88        15
+     Pechipogo plumigeralis       1.00      0.50      0.67         6
+           Pelosia muscerda       0.88      0.83      0.86        18
+   Peribatodes rhomboidaria       0.84      0.91      0.87        80
+      Perizoma alchemillata       0.82      0.90      0.86        10
+     Perizoma flavofasciata       0.80      0.67      0.73         6
+         Phigalia pilosaria       0.67      0.57      0.62         7
+     Phlogophora meticulosa       0.74      0.85      0.79        34
+             Photedes fluxa       0.57      0.80      0.67         5
+    Phragmatobia fuliginosa       0.86      0.97      0.91        38
+        Plemyria rubiginata       1.00      0.83      0.91         6
+            Plusia festucae       1.00      0.80      0.89        10
+  Pterapherapteryx sexalata       1.00      0.67      0.80         3
+            Rhizedra lutosa       0.50      0.17      0.25         6
+          Rivula sericealis       0.86      0.95      0.90        58
+  Schrankia costaestrigalis       0.75      0.60      0.67         5
+      Scoliopteryx libatrix       1.00      0.85      0.92        26
+           Scopula immutata       0.75      0.75      0.75         4
+           Selenia dentaria       0.75      0.69      0.72        13
+       Selenia tetralunaria       0.67      0.50      0.57         4
+        Smerinthus ocellata       0.79      0.83      0.81        18
+            Sphinx ligustri       1.00      0.86      0.92        14
+            Sphinx pinastri       0.92      0.73      0.81        15
+        Sphrageidus similis       0.75      0.43      0.55         7
+           Spilarctia lutea       0.92      0.96      0.94        23
+      Spilosoma lubricipeda       0.94      0.94      0.94        51
+       Stegania trimaculata       1.00      0.80      0.89         5
+         Sunira circellaris       0.62      0.62      0.62         8
+         Thalpophila matura       0.33      0.33      0.33         3
+           Thera obeliscata       1.00      1.00      1.00         3
+             Timandra comae       0.79      0.92      0.85        36
+         Trachea atriplicis       0.88      1.00      0.93         7
+            Tyria jacobaeae       0.93      0.97      0.95        66
+           Wittia sororcula       0.83      0.62      0.71         8
+       Xanthorhoe designata       0.80      0.67      0.73         6
+       Xanthorhoe ferrugata       0.80      0.84      0.82        19
+       Xanthorhoe fluctuata       0.80      0.97      0.88        38
+       Xanthorhoe montanata       0.40      0.33      0.36         6
+     Xanthorhoe spadicearia       0.70      0.70      0.70        10
+                Xestia baja       0.40      0.40      0.40         5
+            Xestia c-nigrum       0.86      0.91      0.88        85
+          Xestia triangulum       1.00      0.92      0.96        13
+        Xestia xanthographa       0.64      0.65      0.65        46
+
+                   accuracy                           0.83      4272
+                  macro avg       0.81      0.73      0.76      4272
+               weighted avg       0.83      0.83      0.82      4272
+
+Saved: results/advanced_evaluation/figures/confusion_matrix_image_only.png
+Saved: results/advanced_evaluation/figures/per_species_accuracy_image_only.png
+
+============================================================
+ADVANCED EVALUATION: Metadata Only
+============================================================
+
+Top 10 easiest species:
+               species  accuracy  n_samples
+   Operophtera brumata 97.500000         40
+       Tyria jacobaeae 83.333333         66
+Hoplodrina octogenaria 75.862069         29
+       Orthosia cerasi 72.727273         33
+     Luperina testacea 60.714286         56
+Agriopis leucophaearia 60.000000         10
+   Mesoligia furuncula 52.173913         46
+   Asteroscopus sphinx 50.000000          6
+          Amata phegea 50.000000          8
+      Idaea emarginata 50.000000         12
+
+Top 10 hardest species:
+               species  accuracy  n_samples
+      Thera obeliscata       0.0          3
+    Thalpophila matura       0.0          3
+  Xanthorhoe designata       0.0          6
+      Wittia sororcula       0.0          8
+  Xanthorhoe ferrugata       0.0         19
+  Xanthorhoe fluctuata       0.0         38
+Xanthorhoe spadicearia       0.0         10
+  Xanthorhoe montanata       0.0          6
+           Xestia baja       0.0          5
+     Xestia triangulum       0.0         13
+
+Classification Report:
+                             precision    recall  f1-score   support
+
+      Abraxas grossulariata       0.00      0.00      0.00         6
+            Abraxas sylvata       0.00      0.00      0.00         4
+        Abrostola triplasia       0.00      0.00      0.00         6
+           Acronicta aceris       0.00      0.00      0.00         9
+         Acronicta leporina       0.00      0.00      0.00        10
+      Acronicta megacephala       0.00      0.00      0.00        14
+          Acronicta rumicis       0.05      0.10      0.07        31
+       Agriopis aurantiaria       0.00      0.00      0.00         4
+     Agriopis leucophaearia       0.30      0.60      0.40        10
+        Agriopis marginaria       0.22      0.40      0.29        15
+          Agrius convolvuli       0.00      0.00      0.00         9
+             Agrochola lota       0.00      0.00      0.00         3
+           Agrochola lunosa       0.50      0.38      0.43         8
+        Agrochola macilenta       0.00      0.00      0.00         4
+             Agrotis clavis       0.00      0.00      0.00        15
+      Agrotis exclamationis       0.03      0.05      0.04        40
+            Agrotis ipsilon       0.00      0.00      0.00        14
+               Agrotis puta       0.00      0.00      0.00        42
+            Agrotis segetum       0.00      0.00      0.00        23
+        Agrotis vestigialis       0.00      0.00      0.00        12
+            Alcis repandata       0.00      0.00      0.00         7
+      Allophyes oxyacanthae       0.00      0.00      0.00         3
+       Alsophila aescularia       0.10      0.09      0.10        11
+               Amata phegea       0.40      0.50      0.44         8
+          Amphipyra berbera       0.00      0.00      0.00         3
+        Amphipyra pyramidea       0.00      0.00      0.00        23
+            Anarta myrtilli       0.00      0.00      0.00         3
+            Anarta trifolii       0.00      0.00      0.00        13
+             Anorthoa munda       0.00      0.00      0.00         8
+          Apamea monoglypha       0.08      0.14      0.10        35
+       Apterogenum ypsillon       0.00      0.00      0.00         3
+                Arctia caja       0.00      0.00      0.00         9
+    Arenostola phragmitidis       0.00      0.00      0.00         7
+        Asteroscopus sphinx       0.60      0.50      0.55         6
+          Atethmia centrago       0.00      0.00      0.00         7
+        Atolmis rubricollis       0.00      0.00      0.00         6
+           Autographa gamma       0.12      0.27      0.17       146
+              Axylia putris       0.00      0.00      0.00        26
+           Biston betularia       0.00      0.00      0.00        21
+           Biston strataria       0.00      0.00      0.00         4
+           Bupalus piniaria       0.00      0.00      0.00         8
+         Cabera exanthemata       0.00      0.00      0.00        32
+             Cabera pusaria       0.00      0.00      0.00        20
+              Callistege mi       0.00      0.00      0.00         7
+       Calliteara pudibunda       0.06      0.24      0.09        17
+       Campaea margaritaria       0.00      0.00      0.00        46
+     Camptogramma bilineata       0.05      0.02      0.03        86
+      Caradrina clavipalpis       0.00      0.00      0.00         9
+          Caradrina kadenii       0.00      0.00      0.00         3
+         Caradrina morpheus       0.00      0.00      0.00        11
+             Catocala nupta       0.00      0.00      0.00        17
+            Catocala sponsa       0.00      0.00      0.00         7
+       Charanyca ferruginea       0.00      0.00      0.00         6
+      Charanyca trigrammica       0.00      0.00      0.00         4
+         Chiasmia clathrata       0.00      0.00      0.00        23
+      Chloroclysta siterata       0.00      0.00      0.00         4
+        Chloroclystis v-ata       0.00      0.00      0.00        21
+            Cidaria fulvata       0.00      0.00      0.00         3
+           Collita griseola       0.07      0.08      0.08        25
+           Colocasia coryli       0.00      0.00      0.00        16
+    Colostygia pectinataria       0.00      0.00      0.00        14
+          Colotois pennaria       0.22      0.33      0.27         6
+        Comibaena bajularia       0.00      0.00      0.00         4
+    Conistra erythrocephala       0.00      0.00      0.00         4
+          Conistra vaccinii       0.17      0.20      0.18        20
+         Coscinia cribraria       0.00      0.00      0.00        10
+           Cosmia trapezina       0.09      0.23      0.13        30
+         Cosmorhoe ocellata       0.00      0.00      0.00         6
+       Craniophora ligustri       0.00      0.00      0.00        19
+       Crocallis elinguaria       0.00      0.00      0.00        16
+              Cryphia algae       0.00      0.00      0.00        15
+    Cyclophora albipunctata       0.00      0.00      0.00         3
+        Cyclophora linearia       0.00      0.00      0.00         7
+       Cyclophora punctaria       0.00      0.00      0.00        15
+         Deilephila elpenor       0.00      0.00      0.00        27
+       Deilephila porcellus       0.00      0.00      0.00        10
+           Deltote bankiana       0.00      0.00      0.00        13
+            Deltote pygarga       0.12      0.04      0.06        23
+       Diachrysia chrysitis       0.00      0.00      0.00         9
+           Diacrisia sannio       0.00      0.00      0.00         3
+           Diaphora mendica       0.00      0.00      0.00         6
+               Diarsia rubi       0.14      0.25      0.18        28
+        Dryobotodes eremita       0.00      0.00      0.00         6
+    Dypterygia scabriuscula       0.00      0.00      0.00         7
+         Dysstroma truncata       0.00      0.00      0.00        15
+      Ecliptopera silaceata       0.00      0.00      0.00        10
+     Ectropis crepuscularia       0.25      0.02      0.04        49
+             Eilema caniola       0.00      0.00      0.00         7
+          Ematurga atomaria       0.10      0.12      0.11        24
+           Ennomos alniaria       0.00      0.00      0.00         7
+           Ennomos erosaria       0.00      0.00      0.00         6
+        Ennomos quercinaria       0.00      0.00      0.00         3
+          Epione repandaria       0.00      0.00      0.00         4
+         Epirrhoe alternata       0.00      0.00      0.00        44
+         Erannis defoliaria       0.32      0.43      0.36        14
+          Euchoeca nebulata       0.00      0.00      0.00         3
+          Euclidia glyphica       0.00      0.00      0.00        15
+           Eulithis prunata       0.00      0.00      0.00         6
+         Eulithis pyraliata       0.00      0.00      0.00         7
+           Eulithis testata       0.00      0.00      0.00        10
+      Eupithecia abbreviata       0.00      0.00      0.00         4
+     Eupithecia absinthiata       0.00      0.00      0.00         4
+     Eupithecia centaureata       0.00      0.00      0.00        12
+       Eupithecia linariata       0.00      0.00      0.00         4
+          Eupithecia nanata       0.00      0.00      0.00         6
+     Eupithecia tantillaria       0.00      0.00      0.00         4
+         Eupithecia vulgata       0.00      0.00      0.00         5
+   Euplagia quadripunctaria       0.14      0.27      0.19        11
+          Euplexia lucipara       0.00      0.00      0.00         4
+     Euproctis chrysorrhoea       0.00      0.00      0.00        12
+        Eupsilia transversa       0.25      0.33      0.29         9
+             Euxoa cursoria       0.00      0.00      0.00         6
+      Geometra papilionaria       0.00      0.00      0.00         8
+           Globia sparganii       0.00      0.00      0.00         4
+   Gymnoscelis rufifasciata       0.08      0.03      0.04        72
+               Hada plebeja       0.00      0.00      0.00         5
+        Hecatera bicolorata       0.00      0.00      0.00         7
+         Hemaris fuciformis       0.00      0.00      0.00         6
+        Hemithea aestivaria       0.00      0.00      0.00        19
+         Herminia grisealis       0.00      0.00      0.00         7
+     Herminia tarsipennalis       0.00      0.00      0.00         7
+         Hoplodrina ambigua       0.00      0.00      0.00        28
+     Hoplodrina octogenaria       0.15      0.76      0.25        29
+          Hydraecia micacea       0.00      0.00      0.00         5
+      Hydriomena impluviata       0.00      0.00      0.00         5
+           Hylaea fasciaria       0.00      0.00      0.00         6
+               Hyles gallii       0.00      0.00      0.00         4
+       Hypena proboscidalis       0.00      0.00      0.00        40
+           Hypena rostralis       0.00      0.00      0.00         8
+      Hypomecis punctinalis       0.00      0.00      0.00        17
+        Hypomecis roboraria       0.00      0.00      0.00         4
+             Idaea aversata       0.07      0.19      0.10        99
+             Idaea biselata       0.00      0.00      0.00        16
+            Idaea dimidiata       0.09      0.08      0.08        50
+           Idaea emarginata       0.17      0.50      0.26        12
+          Idaea fuscovenosa       0.05      0.07      0.06        15
+            Idaea rusticata       0.03      0.03      0.03        35
+              Idaea seriata       0.08      0.14      0.10        88
+           Idaea straminata       0.00      0.00      0.00         5
+         Idaea subsericeata       0.00      0.00      0.00        13
+         Idaea sylvestraria       0.00      0.00      0.00         4
+            Jodis lactearia       0.00      0.00      0.00         5
+             Katha depressa       0.00      0.00      0.00         3
+         Lacanobia oleracea       0.00      0.00      0.00        36
+            Lacanobia suasa       0.00      0.00      0.00        17
+             Laothoe populi       0.00      0.00      0.00        22
+          Laspeyria flexula       0.00      0.00      0.00        12
+    Lateroligia ophiogramma       0.00      0.00      0.00         4
+          Leucania obsoleta       0.00      0.00      0.00         4
+            Leucoma salicis       0.00      0.00      0.00         5
+            Ligdia adustata       0.00      0.00      0.00        25
+            Lithosia quadra       0.00      0.00      0.00         3
+         Litoligia literosa       0.00      0.00      0.00         6
+       Lomaspilis marginata       0.00      0.00      0.00        43
+        Lomographa temerata       0.00      0.00      0.00         4
+          Luperina testacea       0.25      0.61      0.35        56
+             Lycia hirtaria       0.00      0.00      0.00         4
+       Lycophotia porphyrea       0.00      0.00      0.00         5
+           Lymantria dispar       0.15      0.17      0.16        35
+         Lythria cruentaria       0.10      0.09      0.10        22
+          Macaria alternata       0.00      0.00      0.00        18
+           Macaria liturata       0.00      0.00      0.00        12
+             Macaria notata       0.00      0.00      0.00         6
+      Macdunnoughia confusa       0.00      0.00      0.00         7
+   Macroglossum stellatarum       0.10      0.06      0.07        51
+         Mamestra brassicae       0.00      0.00      0.00         9
+           Manulea complana       0.00      0.00      0.00        10
+      Melanchra persicariae       0.00      0.00      0.00         3
+        Mesoligia furuncula       0.07      0.52      0.13        46
+       Miltochrista miniata       0.00      0.00      0.00         6
+               Mimas tiliae       0.00      0.00      0.00        14
+                Mormo maura       0.00      0.00      0.00        29
+        Mythimna albipuncta       0.00      0.00      0.00        16
+           Mythimna ferrago       0.10      0.30      0.15        10
+            Mythimna impura       0.00      0.00      0.00         7
+           Mythimna l-album       0.00      0.00      0.00         3
+           Mythimna pallens       1.00      0.09      0.17        11
+         Mythimna straminea       0.00      0.00      0.00         6
+         Mythimna vitellina       0.00      0.00      0.00         3
+               Noctua comes       0.00      0.00      0.00        60
+           Noctua fimbriata       0.00      0.00      0.00        15
+          Noctua interjecta       0.00      0.00      0.00        12
+             Noctua pronuba       0.17      0.44      0.24       270
+          Nyctobrya muralis       0.00      0.00      0.00         5
+         Ochropleura plecta       0.22      0.18      0.20        55
+         Oligia fasciuncula       0.20      0.38      0.26        13
+        Operophtera brumata       0.56      0.97      0.71        40
+   Opisthograptis luteolata       0.15      0.04      0.07        46
+             Orgyia antiqua       0.00      0.00      0.00         7
+            Orthosia cerasi       0.22      0.73      0.34        33
+             Orthosia cruda       0.00      0.00      0.00        14
+           Orthosia gothica       0.14      0.14      0.14        21
+           Orthosia incerta       0.00      0.00      0.00        15
+      Ourapteryx sambucaria       0.00      0.00      0.00        10
+Pachycnemia hippocastanaria       0.00      0.00      0.00         4
+        Panemeria tenebrata       0.00      0.00      0.00         3
+            Panolis flammea       0.00      0.00      0.00         4
+     Parascotia fuliginaria       0.00      0.00      0.00         4
+     Pasiphila rectangulata       0.07      0.07      0.07        15
+     Pechipogo plumigeralis       0.00      0.00      0.00         6
+           Pelosia muscerda       0.03      0.06      0.04        18
+   Peribatodes rhomboidaria       0.06      0.07      0.07        80
+      Perizoma alchemillata       0.00      0.00      0.00        10
+     Perizoma flavofasciata       0.00      0.00      0.00         6
+         Phigalia pilosaria       0.00      0.00      0.00         7
+     Phlogophora meticulosa       0.00      0.00      0.00        34
+             Photedes fluxa       0.00      0.00      0.00         5
+    Phragmatobia fuliginosa       0.03      0.03      0.03        38
+        Plemyria rubiginata       0.00      0.00      0.00         6
+            Plusia festucae       0.00      0.00      0.00        10
+  Pterapherapteryx sexalata       0.00      0.00      0.00         3
+            Rhizedra lutosa       0.00      0.00      0.00         6
+          Rivula sericealis       0.00      0.00      0.00        58
+  Schrankia costaestrigalis       0.00      0.00      0.00         5
+      Scoliopteryx libatrix       0.00      0.00      0.00        26
+           Scopula immutata       0.00      0.00      0.00         4
+           Selenia dentaria       0.00      0.00      0.00        13
+       Selenia tetralunaria       0.00      0.00      0.00         4
+        Smerinthus ocellata       0.00      0.00      0.00        18
+            Sphinx ligustri       0.00      0.00      0.00        14
+            Sphinx pinastri       0.00      0.00      0.00        15
+        Sphrageidus similis       0.00      0.00      0.00         7
+           Spilarctia lutea       0.00      0.00      0.00        23
+      Spilosoma lubricipeda       0.11      0.27      0.16        51
+       Stegania trimaculata       0.00      0.00      0.00         5
+         Sunira circellaris       0.22      0.25      0.24         8
+         Thalpophila matura       0.00      0.00      0.00         3
+           Thera obeliscata       0.00      0.00      0.00         3
+             Timandra comae       0.00      0.00      0.00        36
+         Trachea atriplicis       0.00      0.00      0.00         7
+            Tyria jacobaeae       0.17      0.83      0.28        66
+           Wittia sororcula       0.00      0.00      0.00         8
+       Xanthorhoe designata       0.00      0.00      0.00         6
+       Xanthorhoe ferrugata       0.00      0.00      0.00        19
+       Xanthorhoe fluctuata       0.00      0.00      0.00        38
+       Xanthorhoe montanata       0.00      0.00      0.00         6
+     Xanthorhoe spadicearia       0.00      0.00      0.00        10
+                Xestia baja       0.00      0.00      0.00         5
+            Xestia c-nigrum       0.09      0.18      0.12        85
+          Xestia triangulum       0.00      0.00      0.00        13
+        Xestia xanthographa       0.17      0.30      0.22        46
+
+                   accuracy                           0.13      4272
+                  macro avg       0.04      0.06      0.04      4272
+               weighted avg       0.07      0.13      0.08      4272
+
+Saved: results/advanced_evaluation/figures/confusion_matrix_metadata_only.png
+Saved: results/advanced_evaluation/figures/per_species_accuracy_metadata_only.png
+
+============================================================
+ADVANCED EVALUATION: Early Fusion
+============================================================
+
+Top 10 easiest species:
+                species  accuracy  n_samples
+  Abraxas grossulariata     100.0          6
+     Acronicta leporina     100.0         10
+       Acronicta aceris     100.0          9
+      Caradrina kadenii     100.0          3
+      Atethmia centrago     100.0          7
+        Anarta myrtilli     100.0          3
+Arenostola phragmitidis     100.0          7
+            Arctia caja     100.0          9
+           Amata phegea     100.0          8
+    Asteroscopus sphinx     100.0          6
+
+Top 10 hardest species:
+                    species  accuracy  n_samples
+          Amphipyra berbera 33.333333          3
+        Ennomos quercinaria 33.333333          3
+         Thalpophila matura 33.333333          3
+         Mythimna vitellina 33.333333          3
+           Diacrisia sannio 33.333333          3
+       Agriopis aurantiaria 25.000000          4
+      Charanyca trigrammica 25.000000          4
+        Hypomecis roboraria 25.000000          4
+           Globia sparganii 25.000000          4
+Pachycnemia hippocastanaria  0.000000          4
+
+Classification Report:
+                             precision    recall  f1-score   support
+
+      Abraxas grossulariata       1.00      1.00      1.00         6
+            Abraxas sylvata       1.00      0.50      0.67         4
+        Abrostola triplasia       0.60      0.50      0.55         6
+           Acronicta aceris       1.00      1.00      1.00         9
+         Acronicta leporina       1.00      1.00      1.00        10
+      Acronicta megacephala       0.81      0.93      0.87        14
+          Acronicta rumicis       0.83      0.81      0.82        31
+       Agriopis aurantiaria       0.50      0.25      0.33         4
+     Agriopis leucophaearia       0.90      0.90      0.90        10
+        Agriopis marginaria       0.78      0.93      0.85        15
+          Agrius convolvuli       0.88      0.78      0.82         9
+             Agrochola lota       0.50      0.33      0.40         3
+           Agrochola lunosa       1.00      0.62      0.77         8
+        Agrochola macilenta       1.00      0.50      0.67         4
+             Agrotis clavis       0.79      0.73      0.76        15
+      Agrotis exclamationis       0.92      0.85      0.88        40
+            Agrotis ipsilon       0.62      0.71      0.67        14
+               Agrotis puta       0.82      0.88      0.85        42
+            Agrotis segetum       0.86      0.52      0.65        23
+        Agrotis vestigialis       0.92      0.92      0.92        12
+            Alcis repandata       0.83      0.71      0.77         7
+      Allophyes oxyacanthae       1.00      0.33      0.50         3
+       Alsophila aescularia       0.70      0.64      0.67        11
+               Amata phegea       0.80      1.00      0.89         8
+          Amphipyra berbera       0.33      0.33      0.33         3
+        Amphipyra pyramidea       1.00      0.87      0.93        23
+            Anarta myrtilli       1.00      1.00      1.00         3
+            Anarta trifolii       1.00      0.77      0.87        13
+             Anorthoa munda       1.00      0.88      0.93         8
+          Apamea monoglypha       1.00      0.89      0.94        35
+       Apterogenum ypsillon       1.00      0.67      0.80         3
+                Arctia caja       1.00      1.00      1.00         9
+    Arenostola phragmitidis       0.88      1.00      0.93         7
+        Asteroscopus sphinx       1.00      1.00      1.00         6
+          Atethmia centrago       1.00      1.00      1.00         7
+        Atolmis rubricollis       1.00      0.67      0.80         6
+           Autographa gamma       0.88      0.95      0.91       146
+              Axylia putris       0.96      0.96      0.96        26
+           Biston betularia       1.00      0.95      0.98        21
+           Biston strataria       0.75      0.75      0.75         4
+           Bupalus piniaria       1.00      0.62      0.77         8
+         Cabera exanthemata       0.82      0.97      0.89        32
+             Cabera pusaria       0.74      0.70      0.72        20
+              Callistege mi       0.67      0.57      0.62         7
+       Calliteara pudibunda       0.92      0.65      0.76        17
+       Campaea margaritaria       0.92      0.98      0.95        46
+     Camptogramma bilineata       0.92      0.90      0.91        86
+      Caradrina clavipalpis       1.00      0.67      0.80         9
+          Caradrina kadenii       1.00      1.00      1.00         3
+         Caradrina morpheus       0.38      0.45      0.42        11
+             Catocala nupta       0.79      0.65      0.71        17
+            Catocala sponsa       0.71      0.71      0.71         7
+       Charanyca ferruginea       0.60      0.50      0.55         6
+      Charanyca trigrammica       0.50      0.25      0.33         4
+         Chiasmia clathrata       0.91      0.87      0.89        23
+      Chloroclysta siterata       1.00      1.00      1.00         4
+        Chloroclystis v-ata       0.83      0.95      0.89        21
+            Cidaria fulvata       0.75      1.00      0.86         3
+           Collita griseola       0.88      0.88      0.88        25
+           Colocasia coryli       1.00      1.00      1.00        16
+    Colostygia pectinataria       0.85      0.79      0.81        14
+          Colotois pennaria       1.00      0.67      0.80         6
+        Comibaena bajularia       1.00      1.00      1.00         4
+    Conistra erythrocephala       0.50      0.50      0.50         4
+          Conistra vaccinii       0.94      0.75      0.83        20
+         Coscinia cribraria       0.75      0.90      0.82        10
+           Cosmia trapezina       0.77      0.80      0.79        30
+         Cosmorhoe ocellata       1.00      0.83      0.91         6
+       Craniophora ligustri       0.76      0.84      0.80        19
+       Crocallis elinguaria       0.92      0.75      0.83        16
+              Cryphia algae       0.94      1.00      0.97        15
+    Cyclophora albipunctata       1.00      1.00      1.00         3
+        Cyclophora linearia       0.71      0.71      0.71         7
+       Cyclophora punctaria       0.81      0.87      0.84        15
+         Deilephila elpenor       0.96      0.93      0.94        27
+       Deilephila porcellus       1.00      0.90      0.95        10
+           Deltote bankiana       0.86      0.92      0.89        13
+            Deltote pygarga       0.81      0.91      0.86        23
+       Diachrysia chrysitis       1.00      1.00      1.00         9
+           Diacrisia sannio       1.00      0.33      0.50         3
+           Diaphora mendica       1.00      0.67      0.80         6
+               Diarsia rubi       0.88      0.82      0.85        28
+        Dryobotodes eremita       0.86      1.00      0.92         6
+    Dypterygia scabriuscula       0.88      1.00      0.93         7
+         Dysstroma truncata       1.00      0.73      0.85        15
+      Ecliptopera silaceata       1.00      0.70      0.82        10
+     Ectropis crepuscularia       0.91      0.88      0.90        49
+             Eilema caniola       0.60      0.43      0.50         7
+          Ematurga atomaria       0.96      0.92      0.94        24
+           Ennomos alniaria       0.83      0.71      0.77         7
+           Ennomos erosaria       0.62      0.83      0.71         6
+        Ennomos quercinaria       1.00      0.33      0.50         3
+          Epione repandaria       1.00      0.75      0.86         4
+         Epirrhoe alternata       0.86      0.95      0.90        44
+         Erannis defoliaria       1.00      0.86      0.92        14
+          Euchoeca nebulata       1.00      0.67      0.80         3
+          Euclidia glyphica       0.92      0.73      0.81        15
+           Eulithis prunata       0.86      1.00      0.92         6
+         Eulithis pyraliata       0.86      0.86      0.86         7
+           Eulithis testata       0.77      1.00      0.87        10
+      Eupithecia abbreviata       1.00      0.75      0.86         4
+     Eupithecia absinthiata       1.00      1.00      1.00         4
+     Eupithecia centaureata       0.80      1.00      0.89        12
+       Eupithecia linariata       0.67      0.50      0.57         4
+          Eupithecia nanata       1.00      1.00      1.00         6
+     Eupithecia tantillaria       0.75      0.75      0.75         4
+         Eupithecia vulgata       0.67      0.80      0.73         5
+   Euplagia quadripunctaria       1.00      1.00      1.00        11
+          Euplexia lucipara       1.00      1.00      1.00         4
+     Euproctis chrysorrhoea       0.61      0.92      0.73        12
+        Eupsilia transversa       0.75      0.67      0.71         9
+             Euxoa cursoria       0.67      0.67      0.67         6
+      Geometra papilionaria       1.00      0.88      0.93         8
+           Globia sparganii       1.00      0.25      0.40         4
+   Gymnoscelis rufifasciata       0.82      0.97      0.89        72
+               Hada plebeja       0.67      0.80      0.73         5
+        Hecatera bicolorata       0.78      1.00      0.88         7
+         Hemaris fuciformis       1.00      0.67      0.80         6
+        Hemithea aestivaria       0.95      0.95      0.95        19
+         Herminia grisealis       0.88      1.00      0.93         7
+     Herminia tarsipennalis       0.75      0.86      0.80         7
+         Hoplodrina ambigua       0.85      0.79      0.81        28
+     Hoplodrina octogenaria       0.87      0.93      0.90        29
+          Hydraecia micacea       1.00      0.60      0.75         5
+      Hydriomena impluviata       1.00      1.00      1.00         5
+           Hylaea fasciaria       1.00      0.50      0.67         6
+               Hyles gallii       1.00      0.75      0.86         4
+       Hypena proboscidalis       0.85      0.88      0.86        40
+           Hypena rostralis       0.56      0.62      0.59         8
+      Hypomecis punctinalis       0.92      0.71      0.80        17
+        Hypomecis roboraria       0.50      0.25      0.33         4
+             Idaea aversata       0.92      0.96      0.94        99
+             Idaea biselata       0.75      0.94      0.83        16
+            Idaea dimidiata       0.94      0.94      0.94        50
+           Idaea emarginata       0.92      1.00      0.96        12
+          Idaea fuscovenosa       0.92      0.80      0.86        15
+            Idaea rusticata       0.86      0.91      0.89        35
+              Idaea seriata       0.96      0.90      0.93        88
+           Idaea straminata       1.00      0.80      0.89         5
+         Idaea subsericeata       1.00      0.92      0.96        13
+         Idaea sylvestraria       1.00      0.75      0.86         4
+            Jodis lactearia       1.00      1.00      1.00         5
+             Katha depressa       0.67      0.67      0.67         3
+         Lacanobia oleracea       0.84      0.86      0.85        36
+            Lacanobia suasa       0.65      0.65      0.65        17
+             Laothoe populi       0.91      0.95      0.93        22
+          Laspeyria flexula       1.00      0.92      0.96        12
+    Lateroligia ophiogramma       0.67      0.50      0.57         4
+          Leucania obsoleta       0.75      0.75      0.75         4
+            Leucoma salicis       0.80      0.80      0.80         5
+            Ligdia adustata       1.00      0.84      0.91        25
+            Lithosia quadra       1.00      1.00      1.00         3
+         Litoligia literosa       1.00      0.67      0.80         6
+       Lomaspilis marginata       0.95      0.91      0.93        43
+        Lomographa temerata       1.00      0.50      0.67         4
+          Luperina testacea       0.82      0.98      0.89        56
+             Lycia hirtaria       0.75      0.75      0.75         4
+       Lycophotia porphyrea       0.83      1.00      0.91         5
+           Lymantria dispar       0.88      0.83      0.85        35
+         Lythria cruentaria       0.95      0.95      0.95        22
+          Macaria alternata       0.84      0.89      0.86        18
+           Macaria liturata       0.77      0.83      0.80        12
+             Macaria notata       1.00      1.00      1.00         6
+      Macdunnoughia confusa       1.00      0.86      0.92         7
+   Macroglossum stellatarum       0.86      0.96      0.91        51
+         Mamestra brassicae       0.75      0.67      0.71         9
+           Manulea complana       0.67      0.80      0.73        10
+      Melanchra persicariae       1.00      1.00      1.00         3
+        Mesoligia furuncula       0.74      0.91      0.82        46
+       Miltochrista miniata       1.00      0.67      0.80         6
+               Mimas tiliae       0.92      0.86      0.89        14
+                Mormo maura       0.93      0.93      0.93        29
+        Mythimna albipuncta       0.87      0.81      0.84        16
+           Mythimna ferrago       0.70      0.70      0.70        10
+            Mythimna impura       0.56      0.71      0.62         7
+           Mythimna l-album       1.00      1.00      1.00         3
+           Mythimna pallens       0.71      0.91      0.80        11
+         Mythimna straminea       1.00      0.50      0.67         6
+         Mythimna vitellina       1.00      0.33      0.50         3
+               Noctua comes       0.90      0.93      0.92        60
+           Noctua fimbriata       0.93      0.93      0.93        15
+          Noctua interjecta       0.90      0.75      0.82        12
+             Noctua pronuba       0.89      0.94      0.91       270
+          Nyctobrya muralis       1.00      0.60      0.75         5
+         Ochropleura plecta       0.87      0.95      0.90        55
+         Oligia fasciuncula       0.87      1.00      0.93        13
+        Operophtera brumata       0.88      0.90      0.89        40
+   Opisthograptis luteolata       0.96      0.98      0.97        46
+             Orgyia antiqua       1.00      0.57      0.73         7
+            Orthosia cerasi       0.89      0.94      0.91        33
+             Orthosia cruda       0.75      0.86      0.80        14
+           Orthosia gothica       0.95      0.95      0.95        21
+           Orthosia incerta       0.76      0.87      0.81        15
+      Ourapteryx sambucaria       1.00      1.00      1.00        10
+Pachycnemia hippocastanaria       0.00      0.00      0.00         4
+        Panemeria tenebrata       0.67      0.67      0.67         3
+            Panolis flammea       1.00      1.00      1.00         4
+     Parascotia fuliginaria       1.00      0.75      0.86         4
+     Pasiphila rectangulata       0.92      0.80      0.86        15
+     Pechipogo plumigeralis       0.75      0.50      0.60         6
+           Pelosia muscerda       0.76      0.89      0.82        18
+   Peribatodes rhomboidaria       0.86      0.95      0.90        80
+      Perizoma alchemillata       0.82      0.90      0.86        10
+     Perizoma flavofasciata       1.00      0.67      0.80         6
+         Phigalia pilosaria       0.75      0.86      0.80         7
+     Phlogophora meticulosa       0.83      0.88      0.86        34
+             Photedes fluxa       0.83      1.00      0.91         5
+    Phragmatobia fuliginosa       0.94      0.89      0.92        38
+        Plemyria rubiginata       1.00      0.83      0.91         6
+            Plusia festucae       1.00      0.90      0.95        10
+  Pterapherapteryx sexalata       0.67      0.67      0.67         3
+            Rhizedra lutosa       1.00      0.67      0.80         6
+          Rivula sericealis       0.85      0.97      0.90        58
+  Schrankia costaestrigalis       0.67      0.40      0.50         5
+      Scoliopteryx libatrix       0.83      0.92      0.87        26
+           Scopula immutata       0.80      1.00      0.89         4
+           Selenia dentaria       0.91      0.77      0.83        13
+       Selenia tetralunaria       0.67      0.50      0.57         4
+        Smerinthus ocellata       0.89      0.89      0.89        18
+            Sphinx ligustri       0.88      1.00      0.93        14
+            Sphinx pinastri       1.00      0.73      0.85        15
+        Sphrageidus similis       1.00      0.43      0.60         7
+           Spilarctia lutea       0.92      1.00      0.96        23
+      Spilosoma lubricipeda       0.92      0.96      0.94        51
+       Stegania trimaculata       1.00      0.80      0.89         5
+         Sunira circellaris       0.58      0.88      0.70         8
+         Thalpophila matura       1.00      0.33      0.50         3
+           Thera obeliscata       1.00      1.00      1.00         3
+             Timandra comae       0.94      0.92      0.93        36
+         Trachea atriplicis       1.00      1.00      1.00         7
+            Tyria jacobaeae       0.97      0.98      0.98        66
+           Wittia sororcula       0.86      0.75      0.80         8
+       Xanthorhoe designata       1.00      0.67      0.80         6
+       Xanthorhoe ferrugata       0.73      0.84      0.78        19
+       Xanthorhoe fluctuata       0.93      0.97      0.95        38
+       Xanthorhoe montanata       0.67      0.67      0.67         6
+     Xanthorhoe spadicearia       1.00      0.60      0.75        10
+                Xestia baja       1.00      0.60      0.75         5
+            Xestia c-nigrum       0.93      0.91      0.92        85
+          Xestia triangulum       0.92      0.92      0.92        13
+        Xestia xanthographa       0.84      0.80      0.82        46
+
+                   accuracy                           0.88      4272
+                  macro avg       0.87      0.80      0.82      4272
+               weighted avg       0.88      0.88      0.87      4272
+
+Saved: results/advanced_evaluation/figures/confusion_matrix_early_fusion.png
+Saved: results/advanced_evaluation/figures/per_species_accuracy_early_fusion.png
+
+============================================================
+ADVANCED EVALUATION: Concat Fusion
+============================================================
+
+Top 10 easiest species:
+                species  accuracy  n_samples
+  Abraxas grossulariata     100.0          6
+     Acronicta leporina     100.0         10
+       Acronicta aceris     100.0          9
+      Caradrina kadenii     100.0          3
+      Atethmia centrago     100.0          7
+    Asteroscopus sphinx     100.0          6
+Arenostola phragmitidis     100.0          7
+            Arctia caja     100.0          9
+           Amata phegea     100.0          8
+    Dryobotodes eremita     100.0          6
+
+Top 10 hardest species:
+                  species  accuracy  n_samples
+         Diacrisia sannio 33.333333          3
+       Mythimna vitellina 33.333333          3
+      Sphrageidus similis 28.571429          7
+      Hypomecis roboraria 25.000000          4
+    Charanyca trigrammica 25.000000          4
+             Hada plebeja 20.000000          5
+     Agriopis aurantiaria  0.000000          4
+        Amphipyra berbera  0.000000          3
+         Globia sparganii  0.000000          4
+Pterapherapteryx sexalata  0.000000          3
+
+Classification Report:
+                             precision    recall  f1-score   support
+
+      Abraxas grossulariata       1.00      1.00      1.00         6
+            Abraxas sylvata       0.67      0.50      0.57         4
+        Abrostola triplasia       0.80      0.67      0.73         6
+           Acronicta aceris       0.82      1.00      0.90         9
+         Acronicta leporina       0.91      1.00      0.95        10
+      Acronicta megacephala       0.71      0.86      0.77        14
+          Acronicta rumicis       0.67      0.71      0.69        31
+       Agriopis aurantiaria       0.00      0.00      0.00         4
+     Agriopis leucophaearia       0.82      0.90      0.86        10
+        Agriopis marginaria       0.76      0.87      0.81        15
+          Agrius convolvuli       0.86      0.67      0.75         9
+             Agrochola lota       0.33      0.33      0.33         3
+           Agrochola lunosa       1.00      0.50      0.67         8
+        Agrochola macilenta       1.00      0.50      0.67         4
+             Agrotis clavis       0.76      0.87      0.81        15
+      Agrotis exclamationis       0.86      0.90      0.88        40
+            Agrotis ipsilon       0.56      0.64      0.60        14
+               Agrotis puta       0.90      0.88      0.89        42
+            Agrotis segetum       0.67      0.43      0.53        23
+        Agrotis vestigialis       0.91      0.83      0.87        12
+            Alcis repandata       0.75      0.86      0.80         7
+      Allophyes oxyacanthae       0.50      0.33      0.40         3
+       Alsophila aescularia       0.64      0.64      0.64        11
+               Amata phegea       0.89      1.00      0.94         8
+          Amphipyra berbera       0.00      0.00      0.00         3
+        Amphipyra pyramidea       0.88      0.91      0.89        23
+            Anarta myrtilli       0.50      0.67      0.57         3
+            Anarta trifolii       0.64      0.69      0.67        13
+             Anorthoa munda       0.67      0.75      0.71         8
+          Apamea monoglypha       0.91      0.83      0.87        35
+       Apterogenum ypsillon       1.00      0.67      0.80         3
+                Arctia caja       1.00      1.00      1.00         9
+    Arenostola phragmitidis       0.64      1.00      0.78         7
+        Asteroscopus sphinx       1.00      1.00      1.00         6
+          Atethmia centrago       0.88      1.00      0.93         7
+        Atolmis rubricollis       1.00      0.67      0.80         6
+           Autographa gamma       0.93      0.91      0.92       146
+              Axylia putris       0.86      0.96      0.91        26
+           Biston betularia       0.90      0.90      0.90        21
+           Biston strataria       0.75      0.75      0.75         4
+           Bupalus piniaria       1.00      0.62      0.77         8
+         Cabera exanthemata       0.72      0.91      0.81        32
+             Cabera pusaria       0.76      0.65      0.70        20
+              Callistege mi       0.67      0.57      0.62         7
+       Calliteara pudibunda       1.00      0.65      0.79        17
+       Campaea margaritaria       0.93      0.93      0.93        46
+     Camptogramma bilineata       0.83      0.88      0.85        86
+      Caradrina clavipalpis       0.78      0.78      0.78         9
+          Caradrina kadenii       1.00      1.00      1.00         3
+         Caradrina morpheus       0.50      0.55      0.52        11
+             Catocala nupta       0.57      0.71      0.63        17
+            Catocala sponsa       0.67      0.57      0.62         7
+       Charanyca ferruginea       0.57      0.67      0.62         6
+      Charanyca trigrammica       1.00      0.25      0.40         4
+         Chiasmia clathrata       0.90      0.83      0.86        23
+      Chloroclysta siterata       0.75      0.75      0.75         4
+        Chloroclystis v-ata       0.91      0.95      0.93        21
+            Cidaria fulvata       1.00      1.00      1.00         3
+           Collita griseola       0.84      0.84      0.84        25
+           Colocasia coryli       0.75      0.94      0.83        16
+    Colostygia pectinataria       0.85      0.79      0.81        14
+          Colotois pennaria       1.00      0.67      0.80         6
+        Comibaena bajularia       1.00      1.00      1.00         4
+    Conistra erythrocephala       0.67      0.50      0.57         4
+          Conistra vaccinii       0.75      0.75      0.75        20
+         Coscinia cribraria       0.69      0.90      0.78        10
+           Cosmia trapezina       0.84      0.87      0.85        30
+         Cosmorhoe ocellata       1.00      0.67      0.80         6
+       Craniophora ligustri       0.73      0.84      0.78        19
+       Crocallis elinguaria       1.00      0.75      0.86        16
+              Cryphia algae       0.88      0.93      0.90        15
+    Cyclophora albipunctata       1.00      1.00      1.00         3
+        Cyclophora linearia       0.44      0.57      0.50         7
+       Cyclophora punctaria       0.81      0.87      0.84        15
+         Deilephila elpenor       0.93      0.96      0.95        27
+       Deilephila porcellus       0.89      0.80      0.84        10
+           Deltote bankiana       0.80      0.92      0.86        13
+            Deltote pygarga       0.86      0.83      0.84        23
+       Diachrysia chrysitis       0.80      0.89      0.84         9
+           Diacrisia sannio       1.00      0.33      0.50         3
+           Diaphora mendica       1.00      0.50      0.67         6
+               Diarsia rubi       0.79      0.68      0.73        28
+        Dryobotodes eremita       0.86      1.00      0.92         6
+    Dypterygia scabriuscula       1.00      1.00      1.00         7
+         Dysstroma truncata       0.91      0.67      0.77        15
+      Ecliptopera silaceata       1.00      0.80      0.89        10
+     Ectropis crepuscularia       0.93      0.88      0.91        49
+             Eilema caniola       0.56      0.71      0.62         7
+          Ematurga atomaria       0.81      0.71      0.76        24
+           Ennomos alniaria       0.67      0.86      0.75         7
+           Ennomos erosaria       0.67      0.67      0.67         6
+        Ennomos quercinaria       1.00      0.33      0.50         3
+          Epione repandaria       1.00      0.75      0.86         4
+         Epirrhoe alternata       0.86      1.00      0.93        44
+         Erannis defoliaria       0.92      0.86      0.89        14
+          Euchoeca nebulata       1.00      0.67      0.80         3
+          Euclidia glyphica       0.86      0.80      0.83        15
+           Eulithis prunata       0.86      1.00      0.92         6
+         Eulithis pyraliata       0.83      0.71      0.77         7
+           Eulithis testata       0.82      0.90      0.86        10
+      Eupithecia abbreviata       1.00      0.75      0.86         4
+     Eupithecia absinthiata       1.00      1.00      1.00         4
+     Eupithecia centaureata       0.92      0.92      0.92        12
+       Eupithecia linariata       1.00      0.75      0.86         4
+          Eupithecia nanata       0.86      1.00      0.92         6
+     Eupithecia tantillaria       1.00      0.50      0.67         4
+         Eupithecia vulgata       0.67      0.40      0.50         5
+   Euplagia quadripunctaria       1.00      0.91      0.95        11
+          Euplexia lucipara       1.00      0.75      0.86         4
+     Euproctis chrysorrhoea       0.73      0.92      0.81        12
+        Eupsilia transversa       0.86      0.67      0.75         9
+             Euxoa cursoria       0.44      0.67      0.53         6
+      Geometra papilionaria       1.00      0.75      0.86         8
+           Globia sparganii       0.00      0.00      0.00         4
+   Gymnoscelis rufifasciata       0.84      0.89      0.86        72
+               Hada plebeja       0.50      0.20      0.29         5
+        Hecatera bicolorata       0.88      1.00      0.93         7
+         Hemaris fuciformis       0.80      0.67      0.73         6
+        Hemithea aestivaria       0.83      1.00      0.90        19
+         Herminia grisealis       0.50      0.57      0.53         7
+     Herminia tarsipennalis       0.62      0.71      0.67         7
+         Hoplodrina ambigua       0.81      0.79      0.80        28
+     Hoplodrina octogenaria       0.82      0.97      0.89        29
+          Hydraecia micacea       1.00      0.60      0.75         5
+      Hydriomena impluviata       1.00      0.60      0.75         5
+           Hylaea fasciaria       1.00      0.50      0.67         6
+               Hyles gallii       0.67      0.50      0.57         4
+       Hypena proboscidalis       0.87      0.82      0.85        40
+           Hypena rostralis       0.75      0.75      0.75         8
+      Hypomecis punctinalis       0.72      0.76      0.74        17
+        Hypomecis roboraria       1.00      0.25      0.40         4
+             Idaea aversata       0.87      0.93      0.90        99
+             Idaea biselata       0.76      0.81      0.79        16
+            Idaea dimidiata       0.89      0.96      0.92        50
+           Idaea emarginata       0.85      0.92      0.88        12
+          Idaea fuscovenosa       0.85      0.73      0.79        15
+            Idaea rusticata       0.91      0.83      0.87        35
+              Idaea seriata       0.96      0.91      0.94        88
+           Idaea straminata       1.00      0.80      0.89         5
+         Idaea subsericeata       0.86      0.92      0.89        13
+         Idaea sylvestraria       1.00      0.75      0.86         4
+            Jodis lactearia       1.00      0.60      0.75         5
+             Katha depressa       0.50      0.67      0.57         3
+         Lacanobia oleracea       0.79      0.83      0.81        36
+            Lacanobia suasa       0.77      0.59      0.67        17
+             Laothoe populi       0.94      0.77      0.85        22
+          Laspeyria flexula       1.00      1.00      1.00        12
+    Lateroligia ophiogramma       0.60      0.75      0.67         4
+          Leucania obsoleta       1.00      0.75      0.86         4
+            Leucoma salicis       1.00      0.60      0.75         5
+            Ligdia adustata       0.95      0.84      0.89        25
+            Lithosia quadra       1.00      1.00      1.00         3
+         Litoligia literosa       0.83      0.83      0.83         6
+       Lomaspilis marginata       0.89      0.93      0.91        43
+        Lomographa temerata       1.00      0.75      0.86         4
+          Luperina testacea       0.84      0.96      0.90        56
+             Lycia hirtaria       0.75      0.75      0.75         4
+       Lycophotia porphyrea       0.71      1.00      0.83         5
+           Lymantria dispar       0.81      0.86      0.83        35
+         Lythria cruentaria       0.91      0.91      0.91        22
+          Macaria alternata       0.88      0.78      0.82        18
+           Macaria liturata       0.91      0.83      0.87        12
+             Macaria notata       0.80      0.67      0.73         6
+      Macdunnoughia confusa       0.71      0.71      0.71         7
+   Macroglossum stellatarum       0.82      0.96      0.88        51
+         Mamestra brassicae       0.71      0.56      0.62         9
+           Manulea complana       0.75      0.60      0.67        10
+      Melanchra persicariae       0.75      1.00      0.86         3
+        Mesoligia furuncula       0.74      0.74      0.74        46
+       Miltochrista miniata       0.75      0.50      0.60         6
+               Mimas tiliae       0.92      0.86      0.89        14
+                Mormo maura       0.93      0.93      0.93        29
+        Mythimna albipuncta       0.80      0.75      0.77        16
+           Mythimna ferrago       1.00      0.80      0.89        10
+            Mythimna impura       0.57      0.57      0.57         7
+           Mythimna l-album       1.00      0.67      0.80         3
+           Mythimna pallens       0.53      0.73      0.62        11
+         Mythimna straminea       0.40      0.33      0.36         6
+         Mythimna vitellina       0.50      0.33      0.40         3
+               Noctua comes       0.87      0.90      0.89        60
+           Noctua fimbriata       0.76      0.87      0.81        15
+          Noctua interjecta       0.69      0.75      0.72        12
+             Noctua pronuba       0.90      0.94      0.92       270
+          Nyctobrya muralis       1.00      0.40      0.57         5
+         Ochropleura plecta       0.91      0.89      0.90        55
+         Oligia fasciuncula       0.85      0.85      0.85        13
+        Operophtera brumata       0.92      0.82      0.87        40
+   Opisthograptis luteolata       0.94      0.98      0.96        46
+             Orgyia antiqua       1.00      0.57      0.73         7
+            Orthosia cerasi       0.71      0.88      0.78        33
+             Orthosia cruda       0.83      0.71      0.77        14
+           Orthosia gothica       1.00      0.95      0.98        21
+           Orthosia incerta       0.70      0.47      0.56        15
+      Ourapteryx sambucaria       0.82      0.90      0.86        10
+Pachycnemia hippocastanaria       0.40      0.50      0.44         4
+        Panemeria tenebrata       0.67      0.67      0.67         3
+            Panolis flammea       1.00      1.00      1.00         4
+     Parascotia fuliginaria       1.00      0.75      0.86         4
+     Pasiphila rectangulata       0.67      0.80      0.73        15
+     Pechipogo plumigeralis       1.00      0.67      0.80         6
+           Pelosia muscerda       0.79      0.83      0.81        18
+   Peribatodes rhomboidaria       0.85      0.93      0.89        80
+      Perizoma alchemillata       0.75      0.90      0.82        10
+     Perizoma flavofasciata       0.80      0.67      0.73         6
+         Phigalia pilosaria       0.75      0.86      0.80         7
+     Phlogophora meticulosa       0.84      0.91      0.87        34
+             Photedes fluxa       0.67      0.80      0.73         5
+    Phragmatobia fuliginosa       0.92      0.89      0.91        38
+        Plemyria rubiginata       1.00      0.67      0.80         6
+            Plusia festucae       1.00      0.80      0.89        10
+  Pterapherapteryx sexalata       0.00      0.00      0.00         3
+            Rhizedra lutosa       0.75      0.50      0.60         6
+          Rivula sericealis       0.85      0.91      0.88        58
+  Schrankia costaestrigalis       0.50      0.60      0.55         5
+      Scoliopteryx libatrix       0.88      0.88      0.88        26
+           Scopula immutata       0.67      0.50      0.57         4
+           Selenia dentaria       0.91      0.77      0.83        13
+       Selenia tetralunaria       0.75      0.75      0.75         4
+        Smerinthus ocellata       0.84      0.89      0.86        18
+            Sphinx ligustri       0.93      0.93      0.93        14
+            Sphinx pinastri       0.71      0.67      0.69        15
+        Sphrageidus similis       0.67      0.29      0.40         7
+           Spilarctia lutea       0.92      1.00      0.96        23
+      Spilosoma lubricipeda       0.96      0.88      0.92        51
+       Stegania trimaculata       1.00      0.60      0.75         5
+         Sunira circellaris       0.54      0.88      0.67         8
+         Thalpophila matura       0.50      0.33      0.40         3
+           Thera obeliscata       1.00      0.33      0.50         3
+             Timandra comae       0.86      0.89      0.88        36
+         Trachea atriplicis       1.00      0.86      0.92         7
+            Tyria jacobaeae       0.90      0.95      0.93        66
+           Wittia sororcula       0.83      0.62      0.71         8
+       Xanthorhoe designata       0.67      0.67      0.67         6
+       Xanthorhoe ferrugata       0.71      0.79      0.75        19
+       Xanthorhoe fluctuata       0.90      0.97      0.94        38
+       Xanthorhoe montanata       0.71      0.83      0.77         6
+     Xanthorhoe spadicearia       1.00      0.70      0.82        10
+                Xestia baja       0.67      0.80      0.73         5
+            Xestia c-nigrum       0.90      0.91      0.90        85
+          Xestia triangulum       0.75      0.92      0.83        13
+        Xestia xanthographa       0.70      0.67      0.69        46
+
+                   accuracy                           0.84      4272
+                  macro avg       0.81      0.75      0.77      4272
+               weighted avg       0.85      0.84      0.84      4272
+
+Saved: results/advanced_evaluation/figures/confusion_matrix_concat_fusion.png
+Saved: results/advanced_evaluation/figures/per_species_accuracy_concat_fusion.png
+
+============================================================
+ADVANCED EVALUATION: Gated Fusion
+============================================================
+
+Top 10 easiest species:
+              species  accuracy  n_samples
+Abraxas grossulariata     100.0          6
+   Acronicta leporina     100.0         10
+    Atethmia centrago     100.0          7
+      Anarta myrtilli     100.0          3
+     Biston strataria     100.0          4
+  Asteroscopus sphinx     100.0          6
+          Arctia caja     100.0          9
+     Eulithis testata     100.0         10
+  Ennomos quercinaria     100.0          3
+  Dryobotodes eremita     100.0          6
+
+Top 10 hardest species:
+              species  accuracy  n_samples
+     Diacrisia sannio 33.333333          3
+ Apterogenum ypsillon 33.333333          3
+     Thera obeliscata 33.333333          3
+       Eilema caniola 28.571429          7
+ Agriopis aurantiaria 25.000000          4
+Charanyca trigrammica 25.000000          4
+    Leucania obsoleta 25.000000          4
+       Agrochola lota  0.000000          3
+     Globia sparganii  0.000000          4
+  Hypomecis roboraria  0.000000          4
+
+Classification Report:
+                             precision    recall  f1-score   support
+
+      Abraxas grossulariata       1.00      1.00      1.00         6
+            Abraxas sylvata       1.00      0.50      0.67         4
+        Abrostola triplasia       1.00      0.67      0.80         6
+           Acronicta aceris       0.89      0.89      0.89         9
+         Acronicta leporina       1.00      1.00      1.00        10
+      Acronicta megacephala       0.71      0.86      0.77        14
+          Acronicta rumicis       0.85      0.71      0.77        31
+       Agriopis aurantiaria       0.50      0.25      0.33         4
+     Agriopis leucophaearia       0.90      0.90      0.90        10
+        Agriopis marginaria       0.76      0.87      0.81        15
+          Agrius convolvuli       0.78      0.78      0.78         9
+             Agrochola lota       0.00      0.00      0.00         3
+           Agrochola lunosa       0.80      0.50      0.62         8
+        Agrochola macilenta       1.00      0.75      0.86         4
+             Agrotis clavis       0.72      0.87      0.79        15
+      Agrotis exclamationis       0.80      0.82      0.81        40
+            Agrotis ipsilon       0.59      0.71      0.65        14
+               Agrotis puta       0.93      0.88      0.90        42
+            Agrotis segetum       0.59      0.57      0.58        23
+        Agrotis vestigialis       0.79      0.92      0.85        12
+            Alcis repandata       0.60      0.86      0.71         7
+      Allophyes oxyacanthae       1.00      0.33      0.50         3
+       Alsophila aescularia       0.67      0.73      0.70        11
+               Amata phegea       0.88      0.88      0.88         8
+          Amphipyra berbera       0.50      0.33      0.40         3
+        Amphipyra pyramidea       0.80      0.87      0.83        23
+            Anarta myrtilli       0.60      1.00      0.75         3
+            Anarta trifolii       0.77      0.77      0.77        13
+             Anorthoa munda       0.70      0.88      0.78         8
+          Apamea monoglypha       0.91      0.86      0.88        35
+       Apterogenum ypsillon       1.00      0.33      0.50         3
+                Arctia caja       1.00      1.00      1.00         9
+    Arenostola phragmitidis       0.71      0.71      0.71         7
+        Asteroscopus sphinx       1.00      1.00      1.00         6
+          Atethmia centrago       1.00      1.00      1.00         7
+        Atolmis rubricollis       1.00      0.67      0.80         6
+           Autographa gamma       0.92      0.90      0.91       146
+              Axylia putris       0.89      0.96      0.93        26
+           Biston betularia       0.95      0.86      0.90        21
+           Biston strataria       0.50      1.00      0.67         4
+           Bupalus piniaria       1.00      0.75      0.86         8
+         Cabera exanthemata       0.83      0.94      0.88        32
+             Cabera pusaria       0.87      0.65      0.74        20
+              Callistege mi       1.00      0.43      0.60         7
+       Calliteara pudibunda       0.79      0.65      0.71        17
+       Campaea margaritaria       0.96      0.96      0.96        46
+     Camptogramma bilineata       0.88      0.88      0.88        86
+      Caradrina clavipalpis       1.00      0.56      0.71         9
+          Caradrina kadenii       0.67      0.67      0.67         3
+         Caradrina morpheus       0.42      0.45      0.43        11
+             Catocala nupta       0.85      0.65      0.73        17
+            Catocala sponsa       0.71      0.71      0.71         7
+       Charanyca ferruginea       0.50      0.50      0.50         6
+      Charanyca trigrammica       0.50      0.25      0.33         4
+         Chiasmia clathrata       0.77      0.74      0.76        23
+      Chloroclysta siterata       0.75      0.75      0.75         4
+        Chloroclystis v-ata       0.82      0.86      0.84        21
+            Cidaria fulvata       1.00      1.00      1.00         3
+           Collita griseola       0.77      0.80      0.78        25
+           Colocasia coryli       0.71      0.94      0.81        16
+    Colostygia pectinataria       0.79      0.79      0.79        14
+          Colotois pennaria       0.80      0.67      0.73         6
+        Comibaena bajularia       1.00      1.00      1.00         4
+    Conistra erythrocephala       0.33      0.50      0.40         4
+          Conistra vaccinii       0.78      0.70      0.74        20
+         Coscinia cribraria       0.69      0.90      0.78        10
+           Cosmia trapezina       0.75      0.90      0.82        30
+         Cosmorhoe ocellata       0.80      0.67      0.73         6
+       Craniophora ligustri       0.82      0.95      0.88        19
+       Crocallis elinguaria       0.92      0.75      0.83        16
+              Cryphia algae       0.93      0.93      0.93        15
+    Cyclophora albipunctata       1.00      1.00      1.00         3
+        Cyclophora linearia       0.71      0.71      0.71         7
+       Cyclophora punctaria       0.92      0.73      0.81        15
+         Deilephila elpenor       0.93      0.93      0.93        27
+       Deilephila porcellus       1.00      0.90      0.95        10
+           Deltote bankiana       1.00      1.00      1.00        13
+            Deltote pygarga       0.80      0.87      0.83        23
+       Diachrysia chrysitis       0.75      1.00      0.86         9
+           Diacrisia sannio       0.50      0.33      0.40         3
+           Diaphora mendica       0.75      0.50      0.60         6
+               Diarsia rubi       0.87      0.71      0.78        28
+        Dryobotodes eremita       0.86      1.00      0.92         6
+    Dypterygia scabriuscula       1.00      1.00      1.00         7
+         Dysstroma truncata       0.77      0.67      0.71        15
+      Ecliptopera silaceata       0.88      0.70      0.78        10
+     Ectropis crepuscularia       0.83      0.90      0.86        49
+             Eilema caniola       0.40      0.29      0.33         7
+          Ematurga atomaria       0.80      0.83      0.82        24
+           Ennomos alniaria       0.83      0.71      0.77         7
+           Ennomos erosaria       0.57      0.67      0.62         6
+        Ennomos quercinaria       1.00      1.00      1.00         3
+          Epione repandaria       1.00      0.75      0.86         4
+         Epirrhoe alternata       0.84      0.93      0.88        44
+         Erannis defoliaria       0.80      0.86      0.83        14
+          Euchoeca nebulata       1.00      1.00      1.00         3
+          Euclidia glyphica       1.00      0.67      0.80        15
+           Eulithis prunata       0.83      0.83      0.83         6
+         Eulithis pyraliata       0.75      0.86      0.80         7
+           Eulithis testata       0.77      1.00      0.87        10
+      Eupithecia abbreviata       1.00      0.50      0.67         4
+     Eupithecia absinthiata       1.00      0.75      0.86         4
+     Eupithecia centaureata       0.80      1.00      0.89        12
+       Eupithecia linariata       1.00      0.50      0.67         4
+          Eupithecia nanata       0.86      1.00      0.92         6
+     Eupithecia tantillaria       0.50      0.50      0.50         4
+         Eupithecia vulgata       0.43      0.60      0.50         5
+   Euplagia quadripunctaria       1.00      0.91      0.95        11
+          Euplexia lucipara       0.75      0.75      0.75         4
+     Euproctis chrysorrhoea       0.71      0.83      0.77        12
+        Eupsilia transversa       0.75      0.67      0.71         9
+             Euxoa cursoria       0.57      0.67      0.62         6
+      Geometra papilionaria       1.00      0.88      0.93         8
+           Globia sparganii       0.00      0.00      0.00         4
+   Gymnoscelis rufifasciata       0.78      0.85      0.81        72
+               Hada plebeja       0.75      0.60      0.67         5
+        Hecatera bicolorata       0.70      1.00      0.82         7
+         Hemaris fuciformis       0.75      0.50      0.60         6
+        Hemithea aestivaria       0.95      1.00      0.97        19
+         Herminia grisealis       0.78      1.00      0.88         7
+     Herminia tarsipennalis       0.78      1.00      0.88         7
+         Hoplodrina ambigua       0.81      0.75      0.78        28
+     Hoplodrina octogenaria       0.84      0.90      0.87        29
+          Hydraecia micacea       0.75      0.60      0.67         5
+      Hydriomena impluviata       1.00      0.40      0.57         5
+           Hylaea fasciaria       0.80      0.67      0.73         6
+               Hyles gallii       1.00      0.75      0.86         4
+       Hypena proboscidalis       0.79      0.78      0.78        40
+           Hypena rostralis       0.67      0.50      0.57         8
+      Hypomecis punctinalis       0.59      0.59      0.59        17
+        Hypomecis roboraria       0.00      0.00      0.00         4
+             Idaea aversata       0.89      0.94      0.91        99
+             Idaea biselata       0.88      0.88      0.88        16
+            Idaea dimidiata       0.90      0.94      0.92        50
+           Idaea emarginata       0.92      1.00      0.96        12
+          Idaea fuscovenosa       0.71      0.67      0.69        15
+            Idaea rusticata       0.91      0.89      0.90        35
+              Idaea seriata       0.91      0.90      0.90        88
+           Idaea straminata       0.67      0.80      0.73         5
+         Idaea subsericeata       0.81      1.00      0.90        13
+         Idaea sylvestraria       0.75      0.75      0.75         4
+            Jodis lactearia       0.75      0.60      0.67         5
+             Katha depressa       0.17      0.33      0.22         3
+         Lacanobia oleracea       0.81      0.81      0.81        36
+            Lacanobia suasa       0.71      0.59      0.65        17
+             Laothoe populi       0.91      0.95      0.93        22
+          Laspeyria flexula       0.92      0.92      0.92        12
+    Lateroligia ophiogramma       1.00      0.50      0.67         4
+          Leucania obsoleta       1.00      0.25      0.40         4
+            Leucoma salicis       1.00      0.80      0.89         5
+            Ligdia adustata       1.00      0.84      0.91        25
+            Lithosia quadra       1.00      1.00      1.00         3
+         Litoligia literosa       1.00      0.83      0.91         6
+       Lomaspilis marginata       0.97      0.91      0.94        43
+        Lomographa temerata       1.00      0.75      0.86         4
+          Luperina testacea       0.88      0.91      0.89        56
+             Lycia hirtaria       1.00      0.50      0.67         4
+       Lycophotia porphyrea       1.00      0.60      0.75         5
+           Lymantria dispar       0.83      0.86      0.85        35
+         Lythria cruentaria       0.95      0.86      0.90        22
+          Macaria alternata       0.78      0.78      0.78        18
+           Macaria liturata       0.77      0.83      0.80        12
+             Macaria notata       0.67      0.33      0.44         6
+      Macdunnoughia confusa       0.71      0.71      0.71         7
+   Macroglossum stellatarum       0.88      0.88      0.88        51
+         Mamestra brassicae       0.78      0.78      0.78         9
+           Manulea complana       0.55      0.60      0.57        10
+      Melanchra persicariae       0.60      1.00      0.75         3
+        Mesoligia furuncula       0.74      0.74      0.74        46
+       Miltochrista miniata       1.00      0.67      0.80         6
+               Mimas tiliae       1.00      0.93      0.96        14
+                Mormo maura       0.92      0.83      0.87        29
+        Mythimna albipuncta       0.80      0.75      0.77        16
+           Mythimna ferrago       0.78      0.70      0.74        10
+            Mythimna impura       0.44      0.57      0.50         7
+           Mythimna l-album       0.75      1.00      0.86         3
+           Mythimna pallens       0.57      0.73      0.64        11
+         Mythimna straminea       0.57      0.67      0.62         6
+         Mythimna vitellina       0.50      0.33      0.40         3
+               Noctua comes       0.82      0.90      0.86        60
+           Noctua fimbriata       0.87      0.87      0.87        15
+          Noctua interjecta       0.89      0.67      0.76        12
+             Noctua pronuba       0.93      0.94      0.94       270
+          Nyctobrya muralis       1.00      0.60      0.75         5
+         Ochropleura plecta       0.80      0.89      0.84        55
+         Oligia fasciuncula       0.76      1.00      0.87        13
+        Operophtera brumata       0.95      0.93      0.94        40
+   Opisthograptis luteolata       0.96      0.98      0.97        46
+             Orgyia antiqua       0.80      0.57      0.67         7
+            Orthosia cerasi       0.78      0.88      0.83        33
+             Orthosia cruda       0.75      0.86      0.80        14
+           Orthosia gothica       0.95      1.00      0.98        21
+           Orthosia incerta       0.62      0.53      0.57        15
+      Ourapteryx sambucaria       1.00      1.00      1.00        10
+Pachycnemia hippocastanaria       1.00      0.50      0.67         4
+        Panemeria tenebrata       0.75      1.00      0.86         3
+            Panolis flammea       1.00      1.00      1.00         4
+     Parascotia fuliginaria       1.00      0.75      0.86         4
+     Pasiphila rectangulata       0.79      0.73      0.76        15
+     Pechipogo plumigeralis       0.60      0.50      0.55         6
+           Pelosia muscerda       0.94      0.89      0.91        18
+   Peribatodes rhomboidaria       0.88      0.91      0.90        80
+      Perizoma alchemillata       0.83      1.00      0.91        10
+     Perizoma flavofasciata       0.80      0.67      0.73         6
+         Phigalia pilosaria       0.56      0.71      0.62         7
+     Phlogophora meticulosa       0.84      0.91      0.87        34
+             Photedes fluxa       0.50      0.60      0.55         5
+    Phragmatobia fuliginosa       0.92      0.92      0.92        38
+        Plemyria rubiginata       0.71      0.83      0.77         6
+            Plusia festucae       0.89      0.80      0.84        10
+  Pterapherapteryx sexalata       0.50      0.67      0.57         3
+            Rhizedra lutosa       1.00      0.67      0.80         6
+          Rivula sericealis       0.92      0.95      0.93        58
+  Schrankia costaestrigalis       0.40      0.40      0.40         5
+      Scoliopteryx libatrix       0.92      0.88      0.90        26
+           Scopula immutata       1.00      0.75      0.86         4
+           Selenia dentaria       0.90      0.69      0.78        13
+       Selenia tetralunaria       0.67      0.50      0.57         4
+        Smerinthus ocellata       0.80      0.89      0.84        18
+            Sphinx ligustri       0.86      0.86      0.86        14
+            Sphinx pinastri       0.86      0.80      0.83        15
+        Sphrageidus similis       0.60      0.43      0.50         7
+           Spilarctia lutea       0.88      0.96      0.92        23
+      Spilosoma lubricipeda       0.94      0.92      0.93        51
+       Stegania trimaculata       1.00      0.80      0.89         5
+         Sunira circellaris       0.55      0.75      0.63         8
+         Thalpophila matura       0.50      0.33      0.40         3
+           Thera obeliscata       1.00      0.33      0.50         3
+             Timandra comae       0.85      0.92      0.88        36
+         Trachea atriplicis       0.67      0.86      0.75         7
+            Tyria jacobaeae       0.89      0.95      0.92        66
+           Wittia sororcula       0.83      0.62      0.71         8
+       Xanthorhoe designata       1.00      0.67      0.80         6
+       Xanthorhoe ferrugata       0.78      0.74      0.76        19
+       Xanthorhoe fluctuata       0.90      0.92      0.91        38
+       Xanthorhoe montanata       0.67      0.67      0.67         6
+     Xanthorhoe spadicearia       0.60      0.60      0.60        10
+                Xestia baja       0.50      0.60      0.55         5
+            Xestia c-nigrum       0.90      0.89      0.90        85
+          Xestia triangulum       0.79      0.85      0.81        13
+        Xestia xanthographa       0.70      0.72      0.71        46
+
+                   accuracy                           0.84      4272
+                  macro avg       0.80      0.76      0.77      4272
+               weighted avg       0.85      0.84      0.84      4272
+
+Saved: results/advanced_evaluation/figures/confusion_matrix_gated_fusion.png
+Saved: results/advanced_evaluation/figures/per_species_accuracy_gated_fusion.png
+
+============================================================
+ADVANCED EVALUATION: Transformer Fusion
+============================================================
+
+Top 10 easiest species:
+                species  accuracy  n_samples
+     Acronicta leporina     100.0         10
+       Acronicta aceris     100.0          9
+      Caradrina kadenii     100.0          3
+        Anarta myrtilli     100.0          3
+            Arctia caja     100.0          9
+      Atethmia centrago     100.0          7
+          Cryphia algae     100.0         15
+        Cidaria fulvata     100.0          3
+    Comibaena bajularia     100.0          4
+Dypterygia scabriuscula     100.0          7
+
+Top 10 hardest species:
+                    species  accuracy  n_samples
+             Eilema caniola 28.571429          7
+        Sphrageidus similis 28.571429          7
+Pachycnemia hippocastanaria 25.000000          4
+               Hyles gallii 25.000000          4
+       Agriopis aurantiaria 25.000000          4
+                Xestia baja 20.000000          5
+           Diacrisia sannio  0.000000          3
+       Apterogenum ypsillon  0.000000          3
+             Agrochola lota  0.000000          3
+           Globia sparganii  0.000000          4
+
+Classification Report:
+                             precision    recall  f1-score   support
+
+      Abraxas grossulariata       0.83      0.83      0.83         6
+            Abraxas sylvata       1.00      0.75      0.86         4
+        Abrostola triplasia       0.83      0.83      0.83         6
+           Acronicta aceris       0.90      1.00      0.95         9
+         Acronicta leporina       0.91      1.00      0.95        10
+      Acronicta megacephala       0.75      0.86      0.80        14
+          Acronicta rumicis       0.77      0.74      0.75        31
+       Agriopis aurantiaria       0.25      0.25      0.25         4
+     Agriopis leucophaearia       0.70      0.70      0.70        10
+        Agriopis marginaria       0.75      0.80      0.77        15
+          Agrius convolvuli       0.62      0.56      0.59         9
+             Agrochola lota       0.00      0.00      0.00         3
+           Agrochola lunosa       1.00      0.50      0.67         8
+        Agrochola macilenta       0.67      0.50      0.57         4
+             Agrotis clavis       0.71      0.67      0.69        15
+      Agrotis exclamationis       0.85      0.82      0.84        40
+            Agrotis ipsilon       0.47      0.57      0.52        14
+               Agrotis puta       0.86      0.86      0.86        42
+            Agrotis segetum       0.58      0.48      0.52        23
+        Agrotis vestigialis       0.92      0.92      0.92        12
+            Alcis repandata       0.57      0.57      0.57         7
+      Allophyes oxyacanthae       0.50      0.33      0.40         3
+       Alsophila aescularia       0.64      0.64      0.64        11
+               Amata phegea       0.88      0.88      0.88         8
+          Amphipyra berbera       0.20      0.33      0.25         3
+        Amphipyra pyramidea       0.95      0.78      0.86        23
+            Anarta myrtilli       1.00      1.00      1.00         3
+            Anarta trifolii       0.64      0.69      0.67        13
+             Anorthoa munda       0.75      0.75      0.75         8
+          Apamea monoglypha       0.91      0.91      0.91        35
+       Apterogenum ypsillon       0.00      0.00      0.00         3
+                Arctia caja       1.00      1.00      1.00         9
+    Arenostola phragmitidis       0.50      0.86      0.63         7
+        Asteroscopus sphinx       0.83      0.83      0.83         6
+          Atethmia centrago       0.88      1.00      0.93         7
+        Atolmis rubricollis       1.00      0.50      0.67         6
+           Autographa gamma       0.87      0.92      0.89       146
+              Axylia putris       0.93      0.96      0.94        26
+           Biston betularia       1.00      0.95      0.98        21
+           Biston strataria       0.75      0.75      0.75         4
+           Bupalus piniaria       1.00      0.75      0.86         8
+         Cabera exanthemata       0.74      0.91      0.82        32
+             Cabera pusaria       0.73      0.55      0.63        20
+              Callistege mi       0.83      0.71      0.77         7
+       Calliteara pudibunda       0.79      0.65      0.71        17
+       Campaea margaritaria       0.93      0.93      0.93        46
+     Camptogramma bilineata       0.91      0.86      0.89        86
+      Caradrina clavipalpis       1.00      0.56      0.71         9
+          Caradrina kadenii       1.00      1.00      1.00         3
+         Caradrina morpheus       0.50      0.36      0.42        11
+             Catocala nupta       0.75      0.71      0.73        17
+            Catocala sponsa       0.57      0.57      0.57         7
+       Charanyca ferruginea       0.44      0.67      0.53         6
+      Charanyca trigrammica       1.00      0.50      0.67         4
+         Chiasmia clathrata       0.91      0.87      0.89        23
+      Chloroclysta siterata       1.00      0.75      0.86         4
+        Chloroclystis v-ata       0.90      0.90      0.90        21
+            Cidaria fulvata       1.00      1.00      1.00         3
+           Collita griseola       0.95      0.84      0.89        25
+           Colocasia coryli       0.83      0.94      0.88        16
+    Colostygia pectinataria       0.77      0.71      0.74        14
+          Colotois pennaria       1.00      0.67      0.80         6
+        Comibaena bajularia       1.00      1.00      1.00         4
+    Conistra erythrocephala       1.00      0.50      0.67         4
+          Conistra vaccinii       0.75      0.75      0.75        20
+         Coscinia cribraria       0.78      0.70      0.74        10
+           Cosmia trapezina       0.87      0.87      0.87        30
+         Cosmorhoe ocellata       1.00      0.67      0.80         6
+       Craniophora ligustri       0.75      0.79      0.77        19
+       Crocallis elinguaria       0.92      0.75      0.83        16
+              Cryphia algae       0.88      1.00      0.94        15
+    Cyclophora albipunctata       1.00      0.67      0.80         3
+        Cyclophora linearia       0.62      0.71      0.67         7
+       Cyclophora punctaria       0.85      0.73      0.79        15
+         Deilephila elpenor       0.93      0.93      0.93        27
+       Deilephila porcellus       0.89      0.80      0.84        10
+           Deltote bankiana       0.80      0.92      0.86        13
+            Deltote pygarga       0.66      0.91      0.76        23
+       Diachrysia chrysitis       0.80      0.89      0.84         9
+           Diacrisia sannio       0.00      0.00      0.00         3
+           Diaphora mendica       1.00      0.67      0.80         6
+               Diarsia rubi       0.71      0.71      0.71        28
+        Dryobotodes eremita       0.71      0.83      0.77         6
+    Dypterygia scabriuscula       1.00      1.00      1.00         7
+         Dysstroma truncata       0.75      0.60      0.67        15
+      Ecliptopera silaceata       0.89      0.80      0.84        10
+     Ectropis crepuscularia       0.88      0.86      0.87        49
+             Eilema caniola       0.40      0.29      0.33         7
+          Ematurga atomaria       0.83      0.79      0.81        24
+           Ennomos alniaria       0.86      0.86      0.86         7
+           Ennomos erosaria       1.00      0.50      0.67         6
+        Ennomos quercinaria       0.67      0.67      0.67         3
+          Epione repandaria       1.00      0.75      0.86         4
+         Epirrhoe alternata       0.84      0.98      0.91        44
+         Erannis defoliaria       0.85      0.79      0.81        14
+          Euchoeca nebulata       1.00      0.67      0.80         3
+          Euclidia glyphica       1.00      0.80      0.89        15
+           Eulithis prunata       0.83      0.83      0.83         6
+         Eulithis pyraliata       1.00      0.57      0.73         7
+           Eulithis testata       0.71      1.00      0.83        10
+      Eupithecia abbreviata       1.00      0.75      0.86         4
+     Eupithecia absinthiata       1.00      0.50      0.67         4
+     Eupithecia centaureata       0.80      1.00      0.89        12
+       Eupithecia linariata       1.00      0.50      0.67         4
+          Eupithecia nanata       0.86      1.00      0.92         6
+     Eupithecia tantillaria       0.67      0.50      0.57         4
+         Eupithecia vulgata       0.33      0.40      0.36         5
+   Euplagia quadripunctaria       0.92      1.00      0.96        11
+          Euplexia lucipara       1.00      0.75      0.86         4
+     Euproctis chrysorrhoea       0.50      0.75      0.60        12
+        Eupsilia transversa       0.80      0.89      0.84         9
+             Euxoa cursoria       0.80      0.67      0.73         6
+      Geometra papilionaria       1.00      0.88      0.93         8
+           Globia sparganii       0.00      0.00      0.00         4
+   Gymnoscelis rufifasciata       0.81      0.92      0.86        72
+               Hada plebeja       0.67      0.80      0.73         5
+        Hecatera bicolorata       0.78      1.00      0.88         7
+         Hemaris fuciformis       0.67      0.67      0.67         6
+        Hemithea aestivaria       0.90      1.00      0.95        19
+         Herminia grisealis       0.75      0.86      0.80         7
+     Herminia tarsipennalis       0.71      0.71      0.71         7
+         Hoplodrina ambigua       0.77      0.82      0.79        28
+     Hoplodrina octogenaria       0.76      0.86      0.81        29
+          Hydraecia micacea       0.75      0.60      0.67         5
+      Hydriomena impluviata       1.00      0.40      0.57         5
+           Hylaea fasciaria       1.00      0.67      0.80         6
+               Hyles gallii       0.33      0.25      0.29         4
+       Hypena proboscidalis       0.80      0.88      0.83        40
+           Hypena rostralis       0.71      0.62      0.67         8
+      Hypomecis punctinalis       0.85      0.65      0.73        17
+        Hypomecis roboraria       0.67      0.50      0.57         4
+             Idaea aversata       0.87      0.92      0.89        99
+             Idaea biselata       0.81      0.81      0.81        16
+            Idaea dimidiata       0.89      0.94      0.91        50
+           Idaea emarginata       0.91      0.83      0.87        12
+          Idaea fuscovenosa       0.82      0.93      0.88        15
+            Idaea rusticata       0.90      0.80      0.85        35
+              Idaea seriata       0.95      0.91      0.93        88
+           Idaea straminata       0.80      0.80      0.80         5
+         Idaea subsericeata       0.83      0.77      0.80        13
+         Idaea sylvestraria       0.75      0.75      0.75         4
+            Jodis lactearia       0.50      0.60      0.55         5
+             Katha depressa       0.40      0.67      0.50         3
+         Lacanobia oleracea       0.78      0.81      0.79        36
+            Lacanobia suasa       0.52      0.65      0.58        17
+             Laothoe populi       0.87      0.91      0.89        22
+          Laspeyria flexula       0.92      1.00      0.96        12
+    Lateroligia ophiogramma       1.00      0.75      0.86         4
+          Leucania obsoleta       1.00      0.75      0.86         4
+            Leucoma salicis       1.00      0.80      0.89         5
+            Ligdia adustata       0.88      0.84      0.86        25
+            Lithosia quadra       1.00      1.00      1.00         3
+         Litoligia literosa       1.00      0.67      0.80         6
+       Lomaspilis marginata       0.91      0.91      0.91        43
+        Lomographa temerata       0.33      0.50      0.40         4
+          Luperina testacea       0.87      0.93      0.90        56
+             Lycia hirtaria       1.00      0.75      0.86         4
+       Lycophotia porphyrea       1.00      1.00      1.00         5
+           Lymantria dispar       0.85      0.80      0.82        35
+         Lythria cruentaria       0.91      0.91      0.91        22
+          Macaria alternata       0.88      0.78      0.82        18
+           Macaria liturata       0.82      0.75      0.78        12
+             Macaria notata       0.50      0.50      0.50         6
+      Macdunnoughia confusa       0.71      0.71      0.71         7
+   Macroglossum stellatarum       0.83      0.88      0.86        51
+         Mamestra brassicae       0.50      0.67      0.57         9
+           Manulea complana       0.62      0.80      0.70        10
+      Melanchra persicariae       1.00      1.00      1.00         3
+        Mesoligia furuncula       0.70      0.67      0.69        46
+       Miltochrista miniata       1.00      0.67      0.80         6
+               Mimas tiliae       1.00      0.79      0.88        14
+                Mormo maura       0.90      0.90      0.90        29
+        Mythimna albipuncta       0.87      0.81      0.84        16
+           Mythimna ferrago       0.70      0.70      0.70        10
+            Mythimna impura       0.50      0.57      0.53         7
+           Mythimna l-album       0.75      1.00      0.86         3
+           Mythimna pallens       0.69      0.82      0.75        11
+         Mythimna straminea       1.00      0.50      0.67         6
+         Mythimna vitellina       1.00      0.67      0.80         3
+               Noctua comes       0.91      0.85      0.88        60
+           Noctua fimbriata       0.76      0.87      0.81        15
+          Noctua interjecta       1.00      0.50      0.67        12
+             Noctua pronuba       0.88      0.92      0.90       270
+          Nyctobrya muralis       1.00      0.60      0.75         5
+         Ochropleura plecta       0.83      0.89      0.86        55
+         Oligia fasciuncula       0.80      0.92      0.86        13
+        Operophtera brumata       0.88      0.88      0.88        40
+   Opisthograptis luteolata       0.90      0.98      0.94        46
+             Orgyia antiqua       0.80      0.57      0.67         7
+            Orthosia cerasi       0.74      0.79      0.76        33
+             Orthosia cruda       0.62      0.71      0.67        14
+           Orthosia gothica       0.95      0.95      0.95        21
+           Orthosia incerta       0.69      0.73      0.71        15
+      Ourapteryx sambucaria       1.00      1.00      1.00        10
+Pachycnemia hippocastanaria       1.00      0.25      0.40         4
+        Panemeria tenebrata       0.50      1.00      0.67         3
+            Panolis flammea       1.00      1.00      1.00         4
+     Parascotia fuliginaria       1.00      0.75      0.86         4
+     Pasiphila rectangulata       1.00      0.80      0.89        15
+     Pechipogo plumigeralis       0.80      0.67      0.73         6
+           Pelosia muscerda       0.88      0.78      0.82        18
+   Peribatodes rhomboidaria       0.82      0.94      0.87        80
+      Perizoma alchemillata       0.78      0.70      0.74        10
+     Perizoma flavofasciata       0.80      0.67      0.73         6
+         Phigalia pilosaria       0.67      0.57      0.62         7
+     Phlogophora meticulosa       0.91      0.85      0.88        34
+             Photedes fluxa       0.67      0.80      0.73         5
+    Phragmatobia fuliginosa       0.87      0.87      0.87        38
+        Plemyria rubiginata       0.71      0.83      0.77         6
+            Plusia festucae       1.00      0.90      0.95        10
+  Pterapherapteryx sexalata       0.40      0.67      0.50         3
+            Rhizedra lutosa       0.83      0.83      0.83         6
+          Rivula sericealis       0.92      0.95      0.93        58
+  Schrankia costaestrigalis       0.75      0.60      0.67         5
+      Scoliopteryx libatrix       0.88      0.85      0.86        26
+           Scopula immutata       1.00      1.00      1.00         4
+           Selenia dentaria       0.91      0.77      0.83        13
+       Selenia tetralunaria       1.00      0.50      0.67         4
+        Smerinthus ocellata       0.81      0.94      0.87        18
+            Sphinx ligustri       0.86      0.86      0.86        14
+            Sphinx pinastri       0.91      0.67      0.77        15
+        Sphrageidus similis       0.67      0.29      0.40         7
+           Spilarctia lutea       0.88      0.96      0.92        23
+      Spilosoma lubricipeda       0.85      0.90      0.88        51
+       Stegania trimaculata       1.00      0.80      0.89         5
+         Sunira circellaris       0.55      0.75      0.63         8
+         Thalpophila matura       1.00      0.33      0.50         3
+           Thera obeliscata       1.00      0.67      0.80         3
+             Timandra comae       0.89      0.92      0.90        36
+         Trachea atriplicis       1.00      0.71      0.83         7
+            Tyria jacobaeae       0.90      0.92      0.91        66
+           Wittia sororcula       0.78      0.88      0.82         8
+       Xanthorhoe designata       1.00      1.00      1.00         6
+       Xanthorhoe ferrugata       0.68      0.79      0.73        19
+       Xanthorhoe fluctuata       0.92      0.95      0.94        38
+       Xanthorhoe montanata       1.00      0.67      0.80         6
+     Xanthorhoe spadicearia       1.00      0.40      0.57        10
+                Xestia baja       0.50      0.20      0.29         5
+            Xestia c-nigrum       0.91      0.88      0.90        85
+          Xestia triangulum       0.75      0.92      0.83        13
+        Xestia xanthographa       0.72      0.74      0.73        46
+
+                   accuracy                           0.83      4272
+                  macro avg       0.81      0.75      0.76      4272
+               weighted avg       0.84      0.83      0.83      4272
+
+Saved: results/advanced_evaluation/figures/confusion_matrix_transformer_fusion.png
+Saved: results/advanced_evaluation/figures/per_species_accuracy_transformer_fusion.png
+
+============================================================
+ADVANCED EVALUATION: Coordination
+============================================================
+
+Top 10 easiest species:
+               species  accuracy  n_samples
+ Abraxas grossulariata     100.0          6
+    Acronicta leporina     100.0         10
+      Acronicta aceris     100.0          9
+           Arctia caja     100.0          9
+          Amata phegea     100.0          8
+   Asteroscopus sphinx     100.0          6
+     Atethmia centrago     100.0          7
+Eupithecia centaureata     100.0         12
+     Eupithecia nanata     100.0          6
+   Dryobotodes eremita     100.0          6
+
+Top 10 hardest species:
+                species  accuracy  n_samples
+   Charanyca ferruginea 33.333333          6
+  Charanyca trigrammica 25.000000          4
+   Agriopis aurantiaria 25.000000          4
+    Lomographa temerata 25.000000          4
+Conistra erythrocephala 25.000000          4
+   Eupithecia linariata 25.000000          4
+   Selenia tetralunaria 25.000000          4
+         Agrochola lota  0.000000          3
+       Diacrisia sannio  0.000000          3
+    Hypomecis roboraria  0.000000          4
+
+Classification Report:
+                             precision    recall  f1-score   support
+
+      Abraxas grossulariata       0.86      1.00      0.92         6
+            Abraxas sylvata       0.75      0.75      0.75         4
+        Abrostola triplasia       0.80      0.67      0.73         6
+           Acronicta aceris       0.75      1.00      0.86         9
+         Acronicta leporina       1.00      1.00      1.00        10
+      Acronicta megacephala       0.67      0.71      0.69        14
+          Acronicta rumicis       0.62      0.84      0.71        31
+       Agriopis aurantiaria       0.50      0.25      0.33         4
+     Agriopis leucophaearia       0.89      0.80      0.84        10
+        Agriopis marginaria       0.78      0.93      0.85        15
+          Agrius convolvuli       1.00      0.67      0.80         9
+             Agrochola lota       0.00      0.00      0.00         3
+           Agrochola lunosa       0.86      0.75      0.80         8
+        Agrochola macilenta       1.00      0.50      0.67         4
+             Agrotis clavis       0.48      0.67      0.56        15
+      Agrotis exclamationis       0.83      0.85      0.84        40
+            Agrotis ipsilon       0.53      0.71      0.61        14
+               Agrotis puta       0.89      0.79      0.84        42
+            Agrotis segetum       0.53      0.39      0.45        23
+        Agrotis vestigialis       0.71      0.83      0.77        12
+            Alcis repandata       0.86      0.86      0.86         7
+      Allophyes oxyacanthae       1.00      0.67      0.80         3
+       Alsophila aescularia       0.80      0.73      0.76        11
+               Amata phegea       0.89      1.00      0.94         8
+          Amphipyra berbera       0.33      0.33      0.33         3
+        Amphipyra pyramidea       0.81      0.91      0.86        23
+            Anarta myrtilli       0.67      0.67      0.67         3
+            Anarta trifolii       0.60      0.46      0.52        13
+             Anorthoa munda       0.67      0.75      0.71         8
+          Apamea monoglypha       0.93      0.80      0.86        35
+       Apterogenum ypsillon       1.00      0.67      0.80         3
+                Arctia caja       1.00      1.00      1.00         9
+    Arenostola phragmitidis       0.75      0.86      0.80         7
+        Asteroscopus sphinx       1.00      1.00      1.00         6
+          Atethmia centrago       1.00      1.00      1.00         7
+        Atolmis rubricollis       1.00      0.50      0.67         6
+           Autographa gamma       0.87      0.90      0.89       146
+              Axylia putris       0.92      0.92      0.92        26
+           Biston betularia       1.00      0.90      0.95        21
+           Biston strataria       0.67      0.50      0.57         4
+           Bupalus piniaria       1.00      0.62      0.77         8
+         Cabera exanthemata       0.81      0.91      0.85        32
+             Cabera pusaria       0.68      0.65      0.67        20
+              Callistege mi       0.83      0.71      0.77         7
+       Calliteara pudibunda       0.77      0.59      0.67        17
+       Campaea margaritaria       0.95      0.89      0.92        46
+     Camptogramma bilineata       0.91      0.85      0.88        86
+      Caradrina clavipalpis       0.60      0.67      0.63         9
+          Caradrina kadenii       1.00      0.67      0.80         3
+         Caradrina morpheus       0.44      0.36      0.40        11
+             Catocala nupta       0.64      0.53      0.58        17
+            Catocala sponsa       0.80      0.57      0.67         7
+       Charanyca ferruginea       0.50      0.33      0.40         6
+      Charanyca trigrammica       1.00      0.25      0.40         4
+         Chiasmia clathrata       0.80      0.87      0.83        23
+      Chloroclysta siterata       0.67      0.50      0.57         4
+        Chloroclystis v-ata       0.83      0.95      0.89        21
+            Cidaria fulvata       1.00      1.00      1.00         3
+           Collita griseola       0.81      0.88      0.85        25
+           Colocasia coryli       0.93      0.88      0.90        16
+    Colostygia pectinataria       0.75      0.86      0.80        14
+          Colotois pennaria       1.00      0.50      0.67         6
+        Comibaena bajularia       1.00      1.00      1.00         4
+    Conistra erythrocephala       0.33      0.25      0.29         4
+          Conistra vaccinii       0.71      0.75      0.73        20
+         Coscinia cribraria       1.00      0.90      0.95        10
+           Cosmia trapezina       0.84      0.87      0.85        30
+         Cosmorhoe ocellata       1.00      0.67      0.80         6
+       Craniophora ligustri       1.00      0.84      0.91        19
+       Crocallis elinguaria       0.87      0.81      0.84        16
+              Cryphia algae       0.83      1.00      0.91        15
+    Cyclophora albipunctata       1.00      0.67      0.80         3
+        Cyclophora linearia       0.71      0.71      0.71         7
+       Cyclophora punctaria       0.81      0.87      0.84        15
+         Deilephila elpenor       0.96      0.89      0.92        27
+       Deilephila porcellus       0.90      0.90      0.90        10
+           Deltote bankiana       0.93      1.00      0.96        13
+            Deltote pygarga       0.80      0.87      0.83        23
+       Diachrysia chrysitis       1.00      0.89      0.94         9
+           Diacrisia sannio       0.00      0.00      0.00         3
+           Diaphora mendica       1.00      0.83      0.91         6
+               Diarsia rubi       0.68      0.75      0.71        28
+        Dryobotodes eremita       0.86      1.00      0.92         6
+    Dypterygia scabriuscula       0.88      1.00      0.93         7
+         Dysstroma truncata       0.86      0.80      0.83        15
+      Ecliptopera silaceata       0.91      1.00      0.95        10
+     Ectropis crepuscularia       0.89      0.86      0.88        49
+             Eilema caniola       0.57      0.57      0.57         7
+          Ematurga atomaria       0.85      0.71      0.77        24
+           Ennomos alniaria       0.83      0.71      0.77         7
+           Ennomos erosaria       0.80      0.67      0.73         6
+        Ennomos quercinaria       0.50      0.67      0.57         3
+          Epione repandaria       1.00      0.75      0.86         4
+         Epirrhoe alternata       0.84      0.93      0.88        44
+         Erannis defoliaria       0.69      0.79      0.73        14
+          Euchoeca nebulata       0.67      0.67      0.67         3
+          Euclidia glyphica       0.92      0.73      0.81        15
+           Eulithis prunata       0.83      0.83      0.83         6
+         Eulithis pyraliata       0.67      0.86      0.75         7
+           Eulithis testata       1.00      1.00      1.00        10
+      Eupithecia abbreviata       0.75      0.75      0.75         4
+     Eupithecia absinthiata       1.00      0.50      0.67         4
+     Eupithecia centaureata       0.92      1.00      0.96        12
+       Eupithecia linariata       1.00      0.25      0.40         4
+          Eupithecia nanata       0.75      1.00      0.86         6
+     Eupithecia tantillaria       1.00      0.75      0.86         4
+         Eupithecia vulgata       0.38      0.60      0.46         5
+   Euplagia quadripunctaria       1.00      0.91      0.95        11
+          Euplexia lucipara       0.67      1.00      0.80         4
+     Euproctis chrysorrhoea       0.71      0.83      0.77        12
+        Eupsilia transversa       0.60      0.67      0.63         9
+             Euxoa cursoria       0.38      0.50      0.43         6
+      Geometra papilionaria       1.00      0.88      0.93         8
+           Globia sparganii       1.00      0.75      0.86         4
+   Gymnoscelis rufifasciata       0.83      0.93      0.88        72
+               Hada plebeja       0.67      0.40      0.50         5
+        Hecatera bicolorata       0.78      1.00      0.88         7
+         Hemaris fuciformis       0.80      0.67      0.73         6
+        Hemithea aestivaria       0.90      0.95      0.92        19
+         Herminia grisealis       0.78      1.00      0.88         7
+     Herminia tarsipennalis       0.88      1.00      0.93         7
+         Hoplodrina ambigua       0.92      0.82      0.87        28
+     Hoplodrina octogenaria       0.84      0.90      0.87        29
+          Hydraecia micacea       0.60      0.60      0.60         5
+      Hydriomena impluviata       1.00      0.60      0.75         5
+           Hylaea fasciaria       1.00      0.67      0.80         6
+               Hyles gallii       0.60      0.75      0.67         4
+       Hypena proboscidalis       0.69      0.82      0.75        40
+           Hypena rostralis       0.71      0.62      0.67         8
+      Hypomecis punctinalis       0.71      0.71      0.71        17
+        Hypomecis roboraria       0.00      0.00      0.00         4
+             Idaea aversata       0.89      0.94      0.91        99
+             Idaea biselata       0.68      0.81      0.74        16
+            Idaea dimidiata       0.87      0.96      0.91        50
+           Idaea emarginata       0.86      1.00      0.92        12
+          Idaea fuscovenosa       0.80      0.80      0.80        15
+            Idaea rusticata       0.93      0.80      0.86        35
+              Idaea seriata       0.94      0.88      0.91        88
+           Idaea straminata       0.80      0.80      0.80         5
+         Idaea subsericeata       0.86      0.92      0.89        13
+         Idaea sylvestraria       1.00      0.75      0.86         4
+            Jodis lactearia       0.50      0.40      0.44         5
+             Katha depressa       0.25      0.33      0.29         3
+         Lacanobia oleracea       0.76      0.86      0.81        36
+            Lacanobia suasa       0.47      0.47      0.47        17
+             Laothoe populi       0.86      0.86      0.86        22
+          Laspeyria flexula       0.92      1.00      0.96        12
+    Lateroligia ophiogramma       0.67      0.50      0.57         4
+          Leucania obsoleta       1.00      0.75      0.86         4
+            Leucoma salicis       0.75      0.60      0.67         5
+            Ligdia adustata       0.92      0.88      0.90        25
+            Lithosia quadra       1.00      1.00      1.00         3
+         Litoligia literosa       1.00      0.67      0.80         6
+       Lomaspilis marginata       0.98      0.93      0.95        43
+        Lomographa temerata       0.50      0.25      0.33         4
+          Luperina testacea       0.86      0.88      0.87        56
+             Lycia hirtaria       0.60      0.75      0.67         4
+       Lycophotia porphyrea       0.67      0.80      0.73         5
+           Lymantria dispar       0.97      0.80      0.88        35
+         Lythria cruentaria       0.88      0.95      0.91        22
+          Macaria alternata       0.78      0.78      0.78        18
+           Macaria liturata       0.75      0.75      0.75        12
+             Macaria notata       0.60      0.50      0.55         6
+      Macdunnoughia confusa       0.67      0.86      0.75         7
+   Macroglossum stellatarum       0.86      0.84      0.85        51
+         Mamestra brassicae       0.67      0.44      0.53         9
+           Manulea complana       0.67      0.60      0.63        10
+      Melanchra persicariae       1.00      1.00      1.00         3
+        Mesoligia furuncula       0.69      0.80      0.74        46
+       Miltochrista miniata       0.80      0.67      0.73         6
+               Mimas tiliae       0.92      0.86      0.89        14
+                Mormo maura       0.87      0.90      0.88        29
+        Mythimna albipuncta       0.81      0.81      0.81        16
+           Mythimna ferrago       0.75      0.60      0.67        10
+            Mythimna impura       0.60      0.43      0.50         7
+           Mythimna l-album       1.00      1.00      1.00         3
+           Mythimna pallens       0.70      0.64      0.67        11
+         Mythimna straminea       0.50      0.67      0.57         6
+         Mythimna vitellina       1.00      0.33      0.50         3
+               Noctua comes       0.85      0.88      0.87        60
+           Noctua fimbriata       0.93      0.87      0.90        15
+          Noctua interjecta       0.60      0.50      0.55        12
+             Noctua pronuba       0.88      0.93      0.90       270
+          Nyctobrya muralis       1.00      0.80      0.89         5
+         Ochropleura plecta       0.80      0.89      0.84        55
+         Oligia fasciuncula       1.00      0.85      0.92        13
+        Operophtera brumata       0.95      0.90      0.92        40
+   Opisthograptis luteolata       0.88      0.98      0.93        46
+             Orgyia antiqua       0.80      0.57      0.67         7
+            Orthosia cerasi       0.86      0.97      0.91        33
+             Orthosia cruda       0.76      0.93      0.84        14
+           Orthosia gothica       1.00      1.00      1.00        21
+           Orthosia incerta       0.90      0.60      0.72        15
+      Ourapteryx sambucaria       0.83      1.00      0.91        10
+Pachycnemia hippocastanaria       0.67      0.50      0.57         4
+        Panemeria tenebrata       0.67      0.67      0.67         3
+            Panolis flammea       1.00      1.00      1.00         4
+     Parascotia fuliginaria       1.00      0.75      0.86         4
+     Pasiphila rectangulata       0.92      0.80      0.86        15
+     Pechipogo plumigeralis       0.67      0.67      0.67         6
+           Pelosia muscerda       0.82      0.78      0.80        18
+   Peribatodes rhomboidaria       0.84      0.94      0.89        80
+      Perizoma alchemillata       0.91      1.00      0.95        10
+     Perizoma flavofasciata       1.00      0.67      0.80         6
+         Phigalia pilosaria       0.57      0.57      0.57         7
+     Phlogophora meticulosa       0.94      0.88      0.91        34
+             Photedes fluxa       0.60      0.60      0.60         5
+    Phragmatobia fuliginosa       0.92      0.89      0.91        38
+        Plemyria rubiginata       1.00      0.67      0.80         6
+            Plusia festucae       1.00      0.80      0.89        10
+  Pterapherapteryx sexalata       1.00      0.67      0.80         3
+            Rhizedra lutosa       1.00      1.00      1.00         6
+          Rivula sericealis       0.87      0.95      0.91        58
+  Schrankia costaestrigalis       0.50      0.60      0.55         5
+      Scoliopteryx libatrix       0.91      0.81      0.86        26
+           Scopula immutata       1.00      1.00      1.00         4
+           Selenia dentaria       0.71      0.77      0.74        13
+       Selenia tetralunaria       0.50      0.25      0.33         4
+        Smerinthus ocellata       0.84      0.89      0.86        18
+            Sphinx ligustri       0.85      0.79      0.81        14
+            Sphinx pinastri       0.67      0.67      0.67        15
+        Sphrageidus similis       0.75      0.43      0.55         7
+           Spilarctia lutea       0.81      0.96      0.88        23
+      Spilosoma lubricipeda       0.98      0.90      0.94        51
+       Stegania trimaculata       0.75      0.60      0.67         5
+         Sunira circellaris       1.00      0.88      0.93         8
+         Thalpophila matura       0.25      0.33      0.29         3
+           Thera obeliscata       1.00      0.33      0.50         3
+             Timandra comae       0.97      0.92      0.94        36
+         Trachea atriplicis       1.00      0.71      0.83         7
+            Tyria jacobaeae       0.92      0.98      0.95        66
+           Wittia sororcula       1.00      0.75      0.86         8
+       Xanthorhoe designata       0.80      0.67      0.73         6
+       Xanthorhoe ferrugata       0.80      0.84      0.82        19
+       Xanthorhoe fluctuata       0.90      0.97      0.94        38
+       Xanthorhoe montanata       1.00      0.67      0.80         6
+     Xanthorhoe spadicearia       1.00      0.80      0.89        10
+                Xestia baja       0.75      0.60      0.67         5
+            Xestia c-nigrum       0.85      0.88      0.87        85
+          Xestia triangulum       1.00      0.92      0.96        13
+        Xestia xanthographa       0.77      0.65      0.71        46
+
+                   accuracy                           0.84      4272
+                  macro avg       0.81      0.75      0.77      4272
+               weighted avg       0.84      0.84      0.84      4272
+
+Saved: results/advanced_evaluation/figures/confusion_matrix_coordination.png
+Saved: results/advanced_evaluation/figures/per_species_accuracy_coordination.png
+
+============================================================
+ADVANCED EVALUATION: Cross-Attention TF
+============================================================
+
+Top 10 easiest species:
+                species  accuracy  n_samples
+     Acronicta leporina     100.0         10
+       Acronicta aceris     100.0          9
+            Arctia caja     100.0          9
+      Caradrina kadenii     100.0          3
+      Atethmia centrago     100.0          7
+    Asteroscopus sphinx     100.0          6
+           Amata phegea     100.0          8
+        Anarta myrtilli     100.0          3
+        Cidaria fulvata     100.0          3
+Dypterygia scabriuscula     100.0          7
+
+Top 10 hardest species:
+                    species  accuracy  n_samples
+        Hypomecis roboraria      25.0          4
+      Charanyca trigrammica      25.0          4
+       Selenia tetralunaria      25.0          4
+        Lomographa temerata      25.0          4
+           Globia sparganii      25.0          4
+      Hydriomena impluviata      20.0          5
+       Apterogenum ypsillon       0.0          3
+             Agrochola lota       0.0          3
+          Amphipyra berbera       0.0          3
+Pachycnemia hippocastanaria       0.0          4
+
+Classification Report:
+                             precision    recall  f1-score   support
+
+      Abraxas grossulariata       1.00      0.83      0.91         6
+            Abraxas sylvata       1.00      0.50      0.67         4
+        Abrostola triplasia       1.00      0.50      0.67         6
+           Acronicta aceris       1.00      1.00      1.00         9
+         Acronicta leporina       0.77      1.00      0.87        10
+      Acronicta megacephala       0.67      0.86      0.75        14
+          Acronicta rumicis       0.74      0.81      0.77        31
+       Agriopis aurantiaria       0.50      0.25      0.33         4
+     Agriopis leucophaearia       0.47      0.80      0.59        10
+        Agriopis marginaria       0.65      0.87      0.74        15
+          Agrius convolvuli       0.56      0.56      0.56         9
+             Agrochola lota       0.00      0.00      0.00         3
+           Agrochola lunosa       0.83      0.62      0.71         8
+        Agrochola macilenta       1.00      0.25      0.40         4
+             Agrotis clavis       0.73      0.73      0.73        15
+      Agrotis exclamationis       0.80      0.88      0.83        40
+            Agrotis ipsilon       0.69      0.64      0.67        14
+               Agrotis puta       0.78      0.86      0.82        42
+            Agrotis segetum       0.50      0.39      0.44        23
+        Agrotis vestigialis       0.85      0.92      0.88        12
+            Alcis repandata       0.67      0.86      0.75         7
+      Allophyes oxyacanthae       1.00      0.33      0.50         3
+       Alsophila aescularia       0.73      0.73      0.73        11
+               Amata phegea       1.00      1.00      1.00         8
+          Amphipyra berbera       0.00      0.00      0.00         3
+        Amphipyra pyramidea       0.77      0.74      0.76        23
+            Anarta myrtilli       0.75      1.00      0.86         3
+            Anarta trifolii       0.67      0.31      0.42        13
+             Anorthoa munda       0.78      0.88      0.82         8
+          Apamea monoglypha       0.85      0.80      0.82        35
+       Apterogenum ypsillon       0.00      0.00      0.00         3
+                Arctia caja       1.00      1.00      1.00         9
+    Arenostola phragmitidis       0.60      0.86      0.71         7
+        Asteroscopus sphinx       1.00      1.00      1.00         6
+          Atethmia centrago       0.88      1.00      0.93         7
+        Atolmis rubricollis       0.75      0.50      0.60         6
+           Autographa gamma       0.87      0.89      0.88       146
+              Axylia putris       0.92      0.92      0.92        26
+           Biston betularia       0.83      0.90      0.86        21
+           Biston strataria       1.00      0.50      0.67         4
+           Bupalus piniaria       1.00      0.50      0.67         8
+         Cabera exanthemata       0.81      0.91      0.85        32
+             Cabera pusaria       0.70      0.70      0.70        20
+              Callistege mi       0.60      0.43      0.50         7
+       Calliteara pudibunda       0.83      0.59      0.69        17
+       Campaea margaritaria       0.93      0.91      0.92        46
+     Camptogramma bilineata       0.81      0.85      0.83        86
+      Caradrina clavipalpis       0.67      0.67      0.67         9
+          Caradrina kadenii       1.00      1.00      1.00         3
+         Caradrina morpheus       0.38      0.45      0.42        11
+             Catocala nupta       0.67      0.71      0.69        17
+            Catocala sponsa       0.44      0.57      0.50         7
+       Charanyca ferruginea       0.60      0.50      0.55         6
+      Charanyca trigrammica       1.00      0.25      0.40         4
+         Chiasmia clathrata       0.78      0.78      0.78        23
+      Chloroclysta siterata       1.00      0.75      0.86         4
+        Chloroclystis v-ata       0.78      0.86      0.82        21
+            Cidaria fulvata       1.00      1.00      1.00         3
+           Collita griseola       0.73      0.88      0.80        25
+           Colocasia coryli       0.79      0.94      0.86        16
+    Colostygia pectinataria       0.83      0.71      0.77        14
+          Colotois pennaria       1.00      0.67      0.80         6
+        Comibaena bajularia       1.00      0.75      0.86         4
+    Conistra erythrocephala       0.40      0.50      0.44         4
+          Conistra vaccinii       0.75      0.75      0.75        20
+         Coscinia cribraria       0.89      0.80      0.84        10
+           Cosmia trapezina       0.83      0.83      0.83        30
+         Cosmorhoe ocellata       1.00      0.83      0.91         6
+       Craniophora ligustri       0.77      0.89      0.83        19
+       Crocallis elinguaria       0.87      0.81      0.84        16
+              Cryphia algae       0.87      0.87      0.87        15
+    Cyclophora albipunctata       1.00      1.00      1.00         3
+        Cyclophora linearia       0.50      0.57      0.53         7
+       Cyclophora punctaria       0.92      0.73      0.81        15
+         Deilephila elpenor       0.92      0.89      0.91        27
+       Deilephila porcellus       0.67      0.80      0.73        10
+           Deltote bankiana       1.00      0.92      0.96        13
+            Deltote pygarga       0.74      0.87      0.80        23
+       Diachrysia chrysitis       0.90      1.00      0.95         9
+           Diacrisia sannio       0.50      0.33      0.40         3
+           Diaphora mendica       0.75      0.50      0.60         6
+               Diarsia rubi       0.89      0.89      0.89        28
+        Dryobotodes eremita       0.83      0.83      0.83         6
+    Dypterygia scabriuscula       1.00      1.00      1.00         7
+         Dysstroma truncata       0.79      0.73      0.76        15
+      Ecliptopera silaceata       0.80      0.80      0.80        10
+     Ectropis crepuscularia       0.91      0.80      0.85        49
+             Eilema caniola       0.75      0.43      0.55         7
+          Ematurga atomaria       0.72      0.75      0.73        24
+           Ennomos alniaria       0.86      0.86      0.86         7
+           Ennomos erosaria       0.75      0.50      0.60         6
+        Ennomos quercinaria       0.67      0.67      0.67         3
+          Epione repandaria       1.00      0.75      0.86         4
+         Epirrhoe alternata       0.82      0.95      0.88        44
+         Erannis defoliaria       0.83      0.71      0.77        14
+          Euchoeca nebulata       1.00      0.67      0.80         3
+          Euclidia glyphica       0.79      0.73      0.76        15
+           Eulithis prunata       1.00      1.00      1.00         6
+         Eulithis pyraliata       1.00      0.71      0.83         7
+           Eulithis testata       0.83      1.00      0.91        10
+      Eupithecia abbreviata       0.67      0.50      0.57         4
+     Eupithecia absinthiata       1.00      0.50      0.67         4
+     Eupithecia centaureata       0.92      0.92      0.92        12
+       Eupithecia linariata       1.00      0.50      0.67         4
+          Eupithecia nanata       0.86      1.00      0.92         6
+     Eupithecia tantillaria       1.00      0.50      0.67         4
+         Eupithecia vulgata       0.44      0.80      0.57         5
+   Euplagia quadripunctaria       0.91      0.91      0.91        11
+          Euplexia lucipara       0.80      1.00      0.89         4
+     Euproctis chrysorrhoea       0.47      0.67      0.55        12
+        Eupsilia transversa       0.75      0.67      0.71         9
+             Euxoa cursoria       0.62      0.83      0.71         6
+      Geometra papilionaria       1.00      0.75      0.86         8
+           Globia sparganii       1.00      0.25      0.40         4
+   Gymnoscelis rufifasciata       0.79      0.85      0.82        72
+               Hada plebeja       1.00      0.60      0.75         5
+        Hecatera bicolorata       0.78      1.00      0.88         7
+         Hemaris fuciformis       0.67      0.67      0.67         6
+        Hemithea aestivaria       0.73      1.00      0.84        19
+         Herminia grisealis       0.75      0.86      0.80         7
+     Herminia tarsipennalis       0.71      0.71      0.71         7
+         Hoplodrina ambigua       0.81      0.75      0.78        28
+     Hoplodrina octogenaria       0.87      0.90      0.88        29
+          Hydraecia micacea       0.75      0.60      0.67         5
+      Hydriomena impluviata       1.00      0.20      0.33         5
+           Hylaea fasciaria       1.00      0.50      0.67         6
+               Hyles gallii       1.00      0.75      0.86         4
+       Hypena proboscidalis       0.82      0.82      0.82        40
+           Hypena rostralis       0.60      0.75      0.67         8
+      Hypomecis punctinalis       0.73      0.65      0.69        17
+        Hypomecis roboraria       0.50      0.25      0.33         4
+             Idaea aversata       0.89      0.92      0.91        99
+             Idaea biselata       0.93      0.81      0.87        16
+            Idaea dimidiata       0.85      0.88      0.86        50
+           Idaea emarginata       0.79      0.92      0.85        12
+          Idaea fuscovenosa       0.87      0.87      0.87        15
+            Idaea rusticata       0.94      0.83      0.88        35
+              Idaea seriata       0.95      0.88      0.91        88
+           Idaea straminata       0.80      0.80      0.80         5
+         Idaea subsericeata       0.86      0.92      0.89        13
+         Idaea sylvestraria       1.00      1.00      1.00         4
+            Jodis lactearia       1.00      0.60      0.75         5
+             Katha depressa       1.00      0.67      0.80         3
+         Lacanobia oleracea       0.72      0.78      0.75        36
+            Lacanobia suasa       0.77      0.59      0.67        17
+             Laothoe populi       0.95      0.82      0.88        22
+          Laspeyria flexula       0.92      0.92      0.92        12
+    Lateroligia ophiogramma       0.50      0.50      0.50         4
+          Leucania obsoleta       0.75      0.75      0.75         4
+            Leucoma salicis       0.75      0.60      0.67         5
+            Ligdia adustata       0.91      0.84      0.88        25
+            Lithosia quadra       1.00      1.00      1.00         3
+         Litoligia literosa       1.00      0.83      0.91         6
+       Lomaspilis marginata       0.85      0.91      0.88        43
+        Lomographa temerata       0.50      0.25      0.33         4
+          Luperina testacea       0.87      0.96      0.92        56
+             Lycia hirtaria       0.50      0.50      0.50         4
+       Lycophotia porphyrea       1.00      0.80      0.89         5
+           Lymantria dispar       0.85      0.80      0.82        35
+         Lythria cruentaria       0.91      0.95      0.93        22
+          Macaria alternata       0.76      0.72      0.74        18
+           Macaria liturata       0.62      0.67      0.64        12
+             Macaria notata       0.60      0.50      0.55         6
+      Macdunnoughia confusa       0.86      0.86      0.86         7
+   Macroglossum stellatarum       0.88      0.86      0.87        51
+         Mamestra brassicae       0.75      0.67      0.71         9
+           Manulea complana       0.75      0.90      0.82        10
+      Melanchra persicariae       0.75      1.00      0.86         3
+        Mesoligia furuncula       0.76      0.70      0.73        46
+       Miltochrista miniata       1.00      0.67      0.80         6
+               Mimas tiliae       1.00      0.86      0.92        14
+                Mormo maura       0.87      0.93      0.90        29
+        Mythimna albipuncta       0.71      0.75      0.73        16
+           Mythimna ferrago       0.54      0.70      0.61        10
+            Mythimna impura       0.67      0.57      0.62         7
+           Mythimna l-album       1.00      0.67      0.80         3
+           Mythimna pallens       0.73      0.73      0.73        11
+         Mythimna straminea       0.75      0.50      0.60         6
+         Mythimna vitellina       0.50      0.33      0.40         3
+               Noctua comes       0.87      0.87      0.87        60
+           Noctua fimbriata       0.92      0.80      0.86        15
+          Noctua interjecta       0.64      0.75      0.69        12
+             Noctua pronuba       0.89      0.92      0.90       270
+          Nyctobrya muralis       1.00      0.40      0.57         5
+         Ochropleura plecta       0.86      0.87      0.86        55
+         Oligia fasciuncula       0.93      1.00      0.96        13
+        Operophtera brumata       0.90      0.90      0.90        40
+   Opisthograptis luteolata       0.98      0.98      0.98        46
+             Orgyia antiqua       0.80      0.57      0.67         7
+            Orthosia cerasi       0.82      0.82      0.82        33
+             Orthosia cruda       0.79      0.79      0.79        14
+           Orthosia gothica       1.00      0.95      0.98        21
+           Orthosia incerta       0.82      0.60      0.69        15
+      Ourapteryx sambucaria       0.82      0.90      0.86        10
+Pachycnemia hippocastanaria       0.00      0.00      0.00         4
+        Panemeria tenebrata       0.50      0.33      0.40         3
+            Panolis flammea       1.00      1.00      1.00         4
+     Parascotia fuliginaria       1.00      0.75      0.86         4
+     Pasiphila rectangulata       0.80      0.80      0.80        15
+     Pechipogo plumigeralis       1.00      0.50      0.67         6
+           Pelosia muscerda       0.88      0.83      0.86        18
+   Peribatodes rhomboidaria       0.77      0.91      0.83        80
+      Perizoma alchemillata       0.82      0.90      0.86        10
+     Perizoma flavofasciata       1.00      0.67      0.80         6
+         Phigalia pilosaria       0.67      0.57      0.62         7
+     Phlogophora meticulosa       0.77      0.88      0.82        34
+             Photedes fluxa       0.60      0.60      0.60         5
+    Phragmatobia fuliginosa       0.86      0.82      0.84        38
+        Plemyria rubiginata       0.62      0.83      0.71         6
+            Plusia festucae       0.90      0.90      0.90        10
+  Pterapherapteryx sexalata       0.33      0.33      0.33         3
+            Rhizedra lutosa       0.83      0.83      0.83         6
+          Rivula sericealis       0.84      0.93      0.89        58
+  Schrankia costaestrigalis       0.75      0.60      0.67         5
+      Scoliopteryx libatrix       0.78      0.81      0.79        26
+           Scopula immutata       0.67      1.00      0.80         4
+           Selenia dentaria       0.77      0.77      0.77        13
+       Selenia tetralunaria       0.33      0.25      0.29         4
+        Smerinthus ocellata       0.73      0.89      0.80        18
+            Sphinx ligustri       0.80      0.86      0.83        14
+            Sphinx pinastri       0.77      0.67      0.71        15
+        Sphrageidus similis       1.00      0.29      0.44         7
+           Spilarctia lutea       0.79      1.00      0.88        23
+      Spilosoma lubricipeda       0.90      0.88      0.89        51
+       Stegania trimaculata       1.00      0.80      0.89         5
+         Sunira circellaris       0.40      0.50      0.44         8
+         Thalpophila matura       0.50      0.33      0.40         3
+           Thera obeliscata       1.00      0.67      0.80         3
+             Timandra comae       0.89      0.92      0.90        36
+         Trachea atriplicis       0.83      0.71      0.77         7
+            Tyria jacobaeae       0.89      0.94      0.91        66
+           Wittia sororcula       0.71      0.62      0.67         8
+       Xanthorhoe designata       0.62      0.83      0.71         6
+       Xanthorhoe ferrugata       0.72      0.68      0.70        19
+       Xanthorhoe fluctuata       0.90      0.95      0.92        38
+       Xanthorhoe montanata       0.75      0.50      0.60         6
+     Xanthorhoe spadicearia       0.70      0.70      0.70        10
+                Xestia baja       1.00      0.80      0.89         5
+            Xestia c-nigrum       0.87      0.91      0.89        85
+          Xestia triangulum       1.00      0.69      0.82        13
+        Xestia xanthographa       0.69      0.63      0.66        46
+
+                   accuracy                           0.82      4272
+                  macro avg       0.79      0.73      0.75      4272
+               weighted avg       0.83      0.82      0.82      4272
+
+Saved: results/advanced_evaluation/figures/confusion_matrix_cross-attention_tf.png
+Saved: results/advanced_evaluation/figures/per_species_accuracy_cross-attention_tf.png
+
+============================================================
+COMPARISON: Transformer Fusion vs Cross-Attention TF
+============================================================
+
+Species improved most with Cross-Attention TF:
+                species  accuracy_tf  accuracy_catf  improvement
+            Xestia baja    20.000000      80.000000    60.000000
+           Hyles gallii    25.000000      75.000000    50.000000
+     Eupithecia vulgata    40.000000      80.000000    40.000000
+Cyclophora albipunctata    66.666667     100.000000    33.333333
+       Diacrisia sannio     0.000000      33.333333    33.333333
+ Xanthorhoe spadicearia    40.000000      70.000000    30.000000
+        Alcis repandata    57.142857      85.714286    28.571429
+      Euplexia lucipara    75.000000     100.000000    25.000000
+       Globia sparganii     0.000000      25.000000    25.000000
+      Noctua interjecta    50.000000      75.000000    25.000000
+
+Species degraded most with Cross-Attention TF:
+                  species  accuracy_tf  accuracy_catf  improvement
+  Lateroligia ophiogramma    75.000000      50.000000   -25.000000
+      Agrochola macilenta    50.000000      25.000000   -25.000000
+            Callistege mi    71.428571      42.857143   -28.571429
+       Mythimna vitellina    66.666667      33.333333   -33.333333
+        Amphipyra berbera    33.333333       0.000000   -33.333333
+Pterapherapteryx sexalata    66.666667      33.333333   -33.333333
+         Mythimna l-album   100.000000      66.666667   -33.333333
+      Abrostola triplasia    83.333333      50.000000   -33.333333
+          Anarta trifolii    69.230769      30.769231   -38.461538
+      Panemeria tenebrata   100.000000      33.333333   -66.666667

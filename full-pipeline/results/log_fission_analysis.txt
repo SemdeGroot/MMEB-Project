@@ -1,0 +1,56 @@
+Loading occurrence data...
+Loading multimedia data...
+Image sources: 30208 local | 375 URL fallback
+Before cleaning: 30583 samples
+After cleaning: 28477 samples, 241 species
+Train: 19933 | Val: 4272 | Test: 4272
+
+============================================================
+STEP 1: MODEL COMPARISON
+============================================================
+Image-Only                Test Accuracy: 82.68%
+Metadata-Only             Test Accuracy: 13.32%
+Early Fusion              Test Accuracy: 87.57%
+Concat Fusion             Test Accuracy: 84.29%
+Gated Fusion              Test Accuracy: 84.13%
+Transformer Fusion        Test Accuracy: 83.33%
+Coordination              Test Accuracy: 83.80%
+Cross-Attention TF        Test Accuracy: 82.19%
+
+============================================================
+STEP 2: FISSION ANALYSIS
+============================================================
+
+Unique image info:      82.68%
+Unique metadata info:   13.32%
+Best fusion model:      Early Fusion
+Best fusion accuracy:   87.57%
+
+Synergy (fusion - best unimodal): +4.89%
+-> Fusion captures SYNERGISTIC information
+Advanced fusion benefit:          -3.77%
+-> Advanced fusion did not help over simple fusion
+
+============================================================
+STEP 3: MISSING MODALITY TEST
+============================================================
+
+Best fusion model: Early Fusion
+Full modalities:   87.57%
+Missing metadata:  82.14%  (drop: +5.43%)
+Missing image:     3.44%  (drop: +84.13%)
+
+============================================================
+FINAL SUMMARY TABLE
+============================================================
+
+Model                       Test Accuracy
+------------------------------------------
+Image-Only                         82.68%
+Metadata-Only                      13.32%
+Early Fusion                       87.57%
+Concat Fusion                      84.29%
+Gated Fusion                       84.13%
+Transformer Fusion                 83.33%
+Coordination                       83.80%
+Cross-Attention TF                 82.19%

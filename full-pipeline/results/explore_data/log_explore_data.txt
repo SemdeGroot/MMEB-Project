@@ -1,0 +1,577 @@
+
+========================================================================
+DATA SOURCES
+========================================================================
+Occurrence file: data/occurrence.txt
+Multimedia file: data/multimedia.txt
+Loading occurrence data...
+Loading multimedia data...
+
+========================================================================
+PROJECT DATA USED
+========================================================================
+This script does not load every column in the raw files.
+It loads only the columns used by the current project.
+
+Occurrence columns used by this project:
+  - gbifID
+  - species
+  - decimalLatitude
+  - decimalLongitude
+  - month
+  - year
+  - day
+  - lifeStage
+  - eventTime
+  - stateProvince
+  - coordinateUncertaintyInMeters
+
+Multimedia columns used by this project:
+  - gbifID
+  - identifier
+  - format
+
+Current cleaning rules:
+  - Keep only lifeStage == Adult
+  - Require non-missing species, decimalLatitude, decimalLongitude, month, identifier
+  - Drop species with fewer than 20 samples
+  - Use all available samples after cleaning
+
+========================================================================
+RAW TABLE OVERVIEW
+========================================================================
+Occurrence rows:               31948
+Occurrence unique gbifID:      31948
+Occurrence unique species:     529
+Multimedia rows:               41911
+Multimedia unique gbifID:      30697
+Multimedia rows with URL:      41911
+Occurrence duplicated gbifID:  0
+Multimedia duplicated gbifID:  11214
+
+Missing values in occurrence columns used by the project:
+  coordinateUncertaintyInMeters       11362 (35.56%)
+  eventTime                            1756 (5.50%)
+  species                               561 (1.76%)
+  stateProvince                         152 (0.48%)
+  day                                   150 (0.47%)
+  month                                  53 (0.17%)
+  year                                    7 (0.02%)
+  decimalLatitude                         0 (0.00%)
+  gbifID                                  0 (0.00%)
+  decimalLongitude                        0 (0.00%)
+  lifeStage                               0 (0.00%)
+
+Missing values in multimedia columns used by the project:
+  gbifID                                  0 (0.00%)
+  identifier                              0 (0.00%)
+  format                                  0 (0.00%)
+
+========================================================================
+MULTIMEDIA OVERVIEW
+========================================================================
+Multimedia format distribution:
+format
+image/jpeg    41765
+image/png       142
+image/gif         4
+
+JPEG images per gbifID:
+  Mean: 1.37
+  Std:  0.92
+  Min:  1
+  Max:  20
+
+JPEG multimedia rows:         41765
+Unique gbifID with JPEG:      30583
+Rows kept after first-image:  30583
+
+========================================================================
+CLEANING PIPELINE
+========================================================================
+Merged occurrence + first JPEG multimedia                 30583 rows
+After keeping only Adult                                  30583 rows | removed        0 (0.00%)
+After dropping rows missing required fields               30211 rows | removed      372 (1.22%)
+After dropping species with < 20 samples                  28477 rows | removed     1734 (5.74%)
+Final dataset used by training                            28477 rows | removed        0 (0.00%)
+
+Species before minimum-sample filter: 520
+Species kept after filter:            241
+Species dropped by filter:            279
+
+Example species dropped by the minimum-sample rule:
+species
+Ipimorpha subtusa         19
+Orthonama vittata         19
+Lenisa geminipuncta       19
+Eupithecia inturbata      18
+Chrysodeixis chalcites    17
+Thumatha senex            17
+Perconia strigillaria     17
+Aspitates ochrearia       17
+Herminia tarsicrinalis    16
+Tiliacea aurago           16
+Ennomos autumnaria        16
+Leucania comma            16
+Apamea crenata            16
+Bryophila domestica       16
+Hecatera dysodea          16
+Lymantria monacha         16
+Panthea coenobita         16
+Eupithecia intricata      16
+Helotropha leucostigma    15
+Gortyna flavago           15
+
+========================================================================
+FINAL DATASET OVERVIEW
+========================================================================
+Final rows used by project:       28477
+Final species count:              241
+Unique gbifID:                    28477
+Unique exact locations:           17861
+Year range:                       1921 - 2026
+Random-chance baseline:           0.41%
+
+========================================================================
+SPECIES DISTRIBUTION
+========================================================================
+Samples per species (mean):       118.16
+Samples per species (std):        167.56
+Samples per species (min):        20
+Samples per species (max):        1798
+
+Top 20 most common species:
+species
+Noctua pronuba              1798
+Autographa gamma             975
+Idaea aversata               658
+Idaea seriata                591
+Camptogramma bilineata       571
+Xestia c-nigrum              569
+Peribatodes rhomboidaria     534
+Gymnoscelis rufifasciata     481
+Tyria jacobaeae              438
+Noctua comes                 401
+Rivula sericealis            390
+Luperina testacea            372
+Ochropleura plecta           365
+Macroglossum stellatarum     343
+Spilosoma lubricipeda        338
+Idaea dimidiata              331
+Ectropis crepuscularia       329
+Xestia xanthographa          309
+Campaea margaritaria         307
+Mesoligia furuncula          306
+
+Top 20 rarest kept species:
+species
+Eupithecia absinthiata         24
+Selenia tetralunaria           24
+Panolis flammea                23
+Apterogenum ypsillon           23
+Mythimna l-album               23
+Panemeria tenebrata            23
+Mythimna vitellina             23
+Pachycnemia hippocastanaria    22
+Caradrina kadenii              22
+Allophyes oxyacanthae          22
+Charanyca trigrammica          22
+Agrochola lota                 21
+Euchoeca nebulata              21
+Thalpophila matura             21
+Melanchra persicariae          21
+Lithosia quadra                20
+Cyclophora albipunctata        20
+Ennomos quercinaria            20
+Pterapherapteryx sexalata      20
+Diacrisia sannio               20
+
+========================================================================
+TEMPORAL OVERVIEW
+========================================================================
+Month distribution:
+  Jan: 61
+  Feb: 271
+  Mar: 603
+  Apr: 838
+  May: 2600
+  Jun: 5330
+  Jul: 7817
+  Aug: 6957
+  Sep: 2947
+  Oct: 525
+  Nov: 339
+  Dec: 189
+
+Missing eventTime rows:           811 (2.85%)
+Missing day rows:                 0 (0.00%)
+Missing year rows:                0 (0.00%)
+
+========================================================================
+GEOGRAPHY AND PLACE NAMES
+========================================================================
+Latitude range:                   50.7600 to 53.5346
+Longitude range:                  3.3866 to 7.1989
+
+Unique raw stateProvince names:   18
+
+All raw stateProvince names and counts:
+stateProvince
+Gelderland       7796
+Zuid-Holland     3889
+Friesland        3647
+Groningen        3609
+Noord-Holland    3176
+Noord-Brabant    2533
+Utrecht          1378
+Limburg           750
+Drenthe           718
+Overijssel        429
+Zeeland           397
+Flevoland         109
+South Holland      30
+IJsselmeer          6
+Frisia              3
+North Holland       3
+Zeeuwse meren       3
+Unknown             1
+
+Configured stateProvince renames:
+  Frisia -> Friesland: old=3, existing_target=3647, merged_total=3650
+  North Brabant -> Noord-Brabant: old=0, existing_target=2533, merged_total=2533
+  North Holland -> Noord-Holland: old=3, existing_target=3176, merged_total=3179
+  South Holland -> Zuid-Holland: old=30, existing_target=3889, merged_total=3919
+
+========================================================================
+METADATA USED BY THE MODELS
+========================================================================
+All available raw occurrence columns (possible metadata candidates):
+    1. gbifID
+    2. accessRights
+    3. bibliographicCitation
+    4. language
+    5. license
+    6. modified
+    7. publisher
+    8. references
+    9. rightsHolder
+   10. type
+   11. institutionID
+   12. collectionID
+   13. datasetID
+   14. institutionCode
+   15. collectionCode
+   16. datasetName
+   17. ownerInstitutionCode
+   18. basisOfRecord
+   19. informationWithheld
+   20. dataGeneralizations
+   21. dynamicProperties
+   22. occurrenceID
+   23. catalogNumber
+   24. recordNumber
+   25. recordedBy
+   26. recordedByID
+   27. individualCount
+   28. organismQuantity
+   29. organismQuantityType
+   30. sex
+   31. lifeStage
+   32. reproductiveCondition
+   33. caste
+   34. behavior
+   35. vitality
+   36. establishmentMeans
+   37. degreeOfEstablishment
+   38. pathway
+   39. georeferenceVerificationStatus
+   40. occurrenceStatus
+   41. preparations
+   42. disposition
+   43. associatedOccurrences
+   44. associatedReferences
+   45. associatedSequences
+   46. associatedTaxa
+   47. otherCatalogNumbers
+   48. occurrenceRemarks
+   49. organismID
+   50. organismName
+   51. organismScope
+   52. associatedOrganisms
+   53. previousIdentifications
+   54. organismRemarks
+   55. materialEntityID
+   56. materialEntityRemarks
+   57. verbatimLabel
+   58. materialSampleID
+   59. eventID
+   60. parentEventID
+   61. eventType
+   62. fieldNumber
+   63. eventDate
+   64. eventTime
+   65. startDayOfYear
+   66. endDayOfYear
+   67. year
+   68. month
+   69. day
+   70. verbatimEventDate
+   71. habitat
+   72. samplingProtocol
+   73. sampleSizeValue
+   74. sampleSizeUnit
+   75. samplingEffort
+   76. fieldNotes
+   77. eventRemarks
+   78. locationID
+   79. higherGeographyID
+   80. higherGeography
+   81. continent
+   82. waterBody
+   83. islandGroup
+   84. island
+   85. countryCode
+   86. stateProvince
+   87. county
+   88. municipality
+   89. locality
+   90. verbatimLocality
+   91. verbatimElevation
+   92. verticalDatum
+   93. verbatimDepth
+   94. minimumDistanceAboveSurfaceInMeters
+   95. maximumDistanceAboveSurfaceInMeters
+   96. locationAccordingTo
+   97. locationRemarks
+   98. decimalLatitude
+   99. decimalLongitude
+  100. coordinateUncertaintyInMeters
+  101. coordinatePrecision
+  102. pointRadiusSpatialFit
+  103. verbatimCoordinateSystem
+  104. verbatimSRS
+  105. footprintWKT
+  106. footprintSRS
+  107. footprintSpatialFit
+  108. georeferencedBy
+  109. georeferencedDate
+  110. georeferenceProtocol
+  111. georeferenceSources
+  112. georeferenceRemarks
+  113. geologicalContextID
+  114. earliestEonOrLowestEonothem
+  115. latestEonOrHighestEonothem
+  116. earliestEraOrLowestErathem
+  117. latestEraOrHighestErathem
+  118. earliestPeriodOrLowestSystem
+  119. latestPeriodOrHighestSystem
+  120. earliestEpochOrLowestSeries
+  121. latestEpochOrHighestSeries
+  122. earliestAgeOrLowestStage
+  123. latestAgeOrHighestStage
+  124. lowestBiostratigraphicZone
+  125. highestBiostratigraphicZone
+  126. lithostratigraphicTerms
+  127. group
+  128. formation
+  129. member
+  130. bed
+  131. identificationID
+  132. verbatimIdentification
+  133. identificationQualifier
+  134. typeStatus
+  135. identifiedBy
+  136. identifiedByID
+  137. dateIdentified
+  138. identificationReferences
+  139. identificationVerificationStatus
+  140. identificationRemarks
+  141. taxonID
+  142. scientificNameID
+  143. acceptedNameUsageID
+  144. parentNameUsageID
+  145. originalNameUsageID
+  146. nameAccordingToID
+  147. namePublishedInID
+  148. taxonConceptID
+  149. scientificName
+  150. acceptedNameUsage
+  151. parentNameUsage
+  152. originalNameUsage
+  153. nameAccordingTo
+  154. namePublishedIn
+  155. namePublishedInYear
+  156. higherClassification
+  157. kingdom
+  158. phylum
+  159. class
+  160. order
+  161. superfamily
+  162. family
+  163. subfamily
+  164. tribe
+  165. subtribe
+  166. genus
+  167. genericName
+  168. subgenus
+  169. infragenericEpithet
+  170. specificEpithet
+  171. infraspecificEpithet
+  172. cultivarEpithet
+  173. taxonRank
+  174. verbatimTaxonRank
+  175. vernacularName
+  176. nomenclaturalCode
+  177. taxonomicStatus
+  178. nomenclaturalStatus
+  179. taxonRemarks
+  180. datasetKey
+  181. publishingCountry
+  182. lastInterpreted
+  183. elevation
+  184. elevationAccuracy
+  185. depth
+  186. depthAccuracy
+  187. distanceFromCentroidInMeters
+  188. issue
+  189. taxonomicIssue
+  190. nonTaxonomicIssue
+  191. mediaType
+  192. hasCoordinate
+  193. hasGeospatialIssues
+  194. taxonKey
+  195. acceptedTaxonKey
+  196. kingdomKey
+  197. phylumKey
+  198. classKey
+  199. orderKey
+  200. superfamilyKey
+  201. familyKey
+  202. subfamilyKey
+  203. tribeKey
+  204. subtribeKey
+  205. genusKey
+  206. subgenusKey
+  207. speciesKey
+  208. species
+  209. acceptedScientificName
+  210. verbatimScientificName
+  211. typifiedName
+  212. protocol
+  213. lastParsed
+  214. lastCrawled
+  215. isInvasive
+  216. repatriated
+  217. relativeOrganismQuantity
+  218. projectId
+  219. isSequenced
+  220. gbifRegion
+  221. publishedByGbifRegion
+  222. level0Gid
+  223. level0Name
+  224. level1Gid
+  225. level1Name
+  226. level2Gid
+  227. level2Name
+  228. level3Gid
+  229. level3Name
+  230. iucnRedListCategory
+
+Raw metadata fields selected by the project:
+   1. decimalLatitude
+   2. decimalLongitude
+   3. month
+   4. day
+   5. year
+   6. eventTime
+   7. stateProvince
+   8. coordinateUncertaintyInMeters
+
+Missingness for the selected raw metadata fields:
+  - decimalLatitude              missing=      0 (0.00%)
+  - decimalLongitude             missing=      0 (0.00%)
+  - month                        missing=      0 (0.00%)
+  - day                          missing=      0 (0.00%)
+  - year                         missing=      0 (0.00%)
+  - eventTime                    missing=    811 (2.85%)
+  - stateProvince                missing=      1 (0.00%)
+  - coordinateUncertaintyInMeters missing=   9908 (34.79%)
+
+Final processed metadata features selected for the models:
+   1. lat_norm
+   2. lon_norm
+   3. month_sin
+   4. month_cos
+   5. day_of_year_sin
+   6. day_of_year_cos
+   7. hour_sin
+   8. hour_cos
+   9. lat_month_interaction
+  10. lat_season_interaction
+  11. lat_day_interaction
+  12. hour_month_interaction
+  13. year_norm
+  14. day_of_year_missing
+  15. event_time_missing
+  16. coord_uncertainty_norm
+  17. coord_uncertainty_missing
+  18. state_Drenthe
+  19. state_Flevoland
+  20. state_Friesland
+  21. state_Gelderland
+  22. state_Groningen
+  23. state_IJsselmeer
+  24. state_Limburg
+  25. state_Noord-Brabant
+  26. state_Noord-Holland
+  27. state_Overijssel
+  28. state_Unknown
+  29. state_Utrecht
+  30. state_Zeeland
+  31. state_Zeeuwse meren
+  32. state_Zuid-Holland
+
+Processed metadata feature ranges:
+  lat_norm                     min=  0.5640 max=  0.5948 mean=  0.5821 std=  0.0075
+  lon_norm                     min=  0.0188 max=  0.0400 mean=  0.0309 std=  0.0039
+  month_sin                    min= -1.0000 max=  1.0000 mean= -0.3726 std=  0.5541
+  month_cos                    min= -1.0000 max=  1.0000 mean= -0.6081 std=  0.4294
+  day_of_year_sin              min= -1.0000 max=  1.0000 mean= -0.1858 std=  0.5716
+  day_of_year_cos              min= -1.0000 max=  1.0000 mean= -0.6950 std=  0.3946
+  hour_sin                     min= -1.0000 max=  1.0000 mean=  0.1184 std=  0.6512
+  hour_cos                     min= -1.0000 max=  1.0000 mean=  0.0161 std=  0.7494
+  lat_month_interaction        min= -0.5943 max=  0.5934 mean= -0.2175 std=  0.3222
+  lat_season_interaction       min= -0.5948 max=  0.5934 mean= -0.3542 std=  0.2497
+  lat_day_interaction          min= -0.5937 max=  0.5932 mean= -0.1087 std=  0.3321
+  hour_month_interaction       min= -0.9999 max=  1.0000 mean= -0.0870 std=  0.4434
+  year_norm                    min=  0.0000 max=  1.0000 mean=  0.9618 std=  0.0342
+  day_of_year_missing          min=  0.0000 max=  0.0000 mean=  0.0000 std=  0.0000
+  event_time_missing           min=  0.0000 max=  1.0000 mean=  0.0285 std=  0.1663
+  coord_uncertainty_norm       min= -1.4645 max=  7.4124 mean=  0.0000 std=  1.0000
+  coord_uncertainty_missing    min=  0.0000 max=  1.0000 mean=  0.3479 std=  0.4763
+  state_Drenthe                min= -0.5000 max=  0.5000 mean= -0.4748 std=  0.1568
+  state_Flevoland              min= -0.5000 max=  0.5000 mean= -0.4962 std=  0.0618
+  state_Friesland              min= -0.5000 max=  0.5000 mean= -0.3718 std=  0.3343
+  state_Gelderland             min= -0.5000 max=  0.5000 mean= -0.2262 std=  0.4459
+  state_Groningen              min= -0.5000 max=  0.5000 mean= -0.3733 std=  0.3327
+  state_IJsselmeer             min= -0.5000 max=  0.5000 mean= -0.4998 std=  0.0145
+  state_Limburg                min= -0.5000 max=  0.5000 mean= -0.4737 std=  0.1601
+  state_Noord-Brabant          min= -0.5000 max=  0.5000 mean= -0.4111 std=  0.2847
+  state_Noord-Holland          min= -0.5000 max=  0.5000 mean= -0.3884 std=  0.3149
+  state_Overijssel             min= -0.5000 max=  0.5000 mean= -0.4849 std=  0.1218
+  state_Unknown                min= -0.5000 max=  0.5000 mean= -0.5000 std=  0.0059
+  state_Utrecht                min= -0.5000 max=  0.5000 mean= -0.4516 std=  0.2146
+  state_Zeeland                min= -0.5000 max=  0.5000 mean= -0.4861 std=  0.1172
+  state_Zeeuwse meren          min= -0.5000 max=  0.5000 mean= -0.4999 std=  0.0103
+  state_Zuid-Holland           min= -0.5000 max=  0.5000 mean= -0.3624 std=  0.3445
+
+Saved individual figures to results/explore_data/figures
+
+========================================================================
+FILES SAVED
+========================================================================
+Main log: results/explore_data/log_explore_data.txt
+Log folder: results/explore_data
+Figures are in: results/explore_data/figures
+
+Done.
