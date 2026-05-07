@@ -12,7 +12,7 @@ class GatedFusionModel(nn.Module):
     silently dominate without it showing in the gate statistics.
     """
 
-    def __init__(self, num_classes, backbone="resnet50", fused_dim=512):
+    def __init__(self, num_classes, backbone="resnet50", metadata_dim=4, fused_dim=512):
         super().__init__()
         if backbone == "resnet50":
             net = tvm.resnet50(weights=tvm.ResNet50_Weights.IMAGENET1K_V1)
@@ -27,7 +27,7 @@ class GatedFusionModel(nn.Module):
             raise ValueError(f"Unknown backbone: {backbone}")
 
         self.loc_encoder = nn.Sequential(
-            nn.Linear(4, 64), nn.ReLU(),
+            nn.Linear(metadata_dim, 64), nn.ReLU(),
             nn.Linear(64, 64), nn.ReLU(),
         )
 

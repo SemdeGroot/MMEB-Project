@@ -6,7 +6,7 @@ import open_clip
 class LateFusionModel(nn.Module):
     """Separate classifier heads per modality, final logits are summed."""
 
-    def __init__(self, num_classes, backbone="resnet50"):
+    def __init__(self, num_classes, backbone="resnet50", metadata_dim=4):
         super().__init__()
         if backbone == "resnet50":
             net = tvm.resnet50(weights=tvm.ResNet50_Weights.IMAGENET1K_V1)
@@ -21,7 +21,7 @@ class LateFusionModel(nn.Module):
             raise ValueError(f"Unknown backbone: {backbone}")
 
         self.loc_encoder = nn.Sequential(
-            nn.Linear(4, 64), nn.ReLU(),
+            nn.Linear(metadata_dim, 64), nn.ReLU(),
             nn.Linear(64, 64), nn.ReLU(),
         )
         self.img_head = nn.Linear(img_dim, num_classes)
