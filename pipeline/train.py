@@ -121,7 +121,7 @@ def load_checkpoint(path, model, optimizer, scheduler):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--model",      required=True,
-                        choices=["baseline", "early_fusion", "late_fusion", "location_only"])
+                        choices=["baseline", "early_fusion", "late_fusion", "gated_fusion", "location_only"])
     parser.add_argument("--backbone",   default="resnet50", choices=["resnet50", "bioclip"])
     parser.add_argument("--epochs",     type=int, default=30)
     parser.add_argument("--batch_size", type=int, default=64)
