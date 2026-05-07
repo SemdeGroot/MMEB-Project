@@ -41,6 +41,9 @@ def build_model(model_name, backbone, num_classes):
     if model_name == "late_fusion":
         from models.late_fusion import LateFusionModel
         return LateFusionModel(num_classes, backbone)
+    if model_name == "gated_fusion":
+        from models.gated_fusion import GatedFusionModel
+        return GatedFusionModel(num_classes, backbone)
     if model_name == "location_only":
         from models.location_only import LocationOnlyModel
         return LocationOnlyModel(num_classes)
@@ -169,7 +172,7 @@ def run_gradcam(model, test_ds, backbone, result_dir, preds_all, species_counts,
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--model",      required=True,
-                        choices=["baseline", "early_fusion", "late_fusion", "location_only"])
+                        choices=["baseline", "early_fusion", "late_fusion", "gated_fusion", "location_only"])
     parser.add_argument("--backbone",   default="resnet50", choices=["resnet50", "bioclip"])
     parser.add_argument("--batch_size", type=int, default=64)
     parser.add_argument("--gradcam",    action="store_true",
