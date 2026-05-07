@@ -203,7 +203,8 @@ def main():
     model.load_state_dict(ckpt["model"])
 
     test_loader = DataLoader(test_ds, batch_size=args.batch_size, shuffle=False,
-                             num_workers=4, pin_memory=True)
+                             num_workers=8, pin_memory=True,
+                             persistent_workers=False, prefetch_factor=2)
 
     print("Running inference on test set...")
     preds, labels = run_inference(model, test_loader, device)

@@ -65,17 +65,25 @@ def _progress(tag, i, n, extra=""):
     print(f"  {tag} [{bar}] {i+1}/{n}{extra}", flush=True)
 
 
-def train_one_epoch(model, loader, criterion, optimizer, device):
+def train_one_epoch(model, loader, criterion, optimizer, device, scaler):
     model.train()
     total_loss = 0.0
     n = len(loader)
     interval = max(1, n // 100)
+    use_amp = scaler is not None
     for i, (img, loc, label) in enumerate(loader):
         img, loc, label = img.to(device), loc.to(device), label.to(device)
         optimizer.zero_grad()
-        loss = criterion(model(img, loc), label)
-        loss.backward()
-        optimizer.step()
+        if use_amp:
+            with torch.amp.autocast(device_type="cuda"):
+                loss = criterion(model(img, loc), label)
+            scaler.scale(loss).backward()
+            scaler.step(optimizer)
+            scaler.update()
+        else:
+            loss = criterion(model(img, loc), label)
+            loss.backward()
+            optimizer.step()
         total_loss += loss.item() * len(label)
         if (i + 1) % interval == 0 or i + 1 == n:
             avg = total_loss / ((i + 1) * loader.batch_size)
@@ -84,15 +92,21 @@ def train_one_epoch(model, loader, criterion, optimizer, device):
 
 
 @torch.no_grad()
-def evaluate(model, loader, criterion, device):
+def evaluate(model, loader, criterion, device, use_amp):
     model.eval()
     total_loss, correct = 0.0, 0
     n = len(loader)
     interval = max(1, n // 100)
     for i, (img, loc, label) in enumerate(loader):
         img, loc, label = img.to(device), loc.to(device), label.to(device)
-        logits = model(img, loc)
-        total_loss += criterion(logits, label).item() * len(label)
+        if use_amp:
+            with torch.amp.autocast(device_type="cuda"):
+                logits = model(img, loc)
+                loss   = criterion(logits, label)
+        else:
+            logits = model(img, loc)
+            loss   = criterion(logits, label)
+        total_loss += loss.item() * len(label)
         correct += (logits.argmax(1) == label).sum().item()
         if (i + 1) % interval == 0 or i + 1 == n:
             _progress("val  ", i, n)
@@ -140,15 +154,22 @@ def main():
     print(f"Classes: {num_classes} | train: {len(train_ds)} | val: {len(val_ds)}")
 
     train_loader = DataLoader(train_ds, batch_size=args.batch_size, shuffle=True,
-                              num_workers=4, pin_memory=True)
+                              num_workers=8, pin_memory=True,
+                              persistent_workers=True, prefetch_factor=2)
     val_loader   = DataLoader(val_ds,   batch_size=args.batch_size, shuffle=False,
-                              num_workers=4, pin_memory=True)
+                              num_workers=8, pin_memory=True,
+                              persistent_workers=True, prefetch_factor=2)
 
     print("Building model...")
     model     = build_model(args.model, args.backbone, num_classes).to(device)
     optimizer = make_optimizer(model, args.model)
     scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=args.epochs)
     criterion = nn.CrossEntropyLoss(weight=compute_class_weights(train_ds, num_classes, device))
+
+    use_amp = device.type == "cuda"
+    scaler  = torch.amp.GradScaler("cuda") if use_amp else None
+    if use_amp:
+        print("Mixed precision (autocast + GradScaler) enabled")
 
     start_epoch    = 0
     best_val_loss  = float("inf")
@@ -180,8 +201,8 @@ def main():
                 p.requires_grad_(True)
             print(f"Epoch {epoch}: BioCLIP backbone unfrozen")
 
-        train_loss            = train_one_epoch(model, train_loader, criterion, optimizer, device)
-        val_loss, val_acc     = evaluate(model, val_loader, criterion, device)
+        train_loss            = train_one_epoch(model, train_loader, criterion, optimizer, device, scaler)
+        val_loss, val_acc     = evaluate(model, val_loader, criterion, device, use_amp)
         scheduler.step()
 
         print(f"Epoch {epoch:3d} | train_loss={train_loss:.4f} | "
