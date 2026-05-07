@@ -112,24 +112,35 @@ def compute_metrics(preds, labels, species_counts):
 
 
 def vit_reshape_transform(tensor):
-    # tensor: (batch, 197, 768) — drop CLS token, reshape to 14x14 spatial grid
+    # open_clip's ViT may emit tensors in either (B, 197, D) or (197, B, D);
+    # 197 = 14*14 patches + 1 CLS. Detect by which axis is 197 and permute to
+    # batch-first before dropping CLS and reshaping to a 14x14 spatial grid.
+    if tensor.shape[0] == 197:
+        tensor = tensor.permute(1, 0, 2)
     patch_tokens = tensor[:, 1:, :]
     patch_tokens = patch_tokens.reshape(patch_tokens.shape[0], 14, 14, patch_tokens.shape[2])
     return patch_tokens.permute(0, 3, 1, 2)
 
 
 def run_gradcam(model, test_ds, backbone, result_dir, preds_all, species_counts, device):
-    from pytorch_grad_cam import GradCAM
+    from pytorch_grad_cam import HiResCAM
     from pytorch_grad_cam.utils.image import show_cam_on_image
     from pytorch_grad_cam.utils.model_targets import ClassifierOutputTarget
     from PIL import Image as PILImage
 
+    # HiResCAM for both backbones: necessary for ViT (vanilla GradCAM zeros out
+    # the patch-token map after ReLU and produces uniform blue images), and
+    # also strictly more faithful for CNNs per Draelos & Carin (2020). One
+    # method across both keeps the saliency comparison consistent.
     if backbone == "resnet50":
-        cam = GradCAM(model=model, target_layers=[model.backbone.layer4[-1]])
+        cam = HiResCAM(model=model, target_layers=[model.backbone.layer4[-1]])
     else:
-        cam = GradCAM(model=model,
-                      target_layers=[model.backbone.transformer.resblocks[-1]],
-                      reshape_transform=vit_reshape_transform)
+        # ln_1 (LayerNorm before attention in the last block) matches the
+        # official pytorch_grad_cam ViT example. Hooking on the resblock output
+        # picks up the residual stream and smears the CAM.
+        cam = HiResCAM(model=model,
+                       target_layers=[model.backbone.transformer.resblocks[-1].ln_1],
+                       reshape_transform=vit_reshape_transform)
 
     # Group test indices by (bucket, correct/incorrect)
     rng = random.Random(GRADCAM_SEED)
