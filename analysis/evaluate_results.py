@@ -346,3 +346,5 @@ if __name__ == "__main__":
     plot_location_gain(metrics)
     plot_bucket_gain(metrics)
     plot_learning_curves(histories)
+    write_main_table(metrics)
+    write_gain_table(metrics)
