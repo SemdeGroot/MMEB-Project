@@ -11,6 +11,7 @@ dependencies:
   - pillow=12.2.0
   - matplotlib=3.10.9
   - numpy=2.4.3
+  - cartopy=0.24.1
   - pip==26.1.1
   - pip:
     - timm==1.0.26
