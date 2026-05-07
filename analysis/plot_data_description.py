@@ -54,7 +54,7 @@ def plot_observations_per_species(counts):
     ax.bar(range(len(values)), values, width=1.0, color="steelblue", linewidth=0)
     ax.set_xlabel("Species (ranked by observations)")
     ax.set_ylabel("Number of observations")
-    ax.set_title("Observations per species (all 745 species)")
+    ax.set_title(f"Observations per species (all {len(values)} species)")
     ax.set_yscale("log")
 
     for threshold, color in [(100, "#d62728"), (30, "#ff7f0e"), (10, "#2ca02c")]:
