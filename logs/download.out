@@ -1,0 +1,9 @@
+  failed 3449987949_Preview001.jpg: <urlopen error timed out>
+  failed 3449979074_Preview001.jpg: <urlopen error timed out>
+  failed 3449953358_Preview001.jpg: <urlopen error timed out>
+  failed 3449943128_Preview001.jpg: <urlopen error timed out>
+  failed 3449934212_Preview001.jpg: <urlopen error timed out>
+Loaded 32095 occurrence records
+Total multimedia rows: 42152
+
+Done. total=42006, downloaded=2, skipped=41999, errors=5
