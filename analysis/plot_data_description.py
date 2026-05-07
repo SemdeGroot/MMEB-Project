@@ -8,6 +8,7 @@ import cartopy.feature as cfeature
 import matplotlib.pyplot as plt
 import matplotlib.ticker as ticker
 import numpy as np
+from matplotlib.colors import LinearSegmentedColormap
 
 OCCURRENCE = Path(__file__).parent.parent / "data" / "occurrence.txt"
 OUT_DIR    = Path(__file__).parent / "output"  # saves plots to analysis/output
@@ -111,21 +112,30 @@ def plot_geographic_distribution(coords):
     n_out = int((~in_box).sum())
     lats, lons = lats[in_box], lons[in_box]
 
+    # Tight extent: just a sliver of margin so the outermost hexbins aren't clipped.
+    pad = 0.05
+    extent = [lons.min() - pad, lons.max() + pad,
+              lats.min() - pad, lats.max() + pad]
+
     proj = ccrs.PlateCarree()
-    fig, ax = plt.subplots(figsize=(6, 6), subplot_kw={"projection": proj})
-    ax.set_extent([NL_LON[0], NL_LON[1], NL_LAT[0], NL_LAT[1]], crs=proj)
+    fig, ax = plt.subplots(figsize=(9, 8), subplot_kw={"projection": proj})
+    ax.set_extent(extent, crs=proj)
 
     # 10 m NaturalEarth features give recognisable NL coastline and borders.
-    ax.add_feature(cfeature.OCEAN.with_scale("10m"),     facecolor="#cfe2f3")
-    ax.add_feature(cfeature.LAND.with_scale("10m"),      facecolor="#f3f1e8")
-    ax.add_feature(cfeature.LAKES.with_scale("10m"),     facecolor="#cfe2f3", linewidth=0)
+    ax.add_feature(cfeature.OCEAN.with_scale("10m"),     facecolor="#e8eef4")
+    ax.add_feature(cfeature.LAND.with_scale("10m"),      facecolor="#f5f3ec")
+    ax.add_feature(cfeature.LAKES.with_scale("10m"),     facecolor="#e8eef4", linewidth=0)
     ax.add_feature(cfeature.COASTLINE.with_scale("10m"), linewidth=0.6)
     ax.add_feature(cfeature.BORDERS.with_scale("10m"),   linewidth=0.5, linestyle=":")
 
-    hb = ax.hexbin(lons, lats, gridsize=40, cmap="viridis",
-                   mincnt=1, bins="log", alpha=0.75, transform=proj)
+    # Drop the lightest 30% of YlOrRd so even sparse hexbins read clearly on the land.
+    base   = plt.colormaps["YlOrRd"]
+    cmap   = LinearSegmentedColormap.from_list("YlOrRd_dark", base(np.linspace(0.30, 1.0, 256)))
+
+    hb = ax.hexbin(lons, lats, gridsize=45, cmap=cmap,
+                   mincnt=1, bins="log", transform=proj)
     cb = fig.colorbar(hb, ax=ax, shrink=0.75, pad=0.04)
-    cb.set_label("Observations (log scale)")
+    cb.set_label("Observations per hexbin (log scale)")
 
     gl = ax.gridlines(draw_labels=True, linewidth=0.3, alpha=0.4)
     gl.top_labels = False
