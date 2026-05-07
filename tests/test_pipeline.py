@@ -51,6 +51,7 @@ RUNS = [
     ("baseline",      "resnet50"),
     ("early_fusion",  "resnet50"),
     ("late_fusion",   "resnet50"),
+    ("gated_fusion",  "resnet50"),
     ("location_only", None),
 ]
 
