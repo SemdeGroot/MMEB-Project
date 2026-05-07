@@ -133,7 +133,7 @@ def plot_location_gain(metrics):
     ax.axhline(0, color="black", linewidth=0.8)
     ax.set_xticks(range(len(labels)))
     ax.set_xticklabels(labels, fontsize=9)
-    ax.set_ylabel("ΔMacro-F1 (fusion − baseline)")
+    ax.set_ylabel("ΔMacro-F1 (fusion - baseline)")
     ax.set_title("Macro-F1 gain from adding location data")
 
     for bar, g in zip(bars, gains):
@@ -184,7 +184,7 @@ def plot_bucket_gain(metrics):
     ax.axhline(0, color="black", linewidth=0.8)
     ax.set_xticks(x)
     ax.set_xticklabels(labels, fontsize=9)
-    ax.set_ylabel("ΔMacro-F1 (fusion − baseline)")
+    ax.set_ylabel("ΔMacro-F1 (fusion - baseline)")
     ax.set_title("Macro-F1 gain from location data, per species bucket")
     ax.legend(fontsize=9)
     fig.tight_layout()
@@ -336,7 +336,7 @@ if __name__ == "__main__":
     histories = load_histories()
 
     if not metrics and not histories:
-        print(f"No results found in {RESULTS_DIR}/ — run ALICE jobs first.")
+        print(f"No results found in {RESULTS_DIR}/ - run ALICE jobs first.")
     else:
         available = set(metrics) | set(histories)
         print(f"Loaded results for: {', '.join(available)}")
