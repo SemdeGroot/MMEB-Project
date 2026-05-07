@@ -148,6 +148,51 @@ def plot_location_gain(metrics):
     print("Saved location_gain.png")
 
 
+def plot_bucket_gain(metrics):
+    """For every fusion variant, show per-bucket macro-F1 gain over its image-only baseline."""
+    pairs = [
+        ("ResNet-50 early",  "baseline_resnet50", "early_fusion_resnet50"),
+        ("ResNet-50 late",   "baseline_resnet50", "late_fusion_resnet50"),
+        ("ResNet-50 gated",  "baseline_resnet50", "gated_fusion_resnet50"),
+        ("BioCLIP early",    "baseline_bioclip",  "early_fusion_bioclip"),
+        ("BioCLIP late",     "baseline_bioclip",  "late_fusion_bioclip"),
+        ("BioCLIP gated",    "baseline_bioclip",  "gated_fusion_bioclip"),
+    ]
+    pairs = [p for p in pairs
+             if p[1] in metrics and p[2] in metrics
+             and "bucket_f1" in metrics[p[1]] and "bucket_f1" in metrics[p[2]]]
+
+    if not pairs:
+        print("Not enough bucket data for bucket_gain.png — skipping")
+        return
+
+    labels = [p[0] for p in pairs]
+    x      = np.arange(len(pairs))
+    width  = 0.25
+    offsets = [-width, 0, width]
+
+    fig, ax = plt.subplots(figsize=(10, 4))
+    for offset, bucket in zip(offsets, BUCKETS):
+        gains = []
+        for _, base_key, fusion_key in pairs:
+            b = metrics[base_key]["bucket_f1"].get(bucket)
+            f = metrics[fusion_key]["bucket_f1"].get(bucket)
+            gains.append(f - b if b is not None and f is not None else float("nan"))
+        ax.bar(x + offset, gains, width, label=BUCKET_LABEL[bucket],
+               color=BUCKET_COLOR[bucket], alpha=0.85)
+
+    ax.axhline(0, color="black", linewidth=0.8)
+    ax.set_xticks(x)
+    ax.set_xticklabels(labels, fontsize=9)
+    ax.set_ylabel("ΔMacro-F1 (fusion − baseline)")
+    ax.set_title("Macro-F1 gain from location data, per species bucket")
+    ax.legend(fontsize=9)
+    fig.tight_layout()
+    fig.savefig(OUT_DIR / "bucket_gain.png", dpi=150)
+    plt.close(fig)
+    print("Saved bucket_gain.png")
+
+
 def load_histories():
     """Return dict mapping experiment key → list of per-epoch dicts from history.json."""
     data = {}
@@ -207,4 +252,5 @@ if __name__ == "__main__":
     plot_macro_f1(metrics)
     plot_bucket_f1(metrics)
     plot_location_gain(metrics)
+    plot_bucket_gain(metrics)
     plot_learning_curves(histories)
