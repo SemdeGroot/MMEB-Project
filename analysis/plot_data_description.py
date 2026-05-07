@@ -12,11 +12,16 @@ OUT_DIR    = Path(__file__).parent / "output"  # saves plots to analysis/output
 MONTH_NAMES = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
                "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
 
+# Approximate Netherlands bounding box (matches docs/assumptions.txt item 2).
+NL_LAT = (50.7, 53.6)
+NL_LON = (3.3, 7.2)
+
 
 def load_data():
     counts        = Counter()
     month_records = defaultdict(int)
     month_species = defaultdict(set)
+    coords        = []  # (lat, lon) per record with valid coordinates
 
     with open(OCCURRENCE, newline="", encoding="utf-8") as f:
         for row in csv.DictReader(f, delimiter="\t"):
@@ -28,7 +33,15 @@ def load_data():
             month_records[int(m)] += 1
             month_species[int(m)].add(sp)
 
-    return counts, month_records, month_species
+            lat = row.get("decimalLatitude", "").strip()
+            lon = row.get("decimalLongitude", "").strip()
+            if lat and lon:
+                try:
+                    coords.append((float(lat), float(lon)))
+                except ValueError:
+                    pass
+
+    return counts, month_records, month_species, coords
 
 
 def plot_observations_per_species(counts):
@@ -86,7 +99,39 @@ def plot_monthly_distribution(month_records, month_species):
     print("Saved monthly_distribution.png")
 
 
+def plot_geographic_distribution(coords):
+    """Hexbin density of observations over the Netherlands bounding box."""
+    lats = np.array([c[0] for c in coords])
+    lons = np.array([c[1] for c in coords])
+
+    in_box = ((lats >= NL_LAT[0]) & (lats <= NL_LAT[1])
+              & (lons >= NL_LON[0]) & (lons <= NL_LON[1]))
+    n_out = int((~in_box).sum())
+    lats, lons = lats[in_box], lons[in_box]
+
+    fig, ax = plt.subplots(figsize=(6, 6))
+    hb = ax.hexbin(lons, lats, gridsize=40, cmap="viridis",
+                   mincnt=1, bins="log",
+                   extent=(NL_LON[0], NL_LON[1], NL_LAT[0], NL_LAT[1]))
+    cb = fig.colorbar(hb, ax=ax, shrink=0.8)
+    cb.set_label("Observations (log scale)")
+
+    ax.set_xlim(NL_LON)
+    ax.set_ylim(NL_LAT)
+    # Approx aspect correction for ~52°N: 1° lon is shorter than 1° lat.
+    ax.set_aspect(1.0 / np.cos(np.radians(52.0)))
+    ax.set_xlabel("Longitude (°E)")
+    ax.set_ylabel("Latitude (°N)")
+    ax.set_title(f"Geographic distribution of observations (n={len(lats):,})")
+
+    fig.tight_layout()
+    fig.savefig(OUT_DIR / "geographic_distribution.png", dpi=150)
+    plt.close(fig)
+    print(f"Saved geographic_distribution.png ({n_out} records outside NL bbox dropped)")
+
+
 if __name__ == "__main__":
-    counts, month_records, month_species = load_data()
+    counts, month_records, month_species, coords = load_data()
     plot_observations_per_species(counts)
     plot_monthly_distribution(month_records, month_species)
+    plot_geographic_distribution(coords)
