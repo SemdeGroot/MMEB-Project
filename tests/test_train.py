@@ -63,15 +63,17 @@ def run(model, backbone, out_dir, extra_args=None):
         pipeline.train.main()
 
 
-# All 7 experiments from job.sh
+# All 9 experiments from job.sh
 RUNS = [
     ("baseline",      "resnet50"),
     ("early_fusion",  "resnet50"),
     ("late_fusion",   "resnet50"),
+    ("gated_fusion",  "resnet50"),
     ("location_only", None),
     ("baseline",      "bioclip"),
     ("early_fusion",  "bioclip"),
     ("late_fusion",   "bioclip"),
+    ("gated_fusion",  "bioclip"),
 ]
 
 import tempfile
