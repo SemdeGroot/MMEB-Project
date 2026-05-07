@@ -21,6 +21,7 @@ class BaselineModel(nn.Module):
             raise ValueError(f"Unknown backbone: {backbone}")
         self.head = nn.Linear(feat_dim, num_classes)
 
-    def forward(self, img, loc):
-        # loc is ignored — image-only model
+    def forward(self, img, loc=None):
+        # loc is ignored — image-only model. loc is optional so Grad-CAM can call
+        # model(img) with a single positional argument.
         return self.head(self.backbone(img))
