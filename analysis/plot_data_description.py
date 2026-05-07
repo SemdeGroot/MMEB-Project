@@ -3,6 +3,8 @@ import csv
 from collections import Counter, defaultdict
 from pathlib import Path
 
+import cartopy.crs as ccrs
+import cartopy.feature as cfeature
 import matplotlib.pyplot as plt
 import matplotlib.ticker as ticker
 import numpy as np
@@ -100,7 +102,7 @@ def plot_monthly_distribution(month_records, month_species):
 
 
 def plot_geographic_distribution(coords):
-    """Hexbin density of observations over the Netherlands bounding box."""
+    """Hexbin density of observations on a map of the Netherlands."""
     lats = np.array([c[0] for c in coords])
     lons = np.array([c[1] for c in coords])
 
@@ -109,21 +111,27 @@ def plot_geographic_distribution(coords):
     n_out = int((~in_box).sum())
     lats, lons = lats[in_box], lons[in_box]
 
-    fig, ax = plt.subplots(figsize=(6, 6))
+    proj = ccrs.PlateCarree()
+    fig, ax = plt.subplots(figsize=(6, 6), subplot_kw={"projection": proj})
+    ax.set_extent([NL_LON[0], NL_LON[1], NL_LAT[0], NL_LAT[1]], crs=proj)
+
+    # 10 m NaturalEarth features give recognisable NL coastline and borders.
+    ax.add_feature(cfeature.OCEAN.with_scale("10m"),     facecolor="#cfe2f3")
+    ax.add_feature(cfeature.LAND.with_scale("10m"),      facecolor="#f3f1e8")
+    ax.add_feature(cfeature.LAKES.with_scale("10m"),     facecolor="#cfe2f3", linewidth=0)
+    ax.add_feature(cfeature.COASTLINE.with_scale("10m"), linewidth=0.6)
+    ax.add_feature(cfeature.BORDERS.with_scale("10m"),   linewidth=0.5, linestyle=":")
+
     hb = ax.hexbin(lons, lats, gridsize=40, cmap="viridis",
-                   mincnt=1, bins="log",
-                   extent=(NL_LON[0], NL_LON[1], NL_LAT[0], NL_LAT[1]))
-    cb = fig.colorbar(hb, ax=ax, shrink=0.8)
+                   mincnt=1, bins="log", alpha=0.75, transform=proj)
+    cb = fig.colorbar(hb, ax=ax, shrink=0.75, pad=0.04)
     cb.set_label("Observations (log scale)")
 
-    ax.set_xlim(NL_LON)
-    ax.set_ylim(NL_LAT)
-    # Approx aspect correction for ~52°N: 1° lon is shorter than 1° lat.
-    ax.set_aspect(1.0 / np.cos(np.radians(52.0)))
-    ax.set_xlabel("Longitude (°E)")
-    ax.set_ylabel("Latitude (°N)")
-    ax.set_title(f"Geographic distribution of observations (n={len(lats):,})")
+    gl = ax.gridlines(draw_labels=True, linewidth=0.3, alpha=0.4)
+    gl.top_labels = False
+    gl.right_labels = False
 
+    ax.set_title(f"Geographic distribution of observations (n={len(lats):,})")
     fig.tight_layout()
     fig.savefig(OUT_DIR / "geographic_distribution.png", dpi=150)
     plt.close(fig)
