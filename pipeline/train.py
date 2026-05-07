@@ -24,6 +24,9 @@ def build_model(model_name, backbone, num_classes):
     if model_name == "late_fusion":
         from models.late_fusion import LateFusionModel
         return LateFusionModel(num_classes, backbone)
+    if model_name == "gated_fusion":
+        from models.gated_fusion import GatedFusionModel
+        return GatedFusionModel(num_classes, backbone)
     if model_name == "location_only":
         from models.location_only import LocationOnlyModel
         return LocationOnlyModel(num_classes)
