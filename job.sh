@@ -9,6 +9,9 @@
 #SBATCH --mail-user=s3569829@umail.leidenuniv.nl
 #SBATCH --output=logs/%j.out
 
+# Nodes that have shown CUDA-init failures during this project. Jobs landing here fall back to CPU.
+EXCLUDE_NODES="node860,node857"
+
 # Usage:
 # bash job.sh   submit all 9 experiments at once
 # sbatch --time=02:00:00 job.sh baseline resnet50   run one experiment
@@ -29,16 +32,17 @@ if [ $# -eq 0 ]; then
         echo "BioCLIP cache already present at $HF_HOME, skipping pre-warm."
     fi
 
-    sbatch --time=01:00:00 -p gpu-short      "$0" location_only
-    sbatch --time=08:00:00 -p gpu-2080ti-11g "$0" baseline     resnet50
-    sbatch --time=08:00:00 -p gpu-2080ti-11g "$0" early_fusion resnet50
-    sbatch --time=08:00:00 -p gpu-2080ti-11g "$0" late_fusion  resnet50
-    sbatch --time=08:00:00 -p gpu-2080ti-11g "$0" gated_fusion resnet50
-    sbatch --time=08:00:00 -p gpu-2080ti-11g "$0" baseline     bioclip
-    sbatch --time=12:00:00 -p gpu-2080ti-11g "$0" early_fusion bioclip
-    sbatch --time=12:00:00 -p gpu-2080ti-11g "$0" late_fusion  bioclip
-    sbatch --time=12:00:00 -p gpu-2080ti-11g "$0" gated_fusion bioclip
-    echo "All 9 jobs submitted. Check status with: squeue --me"
+    SB="sbatch --exclude=$EXCLUDE_NODES"
+    $SB --time=02:00:00 -p gpu-short      "$0" location_only
+    $SB --time=08:00:00 -p gpu-2080ti-11g "$0" baseline     resnet50
+    $SB --time=08:00:00 -p gpu-2080ti-11g "$0" early_fusion resnet50
+    $SB --time=08:00:00 -p gpu-2080ti-11g "$0" late_fusion  resnet50
+    $SB --time=08:00:00 -p gpu-2080ti-11g "$0" gated_fusion resnet50
+    $SB --time=08:00:00 -p gpu-2080ti-11g "$0" baseline     bioclip
+    $SB --time=12:00:00 -p gpu-2080ti-11g "$0" early_fusion bioclip
+    $SB --time=12:00:00 -p gpu-2080ti-11g "$0" late_fusion  bioclip
+    $SB --time=12:00:00 -p gpu-2080ti-11g "$0" gated_fusion bioclip
+    echo "All 9 jobs submitted (excluding nodes: $EXCLUDE_NODES). Check status with: squeue --me"
     exit 0
 fi
 
