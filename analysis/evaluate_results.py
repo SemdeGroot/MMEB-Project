@@ -10,13 +10,15 @@ OUT_DIR     = Path(__file__).parent / "output"
 
 # Display order and labels for all 7 experiments.
 EXPERIMENTS = [
-    ("baseline_resnet50",    "ResNet\nbaseline"),
-    ("early_fusion_resnet50","ResNet\nearly"),
-    ("late_fusion_resnet50", "ResNet\nlate"),
-    ("location_only",        "Location\nonly"),
-    ("baseline_bioclip",     "BioCLIP\nbaseline"),
-    ("early_fusion_bioclip", "BioCLIP\nearly"),
-    ("late_fusion_bioclip",  "BioCLIP\nlate"),
+    ("baseline_resnet50",     "ResNet\nbaseline"),
+    ("early_fusion_resnet50", "ResNet\nearly"),
+    ("late_fusion_resnet50",  "ResNet\nlate"),
+    ("gated_fusion_resnet50", "ResNet\ngated"),
+    ("location_only",         "Location\nonly"),
+    ("baseline_bioclip",      "BioCLIP\nbaseline"),
+    ("early_fusion_bioclip",  "BioCLIP\nearly"),
+    ("late_fusion_bioclip",   "BioCLIP\nlate"),
+    ("gated_fusion_bioclip",  "BioCLIP\ngated"),
 ]
 
 BUCKETS      = ["rare", "medium", "common"]
@@ -108,8 +110,10 @@ def plot_location_gain(metrics):
     pairs = [
         ("ResNet-50 early",  "baseline_resnet50", "early_fusion_resnet50"),
         ("ResNet-50 late",   "baseline_resnet50", "late_fusion_resnet50"),
+        ("ResNet-50 gated",  "baseline_resnet50", "gated_fusion_resnet50"),
         ("BioCLIP early",    "baseline_bioclip",  "early_fusion_bioclip"),
         ("BioCLIP late",     "baseline_bioclip",  "late_fusion_bioclip"),
+        ("BioCLIP gated",    "baseline_bioclip",  "gated_fusion_bioclip"),
     ]
     labels, gains = [], []
     for label, base_key, fusion_key in pairs:
