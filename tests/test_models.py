@@ -14,6 +14,7 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 from models.baseline import BaselineModel
 from models.early_fusion import EarlyFusionModel
 from models.late_fusion import LateFusionModel
+from models.gated_fusion import GatedFusionModel
 from models.location_only import LocationOnlyModel
 
 NUM_CLASSES = 10
@@ -37,6 +38,7 @@ print("--- ResNet-50 models ---")
 check("baseline      (resnet50)", BaselineModel(NUM_CLASSES, "resnet50"))
 check("early_fusion  (resnet50)", EarlyFusionModel(NUM_CLASSES, "resnet50"))
 check("late_fusion   (resnet50)", LateFusionModel(NUM_CLASSES, "resnet50"))
+check("gated_fusion  (resnet50)", GatedFusionModel(NUM_CLASSES, "resnet50"))
 
 print("--- location_only ---")
 check("location_only", LocationOnlyModel(NUM_CLASSES))
@@ -46,6 +48,7 @@ try:
     check("baseline      (bioclip)", BaselineModel(NUM_CLASSES, "bioclip"))
     check("early_fusion  (bioclip)", EarlyFusionModel(NUM_CLASSES, "bioclip"))
     check("late_fusion   (bioclip)", LateFusionModel(NUM_CLASSES, "bioclip"))
+    check("gated_fusion  (bioclip)", GatedFusionModel(NUM_CLASSES, "bioclip"))
 except Exception as e:
     print(f"  BioCLIP skipped: {e}")
 
