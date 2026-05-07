@@ -148,7 +148,11 @@ def get_datasets(min_samples=MIN_SAMPLES):
     allowed = {sp for sp, n in species_counts.items() if n >= min_samples}
     samples = [s for s in all_samples if s[-1] in allowed]
 
+    dropped_species = len(species_counts) - len(allowed)
+    dropped_records = len(all_samples) - len(samples)
     print(f"Classes: {len(allowed)}, total samples: {len(samples)}")
+    print(f"Discarded {dropped_species} species ({dropped_records} records) "
+          f"below MIN_SAMPLES={min_samples}")
 
     label_to_idx = {sp: i for i, sp in enumerate(sorted(allowed))}
     train_samples, val_samples, test_samples = make_splits(samples)
