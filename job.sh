@@ -73,7 +73,7 @@ export HF_HOME=/zfsstore/courses/2025-2026/4343MMEBX/Group6/.cache
 mkdir -p logs results
 
 # download_image.py is idempotent — skips files that already exist
-python download_image.py
+python data/download_images.py
 
 if [ "$MODEL" = "location_only" ] || [ "$MODEL" = "metadata_only" ]; then
     python -m pipeline.train --model "$MODEL" --epochs 50 --batch_size 64 --resume
