@@ -1,0 +1,94 @@
+============================================================
+DATA EXPLORATION
+============================================================
+
+Loading occurrence.txt ...
+Step 1 - Raw rows in occurrence.txt:        32095
+Step 2 - After dropping missing fields:      31945  (-150)
+Step 3 - After keeping only downloaded imgs: 30722  (-1223)
+Step 4 - After MIN_GBIFIDS >= 10:           29896  (-826 records, -247 species)
+
+============================================================
+BASIC STATISTICS (after filtering)
+============================================================
+Total samples:    29896
+Total species:    317
+Year range:       1921 - 2026
+Latitude range:   50.74 - 53.53
+Longitude range:  3.39 - 7.20
+
+============================================================
+SPECIES DISTRIBUTION
+============================================================
+Samples per species  mean: 94.3
+Samples per species  std:  153.1
+Samples per species  min:  10
+Samples per species  max:  1799
+gbifIDs per species  mean: 94.3
+gbifIDs per species  min:  10
+gbifIDs per species  max:  1799
+
+Top 10 most common species:
+    1799  Noctua pronuba Linnaeus, 1758
+     982  Autographa gamma (Linnaeus, 1758)
+     659  Idaea aversata (Linnaeus, 1758)
+     592  Idaea seriata (Schrank, 1802)
+     570  Xestia c-nigrum (Linnaeus, 1758)
+     570  Camptogramma bilineata (Linnaeus, 1758)
+     536  Peribatodes rhomboidaria (Denis & Schiffermüller) , 1775
+     488  Gymnoscelis rufifasciata (Haworth, 1809)
+     442  Tyria jacobaeae Linnaeus, 1758
+     402  Noctua comes Hübner
+
+Top 10 rarest species (after filter):
+      10  Apocheima hispidaria (Denis & Schiffermüller) , 1775
+      10  Pyrrhia umbra (Hufnagel, 1766)
+      10  Peribatodes secundaria (Denis & Schiffermüller) , 1775
+      10  Mythimna pudorina (Denis & Schiffermüller) , 1775
+      10  Cosmia pyralina (Denis & Schiffermüller) , 1775
+      10  Macrochilo cribrumalis (Hübner, 1793)
+      10  Acronicta auricoma (Denis & Schiffermüller) , 1775
+      10  Conistra rubiginea (Denis & Schiffermüller) , 1775
+      10  Cerapteryx graminis Linnaeus, 1758
+      11  Oligia strigilis (Linnaeus, 1758)
+
+============================================================
+MONTH DISTRIBUTION
+============================================================
+  Jan: 64
+  Feb: 281
+  Mar: 631
+  Apr: 947
+  May: 2704
+  Jun: 5605
+  Jul: 8181
+  Aug: 7292
+  Sep: 3064
+  Oct: 592
+  Nov: 345
+  Dec: 190
+
+============================================================
+PROVINCE DISTRIBUTION
+============================================================
+    8267  Gelderland
+    4009  Zuid-Holland
+    3831  Groningen
+    3770  Friesland
+    3341  Noord-Holland
+    2671  Noord-Brabant
+    1443  Utrecht
+     796  Drenthe
+     783  Limburg
+     446  Overijssel
+     414  Zeeland
+     112  Flevoland
+       7  IJsselmeer
+       5  Zeeuwse meren
+       1  Unknown
+
+============================================================
+SAVING PLOTS
+============================================================
+Saved: /zfsstore/user/s4609808/projects/MMEB-Project/results/explore_data/data_exploration.png
+Saved: /zfsstore/user/s4609808/projects/MMEB-Project/results/explore_data/cleaning_steps.png
