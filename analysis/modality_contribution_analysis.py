@@ -1,4 +1,4 @@
-"""Fission analysis for the pipeline.
+"""Modality contribution analysis for the pipeline.
 
 Reads metrics.json from each result directory and runs the missing-modality
 test on the best fusion model.
@@ -12,7 +12,7 @@ import torch
 from torch.utils.data import DataLoader
 
 RESULTS_DIR  = Path(__file__).parent.parent / "results"
-OUT_DIR      = Path(__file__).parent / "output"
+OUT_DIR      = Path(__file__).parent / "output" / "modality_contribution"
 METADATA_ONLY_MODELS = {"location_only", "metadata_only"}
 
 # All experiments in display order
@@ -154,7 +154,7 @@ def _sep(n=60): print("=" * n)
 
 def main():
     OUT_DIR.mkdir(exist_ok=True)
-    log_file   = open(OUT_DIR / "log_fission_analysis.txt", "w")
+    log_file   = open(OUT_DIR / "log_modality_contribution_analysis.txt", "w")
     sys.stdout = Tee(sys.__stdout__, log_file)
 
     device  = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -184,9 +184,9 @@ def main():
                         "model": model, "backbone": backbone}
         print(f"{label:<35} {f1:>10.4f} {acc:>9.1%}")
 
-    # ---- Step 2: Fission analysis ----
+    # ---- Step 2: Modality contribution analysis ----
     _sep()
-    print("\nSTEP 2: FISSION ANALYSIS")
+    print("\nSTEP 2: MODALITY CONTRIBUTION ANALYSIS")
     _sep()
 
     unimodal_f1 = {k: v["macro_f1"] for k, v in results.items()
@@ -195,7 +195,7 @@ def main():
                    if v["model"] in FUSION_MODELS}
 
     if not unimodal_f1 or not fusion_f1:
-        print("Not enough models evaluated for fission analysis.")
+        print("Not enough models evaluated for modality contribution analysis.")
         return
 
     best_uni_key   = max(unimodal_f1, key=unimodal_f1.get)
@@ -276,7 +276,10 @@ def main():
 
     log_file.close()
     sys.stdout = sys.__stdout__
-    print(f"\nFission analysis saved to {OUT_DIR}/log_fission_analysis.txt")
+    print(
+        "\nModality contribution analysis saved to "
+        f"{OUT_DIR}/log_modality_contribution_analysis.txt"
+    )
 
 
 if __name__ == "__main__":
