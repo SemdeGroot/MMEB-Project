@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 RESULTS_DIR = Path(__file__).parent.parent / "results"
-OUT_DIR     = Path(__file__).parent / "output"
+OUT_DIR = Path(__file__).parent / "output" / "performance_comparison"
 
 # Display order and labels for all 7 experiments.
 EXPERIMENTS = [
