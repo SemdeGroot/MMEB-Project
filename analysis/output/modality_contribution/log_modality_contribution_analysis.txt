@@ -1,0 +1,68 @@
+============================================================
+STEP 1: MODEL RESULTS
+============================================================
+
+Model                                 Macro-F1   Accuracy
+---------------------------------------------------------
+Baseline ResNet-50                      0.6080     68.7%
+Baseline BioCLIP                        0.8638     90.8%
+Location Only                           0.0325      6.5%
+Metadata Only                           0.0383      6.9%
+Early Fusion ResNet-50                  0.6949     75.8%
+Early Fusion BioCLIP                    0.8843     92.1%
+Late Fusion ResNet-50                   0.6752     74.8%
+Late Fusion BioCLIP                     0.8740     91.8%
+Gated Fusion ResNet-50                  0.6957     76.5%
+Gated Fusion BioCLIP                    0.8218     87.5%
+Concat Fusion ResNet-50                 0.5832     65.2%
+Concat Fusion BioCLIP                   0.8043     85.1%
+Transformer Fusion ResNet-50            0.0004      2.0%
+Transformer Fusion BioCLIP              0.0109      2.7%
+Coordination ResNet-50                  0.1843     27.2%
+Coordination BioCLIP                    0.8083     86.3%
+============================================================
+
+STEP 2: MODALITY CONTRIBUTION ANALYSIS
+============================================================
+
+Best image-only model:    0.8638 macro-F1
+Best metadata-only model: 0.0383 macro-F1
+Best fusion model:        Early Fusion BioCLIP
+Best fusion macro-F1:     0.8843
+
+Synergy (fusion - best unimodal): +0.0205
+-> Fusion captures SYNERGISTIC information
+
+Best coordination macro-F1: 0.8083
+Coordination benefit:       -0.0760
+-> Coordination did not help over simple fusion
+============================================================
+
+STEP 3: MISSING MODALITY TEST
+============================================================
+
+Best fusion model: Early Fusion BioCLIP
+Full modalities:   92.06%
+
+Loading datasets for missing modality test...
+Classes: 317, total samples: 40902
+Discarded 247 species (1089 records) below MIN_GBIFIDS=10
+Metadata dim: 31 (17 base + 14 provinces)
+Missing metadata:  86.12%  (drop: +5.94%)
+Missing image:     4.99%  (drop: +87.07%)
+
+-> Image contributes more than metadata to this fusion model
+============================================================
+
+STEP 4: BioCLIP vs ResNet-50 GAIN
+============================================================
+
+Model                      ResNet-50    BioCLIP     Gain
+-------------------------------------------------------
+baseline                      0.6080     0.8638  +0.2558
+early_fusion                  0.6949     0.8843  +0.1894
+late_fusion                   0.6752     0.8740  +0.1988
+gated_fusion                  0.6957     0.8218  +0.1261
+concat_fusion                 0.5832     0.8043  +0.2211
+transformer_fusion            0.0004     0.0109  +0.0105
+coordination                  0.1843     0.8083  +0.6240
