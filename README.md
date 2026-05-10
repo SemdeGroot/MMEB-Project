@@ -1,5 +1,23 @@
 # MMEB Project
 
+## Why this branch is separate from main
+
+This branch contains experiments that we ran but did not select as our main results. The `main` branch holds the ResNet-50 and BioCLIP baselines with weighted cross-entropy and the 4-element location vector. Those are the numbers in the main results tables. The experiments below are still discussed in the report, but as supporting evidence or documented negative results.
+
+### FocalLoss with class weights
+
+We replaced cross-entropy with focal loss (gamma=2). Focal loss reduces the gradient on examples the model is already confident about. Combined with our existing class weights, this turned out to be too aggressive. The baseline ResNet-50 dropped from 0.735 to 0.608 macro-F1, with the biggest loss on common species. Focal loss is built for object detection where most examples are trivial background. In a multi-class classifier that already uses class weights, it appeared to just remove useful learning signal. The `main` branch keeps weighted cross-entropy.
+
+### Transformer fusion
+
+The `transformer_fusion` model applies cross-attention between one image token and one metadata token. With only one key, the attention softmax is always 1.0, so the attention layer is effectively a linear projection. The transformer encoder, modality embeddings, and LayerNorms wrap a lot of complexity around what is just a weighted sum. Both backbones also went to NaN loss after two epochs under mixed precision. Final test macro-F1 was 0.0004 (ResNet) and 0.011 (BioCLIP). We did not include this model in the main results.
+
+### Deeper metadata-only model
+
+The `metadata_only` model is a 4-layer MLP on the 31-dimensional metadata vector. It reaches 0.038 macro-F1. The shallow `location_only` model reaches 0.025. The 0.013 gap is small, which suggests the limit is the metadata itself, not the model capacity. GPS and date alone cannot separate 317 moth species in the Netherlands. The same pattern shows up in the fusion models on this branch, as they use the 31-dimensional metadata, but their macro-F1 is lower than the matching fusion models on `main`. This could be because of the metadata fusion or because of the different loss function. The `main` branch uses the simpler `location_only`, and we cite the `metadata_only` number in the report as evidence that a deeper architecture does not improve the results significantly.
+
+---
+
 This repository contains the training, testing, and analysis code for moth species classification with images and observation metadata.
 
 The data in this branch is based on GBIF Netherlands records. The pipeline uses downloaded moth images together with observation metadata from `data/occurrence.txt`.
