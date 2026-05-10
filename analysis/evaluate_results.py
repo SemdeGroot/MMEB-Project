@@ -1,4 +1,4 @@
-"""Load metrics.json from each results/ directory and produce comparison plots."""
+"""Load metrics.json from each results directory and produce comparison plots."""
 import json
 from pathlib import Path
 
@@ -8,26 +8,57 @@ import numpy as np
 RESULTS_DIR = Path(__file__).parent.parent / "results"
 OUT_DIR = Path(__file__).parent / "output" / "performance_comparison"
 
-# Display order and labels for all 7 experiments.
+
+# Display order and labels for all experiments.
 EXPERIMENTS = [
     ("baseline_resnet50",     "ResNet\nbaseline"),
     ("early_fusion_resnet50", "ResNet\nearly"),
     ("late_fusion_resnet50",  "ResNet\nlate"),
     ("gated_fusion_resnet50", "ResNet\ngated"),
-    ("location_only",         "Location\nonly"),
+    ("concat_fusion_resnet50", "ResNet\nconcat"),
+    ("transformer_fusion_resnet50", "ResNet\ntransformer"),
+    ("coordination_resnet50", "ResNet\ncoordination"),
+    ("location_only",         "Location\nshallow"),
+    ("metadata_only",         "Metadata\ndeep"),
     ("baseline_bioclip",      "BioCLIP\nbaseline"),
     ("early_fusion_bioclip",  "BioCLIP\nearly"),
     ("late_fusion_bioclip",   "BioCLIP\nlate"),
     ("gated_fusion_bioclip",  "BioCLIP\ngated"),
+    ("concat_fusion_bioclip", "BioCLIP\nconcat"),
+    ("transformer_fusion_bioclip", "BioCLIP\ntransformer"),
+    ("coordination_bioclip",  "BioCLIP\ncoordination"),
 ]
 
 BUCKETS      = ["rare", "medium", "common"]
-BUCKET_LABEL = {"rare": "Rare (10–29)", "medium": "Medium (30–99)", "common": "Common (100+)"}
+BUCKET_LABEL = {"rare": "Rare (10-29)", "medium": "Medium (30-99)", "common": "Common (100+)"}
 BUCKET_COLOR = {"rare": "#d62728", "medium": "#ff7f0e", "common": "#2ca02c"}
+
+FUSION_GAIN_PAIRS = [
+    ("ResNet-50\nearly",       "baseline_resnet50", "early_fusion_resnet50"),
+    ("ResNet-50\nlate",        "baseline_resnet50", "late_fusion_resnet50"),
+    ("ResNet-50\ngated",       "baseline_resnet50", "gated_fusion_resnet50"),
+    ("ResNet-50\nconcat",      "baseline_resnet50", "concat_fusion_resnet50"),
+    ("ResNet-50\ntransformer", "baseline_resnet50", "transformer_fusion_resnet50"),
+    ("ResNet-50\ncoord.",      "baseline_resnet50", "coordination_resnet50"),
+    ("BioCLIP\nearly",         "baseline_bioclip",  "early_fusion_bioclip"),
+    ("BioCLIP\nlate",          "baseline_bioclip",  "late_fusion_bioclip"),
+    ("BioCLIP\ngated",         "baseline_bioclip",  "gated_fusion_bioclip"),
+    ("BioCLIP\nconcat",        "baseline_bioclip",  "concat_fusion_bioclip"),
+    ("BioCLIP\ntransformer",   "baseline_bioclip",  "transformer_fusion_bioclip"),
+    ("BioCLIP\ncoord.",        "baseline_bioclip",  "coordination_bioclip"),
+]
+
+
+def experiment_color(key):
+    if key in {"location_only", "metadata_only"}:
+        return "#9a9a9a"
+    if "resnet" in key:
+        return "#4878cf"
+    return "#6acc65"
 
 
 def load_metrics():
-    """Return dict mapping experiment key → metrics dict (from metrics.json)."""
+    """Return dict mapping experiment key to metrics dict from metrics.json."""
     data = {}
     for key, _ in EXPERIMENTS:
         path = RESULTS_DIR / key / "metrics.json"
@@ -44,11 +75,11 @@ def plot_macro_f1(metrics):
     values = [metrics[k]["macro_f1"] for k in keys]
 
     if not keys:
-        print("No macro_f1 data found — skipping macro_f1_comparison.png")
+        print("No macro_f1 data found - skipping macro_f1_comparison.png")
         return
 
-    fig, ax = plt.subplots(figsize=(9, 4))
-    colors = ["#4878cf" if "resnet" in k or k == "location_only" else "#6acc65" for k in keys]
+    fig, ax = plt.subplots(figsize=(12, 4.5))
+    colors = [experiment_color(k) for k in keys]
     bars = ax.bar(range(len(keys)), values, color=colors, width=0.6)
 
     ax.set_xticks(range(len(keys)))
@@ -64,7 +95,8 @@ def plot_macro_f1(metrics):
 
     from matplotlib.patches import Patch
     ax.legend(handles=[Patch(color="#4878cf", label="ResNet-50"),
-                        Patch(color="#6acc65", label="BioCLIP")],
+                       Patch(color="#6acc65", label="BioCLIP"),
+                       Patch(color="#9a9a9a", label="Metadata-only")],
               fontsize=9)
     fig.tight_layout()
     fig.savefig(OUT_DIR / "macro_f1_comparison.png", dpi=150)
@@ -80,14 +112,14 @@ def plot_bucket_f1(metrics):
               if k in metrics and "bucket_f1" in metrics[k]]
 
     if not keys:
-        print("No bucket_f1 data found — skipping bucket_f1_comparison.png")
+        print("No bucket_f1 data found - skipping bucket_f1_comparison.png")
         return
 
     x      = np.arange(len(keys))
     width  = 0.25
     offsets = [-width, 0, width]
 
-    fig, ax = plt.subplots(figsize=(10, 4))
+    fig, ax = plt.subplots(figsize=(14, 4.5))
     for offset, bucket in zip(offsets, BUCKETS):
         values = [metrics[k]["bucket_f1"].get(bucket, float("nan")) for k in keys]
         ax.bar(x + offset, values, width, label=BUCKET_LABEL[bucket],
@@ -106,17 +138,9 @@ def plot_bucket_f1(metrics):
 
 
 def plot_location_gain(metrics):
-    """Bar chart: macro-F1 gain of fusion over baseline for each backbone."""
-    pairs = [
-        ("ResNet-50 early",  "baseline_resnet50", "early_fusion_resnet50"),
-        ("ResNet-50 late",   "baseline_resnet50", "late_fusion_resnet50"),
-        ("ResNet-50 gated",  "baseline_resnet50", "gated_fusion_resnet50"),
-        ("BioCLIP early",    "baseline_bioclip",  "early_fusion_bioclip"),
-        ("BioCLIP late",     "baseline_bioclip",  "late_fusion_bioclip"),
-        ("BioCLIP gated",    "baseline_bioclip",  "gated_fusion_bioclip"),
-    ]
+    """Bar chart: macro-F1 gain of each fusion model over its image-only baseline."""
     labels, gains = [], []
-    for label, base_key, fusion_key in pairs:
+    for label, base_key, fusion_key in FUSION_GAIN_PAIRS:
         if (base_key in metrics and fusion_key in metrics
                 and "macro_f1" in metrics[base_key]
                 and "macro_f1" in metrics[fusion_key]):
@@ -124,17 +148,18 @@ def plot_location_gain(metrics):
             gains.append(metrics[fusion_key]["macro_f1"] - metrics[base_key]["macro_f1"])
 
     if not gains:
-        print("Not enough data for location_gain.png — skipping")
+        print("Not enough data for location_gain.png - skipping")
         return
 
     colors = ["#2ca02c" if g >= 0 else "#d62728" for g in gains]
-    fig, ax = plt.subplots(figsize=(7, 4))
+    fig, ax = plt.subplots(figsize=(12.5, 5.0))
     bars = ax.bar(range(len(labels)), gains, color=colors, width=0.5)
     ax.axhline(0, color="black", linewidth=0.8)
     ax.set_xticks(range(len(labels)))
-    ax.set_xticklabels(labels, fontsize=9)
-    ax.set_ylabel("ΔMacro-F1 (fusion - baseline)")
-    ax.set_title("Macro-F1 gain from adding location data")
+    ax.set_xticklabels(labels, fontsize=8.5)
+    ax.set_ylabel("Delta Macro-F1 (fusion - baseline)")
+    ax.set_title("Macro-F1 gain from adding metadata")
+    ax.margins(x=0.02)
 
     ymax = max(gains)
     ymin = min(gains)
@@ -155,20 +180,12 @@ def plot_location_gain(metrics):
 
 def plot_bucket_gain(metrics):
     """For every fusion variant, show per-bucket macro-F1 gain over its image-only baseline."""
-    pairs = [
-        ("ResNet-50 early",  "baseline_resnet50", "early_fusion_resnet50"),
-        ("ResNet-50 late",   "baseline_resnet50", "late_fusion_resnet50"),
-        ("ResNet-50 gated",  "baseline_resnet50", "gated_fusion_resnet50"),
-        ("BioCLIP early",    "baseline_bioclip",  "early_fusion_bioclip"),
-        ("BioCLIP late",     "baseline_bioclip",  "late_fusion_bioclip"),
-        ("BioCLIP gated",    "baseline_bioclip",  "gated_fusion_bioclip"),
-    ]
-    pairs = [p for p in pairs
+    pairs = [p for p in FUSION_GAIN_PAIRS
              if p[1] in metrics and p[2] in metrics
              and "bucket_f1" in metrics[p[1]] and "bucket_f1" in metrics[p[2]]]
 
     if not pairs:
-        print("Not enough bucket data for bucket_gain.png — skipping")
+        print("Not enough bucket data for bucket_gain.png - skipping")
         return
 
     labels = [p[0] for p in pairs]
@@ -176,7 +193,7 @@ def plot_bucket_gain(metrics):
     width  = 0.25
     offsets = [-width, 0, width]
 
-    fig, ax = plt.subplots(figsize=(10, 4))
+    fig, ax = plt.subplots(figsize=(14, 5.0))
     for offset, bucket in zip(offsets, BUCKETS):
         gains = []
         for _, base_key, fusion_key in pairs:
@@ -188,9 +205,10 @@ def plot_bucket_gain(metrics):
 
     ax.axhline(0, color="black", linewidth=0.8)
     ax.set_xticks(x)
-    ax.set_xticklabels(labels, fontsize=9)
-    ax.set_ylabel("ΔMacro-F1 (fusion - baseline)")
-    ax.set_title("Macro-F1 gain from location data, per species bucket")
+    ax.set_xticklabels(labels, fontsize=8.5)
+    ax.set_ylabel("Delta Macro-F1 (fusion - baseline)")
+    ax.set_title("Macro-F1 gain from metadata, per species bucket")
+    ax.margins(x=0.02)
     ax.legend(fontsize=9)
     fig.tight_layout()
     fig.savefig(OUT_DIR / "bucket_gain.png", dpi=150)
@@ -211,7 +229,7 @@ def write_main_table(metrics):
                      bf.get("rare"), bf.get("medium"), bf.get("common")))
 
     if not rows:
-        print("No data for main_results.tex — skipping")
+        print("No data for main_results.tex - skipping")
         return
 
     cols = list(zip(*[r[1:] for r in rows]))
@@ -242,20 +260,12 @@ def write_main_table(metrics):
 
 def write_gain_table(metrics):
     """LaTeX table: macro-F1 gain (fusion - baseline), overall and per bucket."""
-    pairs = [
-        ("ResNet-50 early",  "baseline_resnet50", "early_fusion_resnet50"),
-        ("ResNet-50 late",   "baseline_resnet50", "late_fusion_resnet50"),
-        ("ResNet-50 gated",  "baseline_resnet50", "gated_fusion_resnet50"),
-        ("BioCLIP early",    "baseline_bioclip",  "early_fusion_bioclip"),
-        ("BioCLIP late",     "baseline_bioclip",  "late_fusion_bioclip"),
-        ("BioCLIP gated",    "baseline_bioclip",  "gated_fusion_bioclip"),
-    ]
 
     def diff(a, b):
         return None if a is None or b is None else b - a
 
     rows = []
-    for label, base, fus in pairs:
+    for label, base, fus in FUSION_GAIN_PAIRS:
         mb, mf = metrics.get(base), metrics.get(fus)
         if not mb or not mf or "macro_f1" not in mb or "macro_f1" not in mf:
             continue
@@ -270,7 +280,7 @@ def write_gain_table(metrics):
         ))
 
     if not rows:
-        print("No data for gain_table.tex — skipping")
+        print("No data for gain_table.tex - skipping")
         return
 
     def fmt(v):
@@ -291,7 +301,7 @@ def write_gain_table(metrics):
 
 
 def load_histories():
-    """Return dict mapping experiment key → list of per-epoch dicts from history.json."""
+    """Return dict mapping experiment key to list of per-epoch dicts from history.json."""
     data = {}
     for key, _ in EXPERIMENTS:
         path = RESULTS_DIR / key / "history.json"
@@ -307,7 +317,7 @@ def plot_learning_curves(histories):
     labels = {k: lbl for k, lbl in EXPERIMENTS}
 
     if not keys:
-        print("No history.json files found — skipping learning_curves.png")
+        print("No history.json files found - skipping learning_curves.png")
         return
 
     ncols = 3
