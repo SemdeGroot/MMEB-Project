@@ -310,7 +310,7 @@ def plot_learning_curves(histories):
         print("No history.json files found — skipping learning_curves.png")
         return
 
-    ncols = 3
+    ncols = 5
     nrows = (len(keys) + ncols - 1) // ncols
     fig, axes = plt.subplots(nrows, ncols, figsize=(4 * ncols, 3 * nrows), squeeze=False)
 
